@@ -1,0 +1,7 @@
+{
+    "border-radius-base": { "value": "4", "type": "borderRadius", "name": "border-radius.base" },
+    "border-radius-1": { "value": "{border-radius-base} * 1", "type": "borderRadius", "name": "border-radius.1" },
+    "border-radius-2": { "value": "{border-radius-base} * 2", "type": "borderRadius", "name": "border-radius.2" },
+    "border-radius-3": { "value": "{border-radius-base} * 4", "type": "borderRadius", "name": "border-radius.3" },
+    "border-radius-4": { "value": "{border-radius-base} * 100", "type": "borderRadius", "name": "border-radius.4" }
+}
