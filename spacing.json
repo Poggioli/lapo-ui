@@ -1,0 +1,16 @@
+{
+    "space-base": { "value": "4", "type": "spacing", "name": "space.base" },
+    "space-1": { "value": "{space-base} * 0.5", "type": "spacing", "name": "space.1" },
+    "space-2": { "value": "{space-base} * 1", "type": "spacing", "name": "space.2" },
+    "space-3": { "value": "{space-base} * 2", "type": "spacing", "name": "space.3" },
+    "space-4": { "value": "{space-base} * 4", "type": "spacing", "name": "space.4" },
+    "space-5": { "value": "{space-base} * 5", "type": "spacing", "name": "space.5" },
+    "space-6": { "value": "{space-base} * 6", "type": "spacing", "name": "space.6" },
+    "space-7": { "value": "{space-base} * 8", "type": "spacing", "name": "space.7" },
+    "space-8": { "value": "{space-base} * 10", "type": "spacing", "name": "space.8" },
+    "space-9": { "value": "{space-base} * 12", "type": "spacing", "name": "space.9" },
+    "space-10": { "value": "{space-base} * 16", "type": "spacing", "name": "space.10" },
+    "space-11": { "value": "{space-base} * 18", "type": "spacing", "name": "space.11" },
+    "space-12": { "value": "{space-base} * 24", "type": "spacing", "name": "space.12" },
+    "space-13": { "value": "{space-base} * 32", "type": "spacing", "name": "space.13" }
+}
