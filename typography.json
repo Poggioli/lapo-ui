@@ -59,7 +59,7 @@
       "fontFamily": "{font-family-1}",
       "fontWeight": "{font-weight-4}",
       "lineHeight": "{line-height-1}",
-      "fontSize": "{font-size-6}",
+      "fontSize": "{font-size-5}",
       "letterSpacing": "{letter-space-3}"
     },
     "type": "typography",
