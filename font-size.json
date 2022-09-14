@@ -1,0 +1,13 @@
+{
+    "font-size-base": { "value": "16", "type": "fontSizes", "name": "font-size.base" },
+    "font-size-1": { "value": "{font-size-base} * 0.625", "type": "fontSizes", "name": "font-size.1" },
+    "font-size-2": { "value": "{font-size-base} * 0.75", "type": "fontSizes", "name": "font-size.2" },
+    "font-size-3": { "value": "{font-size-base} * 0.875", "type": "fontSizes", "name": "font-size.3" },
+    "font-size-4": { "value": "{font-size-base} * 1", "type": "fontSizes", "name": "font-size.4" },
+    "font-size-5": { "value": "{font-size-base} * 1.125", "type": "fontSizes", "name": "font-size.5" },
+    "font-size-6": { "value": "{font-size-base} * 1.5", "type": "fontSizes", "name": "font-size.6" },
+    "font-size-7": { "value": "{font-size-base} * 2", "type": "fontSizes", "name": "font-size.7" },
+    "font-size-8": { "value": "{font-size-base} * 2.5", "type": "fontSizes", "name": "font-size.8" },
+    "font-size-9": { "value": "{font-size-base} * 3", "type": "fontSizes", "name": "font-size.9" },
+    "font-size-10": { "value": "{font-size-base} * 4", "type": "fontSizes", "name": "font-size.10" }
+}
