@@ -1,0 +1,9 @@
+{
+    "letter-space-base": { "value": "10%", "type": "letterSpacing", "name": "letter-space.base" },
+    "letter-space-1": { "value": "{letter-space-base} * 0.5 * -1", "type": "letterSpacing", "name": "letter-space.1" },
+    "letter-space-2": { "value": "{letter-space-base} * 0.25 * -1", "type": "letterSpacing", "name": "letter-space.2" },
+    "letter-space-3": { "value": "{letter-space-base} * 0", "type": "letterSpacing", "name": "letter-space.3" },
+    "letter-space-4": { "value": "{letter-space-base} * 0.25", "type": "letterSpacing", "name": "letter-space.4" },
+    "letter-space-5": { "value": "{letter-space-base} * 0.5", "type": "letterSpacing", "name": "letter-space.5" },
+    "letter-space-6": { "value": "{letter-space-base} * 1", "type": "letterSpacing", "name": "letter-space.6" }
+}
