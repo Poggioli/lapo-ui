@@ -1,0 +1,10 @@
+{
+  "name": "lapo-ui",
+  "version": "0.0.0",
+  "repository": "git@github.com:Poggioli/lapo-ui.git",
+  "author": "Poggioli <joaopogiolli@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@stitches/react": "^1.2.8"
+  }
+}
