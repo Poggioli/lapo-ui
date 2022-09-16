@@ -1,0 +1,11 @@
+{
+    "include": [
+        "components/**/*",
+        "utils/**/*"
+    ],
+    "compilerOptions": {
+        "target": "es6",
+        "jsx": "react",
+        "allowSyntheticDefaultImports": true
+    }
+}
