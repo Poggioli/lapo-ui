@@ -1,11 +1,25 @@
 {
-    "include": [
-        "components/**/*",
-        "utils/**/*"
-    ],
-    "compilerOptions": {
-        "target": "es6",
-        "jsx": "react",
-        "allowSyntheticDefaultImports": true
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "lib": ["es6"],
+    "allowJs": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "removeComments": true,
+    "typeRoots": ["./node_modules/@types", "./src/@types"],
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["./src/components/*"],
+      "@utils/*": ["./src/utils/*"]
     }
+  },
+  "include": ["src"],
+  "exclude": ["**/__tests__/**/*"]
 }
