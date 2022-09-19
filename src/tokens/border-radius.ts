@@ -1,13 +1,12 @@
 export const borderRadiusTokens = (): { [key: string]: string } => {
     const baseValue: number = 4;
-    const prefix: string = 'border-radius';
     const unity: string = 'px';
     const values: number[] = [1, 2, 4, 100];
 
     return values.reduce((acc: { [key: string]: string }, curr: number, index: number) => {
         return {
             ...acc,
-            [`${prefix}.${index + 1}`]: `${curr * baseValue}${unity}`
+            [`${index + 1}`]: `${curr * baseValue}${unity}`
         }
     }, {});
 }
