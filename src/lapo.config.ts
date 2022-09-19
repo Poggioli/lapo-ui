@@ -3,6 +3,7 @@ import type * as Stitches from '@stitches/react';
 export { VariantProps } from '@stitches/react'
 import { indigo, slate } from '@radix-ui/colors'
 import { buttonTokens } from '@components/Button'
+import WebFont from "webfontloader";
 
 import {
     borderWidthTokens,
@@ -16,6 +17,8 @@ import {
     borderRadiusTokens,
     zIndexTokens
 } from '@tokens';
+
+WebFont.load({ google: { families: ["Roboto: 300, 400, 500, 700", "Nunito: 300, 400, 500, 600, 700"] } });
 
 export const {   
     styled,
