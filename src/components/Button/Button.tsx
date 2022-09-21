@@ -1,12 +1,14 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { styled, CSS, VariantProps } from '../../lapo.config';
 import type * as Polymorphic from '@radix-ui/react-polymorphic';
 import { body_1 } from '@tokens';
 
 const DEFAULT_TAG = 'button';
 
+/* -------------------------------------------------------------------------------------------------
+ * Button
+ * -----------------------------------------------------------------------------------------------*/
 const StyledButton = styled(DEFAULT_TAG, {
-    // reset
     alignItems: 'center',
     appearance: 'none',
     boxSizing: 'border-box',
@@ -27,7 +29,6 @@ const StyledButton = styled(DEFAULT_TAG, {
     },
     borderRadius: '$4',
 
-    //custom
     ...body_1,
     backgroundColor: '$$backgroundColorNormal',
     border: '$$borderStylesNormal',
@@ -135,8 +136,11 @@ type ButtonVariants = Omit<VariantProps<typeof StyledButton>, 'size'>;
 type ButtonOwnProps = ButtonCSSProp & ButtonVariants & { size?: any };
 type ButtonComponent = Polymorphic.ForwardRefComponent<typeof DEFAULT_TAG, ButtonOwnProps>;
 
-export const Button = React.forwardRef((props, forwardedRef) => {
+const Button = React.forwardRef((props, forwardedRef) => {
   return <StyledButton {...props} ref={forwardedRef} />;
 }) as ButtonComponent;
 
 Button.toString = () => `.${StyledButton.className}`;
+/* -----------------------------------------------------------------------------------------------*/
+
+export { Button };

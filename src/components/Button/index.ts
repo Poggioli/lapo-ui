@@ -1,4 +1,4 @@
-export { buttonTokens } from './tokens';
+import { buttonTokens } from './tokens';
 import { Button } from './Button';
 
-export default Button;
+export { Button, buttonTokens };
