@@ -157,6 +157,28 @@
                     }
                 }
             }
+        },
+        "input": {
+            "normal": {
+                "value": "{palette.light.gray.100}",
+                "type": "color",
+                "name": "border.input.normal"
+            },
+            "focused": {
+                "value": "{palette.light.primary.90}",
+                "type": "color",
+                "name": "border.input.focused"
+            },
+            "disabled": {
+                "value": "{palette.light.gray.80}",
+                "type": "color",
+                "name": "border.input.disabled"
+            },
+            "error": {
+                "value": "{palette.light.danger.200}",
+                "type": "color",
+                "name": "border.input.error"
+            }
         }
     },
     "text": {
@@ -252,6 +274,52 @@
                         "name": "text.button.text.primary.disabled"
                     }
                 }
+            }
+        },
+        "input": {
+            "label": {
+                "normal": {
+                    "value": "{palette.light.gray.200}",
+                    "type": "color",
+                    "name": "text.input.label.normal"
+                },
+                "focused": {
+                    "value": "{palette.light.primary.100}",
+                    "type": "color",
+                    "name": "text.input.label.focused"
+                },
+                "disabled": {
+                    "value": "{palette.light.gray.80}",
+                    "type": "color",
+                    "name": "text.input.label.disabled"
+                },
+                "error": {
+                    "value": "{palette.light.danger.200}",
+                    "type": "color",
+                    "name": "text.input.label.error"
+                }
+            },
+            "value": {
+                "normal": {
+                    "value": "{palette.light.gray.300}",
+                    "type": "color",
+                    "name": "text.input.value.normal"
+                },
+                "disabled": {
+                    "value": "{palette.light.gray.80}",
+                    "type": "color",
+                    "name": "text.input.value.disabled"
+                },
+                "error": {
+                    "value": "{palette.light.danger.200}",
+                    "type": "color",
+                    "name": "text.input.value.error"
+                }
+            },
+            "placeholder": {
+                "value": "{palette.light.gray.70}",
+                "type": "color",
+                "name": "text.input.placeholder"
             }
         }
     },

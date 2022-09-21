@@ -3,7 +3,7 @@
     "jsx": "react",
     "target": "es2017",
     "module": "commonjs",
-    "lib": ["es6"],
+    "lib": ["es6", "DOM"],
     "allowJs": true,
     "outDir": "./dist",
     "rootDir": "./src",
