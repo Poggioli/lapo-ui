@@ -20,7 +20,8 @@
       "@components/*": ["./src/components/*"],
       "@utils/*": ["./src/utils/*"],
       "@tokens": ["./src/tokens/index.ts"],
-      "@emotion/core": ["./src/types/emotion.d.ts"]
+      "@emotion/core": ["./src/types/emotion.d.ts"],
+      "@lapoConfig": ["./src/lapo.config.ts"]
     }
   },
   "include": ["src"],

@@ -1,7 +1,7 @@
-import React, { useId, useState } from 'react';
-import { styled, CSS, VariantProps } from '../../lapo.config';
+import { CSS, styled, VariantProps } from '@lapoConfig';
 import type * as Polymorphic from '@radix-ui/react-polymorphic';
 import { body_1 } from '@tokens';
+import React, { useState } from 'react';
 
 const DEFAULT_TAG = 'input';
 const DEFAULT_CONTAINER_TAG = 'div';
@@ -255,4 +255,4 @@ const Input = React.forwardRef((
 Input.toString = () => `.${StyledInput.className}`;
 /* -----------------------------------------------------------------------------------------------*/
 
-export { Input }
+export { Input };

@@ -1,4 +1,4 @@
-import { CSS } from "src/lapo.config";
+import { CSS } from "@lapoConfig";
 
 export const heading_1: CSS = {
     fontFamily: '$1',

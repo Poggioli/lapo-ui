@@ -1,7 +1,7 @@
-import React from 'react';
-import { styled, CSS, VariantProps } from '../../lapo.config';
+import { CSS, styled, VariantProps } from '@lapoConfig';
 import type * as Polymorphic from '@radix-ui/react-polymorphic';
 import { body_1 } from '@tokens';
+import React from 'react';
 
 const DEFAULT_TAG = 'button';
 

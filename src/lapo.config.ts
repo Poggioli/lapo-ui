@@ -1,8 +1,8 @@
-import { createStitches } from '@stitches/react';
+import { createStitches, styled } from '@stitches/react';
 import type * as Stitches from '@stitches/react';
 export { VariantProps } from '@stitches/react'
 import { indigo, slate, tomato } from '@radix-ui/colors'
-// import { buttonTokens } from '@components/Button'
+import { buttonTokens } from '@components/Button'
 import { inputTokens } from '@components/Input';
 import WebFont from "webfontloader";
 
@@ -21,22 +21,13 @@ import {
 
 WebFont.load({ google: { families: ["Roboto: 300, 400, 500, 700", "Nunito: 300, 400, 500, 600, 700"] } });
 
-export const {   
-    styled,
-    css,
-    globalCss,
-    keyframes,
-    theme,
-    createTheme,
-    getCssText,
-    config
-} = createStitches({
+const lapo = createStitches({
     theme: {
         colors: {
             white: '#FFF',
             black: '#000',
             transparent: 'transparent',
-            // ...buttonTokens(indigo, slate),
+            ...buttonTokens(indigo, slate),
             ...inputTokens(indigo, slate, tomato),
         },
         space: {
@@ -71,5 +62,26 @@ export const {
         }      
     }
 });
+
+const {
+    css,
+    globalCss,
+    keyframes,
+    createTheme,
+    getCssText,
+    theme,
+    config
+} = lapo;
+
+export {   
+    styled,
+    css,
+    globalCss,
+    keyframes,
+    createTheme,
+    getCssText,
+    theme,
+    config
+}
 
 export type CSS = Stitches.CSS<typeof config>;

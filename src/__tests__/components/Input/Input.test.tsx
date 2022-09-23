@@ -1,12 +1,11 @@
-import React from "react";
-import { axe } from 'jest-axe';
 import { render, RenderResult } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { ComponentProps } from "react";
+import { axe } from 'jest-axe';
+import React, { ComponentProps } from "react";
 import { Input } from "../../../components/Input/Input";
 
 describe('Given a default Input', () => {
-    const label: string = "Test Input"
+    const label: string = "Test Input";
     let rendered: RenderResult;
     let input: HTMLElement;
 
@@ -79,5 +78,5 @@ describe('Given a default Input', () => {
 
     it('should return a text when call toString of component', () => {
         expect(Input.toString()).toBe('.c-gAwlVy')
-    })
+    });
 });

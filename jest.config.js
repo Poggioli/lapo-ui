@@ -6,7 +6,8 @@ module.exports = {
         "@components/(.*)": "<rootDir>/src/components/$1",
         "@utils/(.*)": "<rootDir>/src/utils/$1",
         "@tokens": "<rootDir>/src/tokens/index.ts",
-        "@emotion/core": "<rootDir>/src/types/emotion.d.ts"
+        "@emotion/core": "<rootDir>/src/types/emotion.d.ts",
+        "@lapoConfig": "<rootDir>/src/lapo.config.ts"
     },
     setupFilesAfterEnv: [
         "<rootDir>/jest-setup.ts",
