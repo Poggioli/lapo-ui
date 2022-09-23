@@ -199,7 +199,9 @@ const Input = React.forwardRef((
 
   const [isFocused, setIsFocused] = useState(false);
   const [hasValue, setHasValue] = useState(!!value);
-  const newId = id || useId();
+  //ToDo create a hook to generate Id's
+  // const newId = id || useId();
+  const newId = id || 'any-id';
   const ownLabel = required ? '*'.concat(label) : label;
 
   const handleOnFocus = (event: React.FocusEvent<HTMLInputElement, Element>) => {
@@ -239,7 +241,7 @@ const Input = React.forwardRef((
         onFocus={handleOnFocus}
         onBlur={handleOnBlur}
         onChange={handleOnChange}
-        placeholder={isFocused && !value ? placeholder : ''}
+        placeholder={isFocused ? placeholder : ''}
         ref={forwardedRef}
         value={value}
         disabled={disabled}

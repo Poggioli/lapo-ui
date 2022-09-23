@@ -2,7 +2,7 @@ import { createStitches } from '@stitches/react';
 import type * as Stitches from '@stitches/react';
 export { VariantProps } from '@stitches/react'
 import { indigo, slate, tomato } from '@radix-ui/colors'
-import { buttonTokens } from '@components/Button'
+// import { buttonTokens } from '@components/Button'
 import { inputTokens } from '@components/Input';
 import WebFont from "webfontloader";
 
@@ -36,7 +36,7 @@ export const {
             white: '#FFF',
             black: '#000',
             transparent: 'transparent',
-            ...buttonTokens(indigo, slate),
+            // ...buttonTokens(indigo, slate),
             ...inputTokens(indigo, slate, tomato),
         },
         space: {
