@@ -3,7 +3,7 @@ import type * as Polymorphic from '@radix-ui/react-polymorphic';
 import { body_1 } from '@tokens';
 import React, { useState } from 'react';
 
-const DEFAULT_TAG = 'input';
+const DEFAULT_TAG_INPUT = 'input';
 const DEFAULT_CONTAINER_TAG = 'div';
 const DEFAULT_LABEL_TAG = 'label';
 
@@ -12,39 +12,53 @@ const DEFAULT_LABEL_TAG = 'label';
  * -----------------------------------------------------------------------------------------------*/
 const StyledLabel = styled(DEFAULT_LABEL_TAG, {
   ...body_1,
-  position: 'absolute',
-  top: '100%',
-  transform: 'translateY(-100%)',
-  color: '$text-input-label-normal',
+  color: '$$textColorLabelNormal',
+  marginTop: '$3',
   transition: `color 150ms linear,
-               top 150ms linear, 
-               font-size 150ms linear, 
-               transform 150ms linear`,
+    font-size 150ms linear,
+    margin-top 175ms linear`,
 
   variants: {
-    toTop: {
-      true: {
-        top: 0,
-        fontSize: '$2',
-        transform: 'translateY(0%)',
-      }
+    variant: {
+      filled: {
+        $$textColorLabelNormal: '$colors-text-input-filled-primary-label-normal',
+        $$textColorLabelFocused: '$colors-text-input-filled-primary-label-focused',
+        $$textColorLabelDisabled: '$colors-text-input-filled-primary-label-disabled',
+        $$textColorLabelInvalid: '$colors-text-input-filled-primary-label-invalid',
+        $$textColorLabelInvalidFocused: '$colors-text-input-filled-primary-label-invalid-focused'
+      },
+      outlined: {
+        $$textColorLabelNormal: '$colors-text-input-outlined-primary-label-normal',
+        $$textColorLabelFocused: '$colors-text-input-outlined-primary-label-focused',
+        $$textColorLabelDisabled: '$colors-text-input-outlined-primary-label-disabled',
+        $$textColorLabelInvalid: '$colors-text-input-outlined-primary-label-invalid',
+        $$textColorLabelInvalidFocused: '$colors-text-input-outlined-primary-label-invalid-focused'
+      },
     },
 
-    focused: {
+    focused: { 
       true: {
-        color: '$text-input-label-focused'
+        color: '$$textColorLabelFocused',
+        fontSize: '$1',
+        lineHeight: '$1',
+        marginTop: '0',
       }
     },
-
-    invalid: {
+    invalid: { 
       true: {
-        color: '$text-input-label-error'
+        color: '$$textColorLabelInvalid'
       }
     },
-
+    filled: {
+      true: {
+        fontSize: '$1',
+        lineHeight: '$1',
+        marginTop: '0',
+      }
+    },
     disabled: {
       true: {
-        color: '$text-input-label-disabled'
+        color: '$$textColorLabelDisabled !important'
       }
     },
   },
@@ -54,11 +68,14 @@ const StyledLabel = styled(DEFAULT_LABEL_TAG, {
       focused: true,
       invalid: true,
       css: {
-        color: '$text-input-label-error'
+        color: '$$textColorLabelInvalidFocused',
       }
     }
-  ]
+  ],
 
+  defaultVariants: {
+    variant: 'filled'
+  }
 });
 
 type LabelCSSProp = { css?: CSS };
@@ -76,32 +93,72 @@ const Label = React.forwardRef(({ children, ...props }, forwardedRef) => {
  * Container
  * -----------------------------------------------------------------------------------------------*/
 const StyledContainer = styled(DEFAULT_CONTAINER_TAG, {
+  backgroundColor: '$$backgroundColorNormal',
+  borderBottom: '$borderWidths$1 solid $$borderColorNormal',
+  borderTopLeftRadius: '$1',
+  borderTopRightRadius: '$1',
   boxSizing: 'border-box',
-  height: "$9",
-  borderBottom: '$borderWidths$1 solid $border-input-normal',
-  padding: '0 $4 $1 $3',
   display: "flex",
   flexDirection: 'column',
-  justifyContent: 'flex-end',
+  height: "$9",
+  justifyContent: 'flex-start',
+  padding: '$2 $4 $3 $3',
   position: 'relative',
-  transition: 'border-color 150ms linear',
+  transition: `background-color 150ms linear,
+    border-color 150ms linear`,
 
   variants: {
+    variant: {
+      filled: {
+        $$backgroundColorNormal: '$colors-background-input-filled-primary-normal',
+        $$backgroundColorFocused: '$colors-background-input-filled-primary-focused',
+        $$backgroundColorDisabled: '$colors-background-input-filled-primary-disabled',
+        $$backgroundColorInvalid: '$colors-background-input-filled-primary-invalid',
+        $$backgroundColorInvalidFocused: '$colors-background-input-filled-primary-invalid-focused',
+
+        $$borderColorNormal: '$colors-border-input-filled-primary-normal',
+        $$borderColorFocused: '$colors-border-input-filled-primary-focused',
+        $$borderColorDisabled: '$colors-border-input-filled-primary-disabled',
+        $$borderColorInvalid: '$colors-border-input-filled-primary-invalid',
+        $$borderColorInvalidFocused: '$colors-border-input-filled-primary-invalid-focused',
+      },
+      outlined: {
+        $$backgroundColorNormal: '$colors-background-input-outlined-primary-normal',
+        $$backgroundColorFocused: '$colors-background-input-outlined-primary-focused',
+        $$backgroundColorDisabled: '$colors-background-input-outlined-primary-disabled',
+        $$backgroundColorInvalid: '$colors-background-input-outlined-primary-invalid',
+        $$backgroundColorInvalidFocused: '$colors-background-input-outlined-primary-invalid-focused',
+
+        $$borderColorNormal: '$colors-border-input-outlined-primary-normal',
+        $$borderColorFocused: '$colors-border-input-outlined-primary-focused',
+        $$borderColorDisabled: '$colors-border-input-outlined-primary-disabled',
+        $$borderColorInvalid: '$colors-border-input-outlined-primary-invalid',
+        $$borderColorInvalidFocused: '$colors-border-input-outlined-primary-invalid-focused',
+
+        borderBottomLeftRadius: '$1',
+        borderBottomRightRadius: '$1',
+        border: '$borderWidths$1 solid $$borderColorNormal',
+      }
+    },
+
     focused: {
       true: {
-        borderBottomColor: '$border-input-focused'
+        backgroundColor: '$$backgroundColorFocused',
+        borderColor: '$$borderColorFocused',
       }
     },
     
     invalid: {
       true: {
-        borderBottomColor: '$border-input-error'
+        backgroundColor: '$$backgroundColorInvalid',
+        borderColor: '$$borderColorInvalid',
       }
     },
 
     disabled: {
       true: {
-        borderBottomColor: '$border-input-disabled'
+        backgroundColor: '$$backgroundColorDisabled !important',
+        borderColor: '$$borderColorDisabled !important',
       }
     },
   },
@@ -111,10 +168,16 @@ const StyledContainer = styled(DEFAULT_CONTAINER_TAG, {
       focused: true,
       invalid: true,
       css: {
-        borderBottomColor: '$border-input-error'
+        backgroundColor: '$$backgroundColorInvalidFocused',
+        borderColor: '$$borderColorInvalidFocused',
       }
     }
-  ]
+  ],
+
+  defaultVariants: {
+    variant: 'filled'
+  }
+
 });
 
 type ContainerCSSProp = { css?: CSS };
@@ -131,17 +194,21 @@ const Container = React.forwardRef(({children, ...props}, forwardedRef) => {
 /* -------------------------------------------------------------------------------------------------
  * Input
  * -----------------------------------------------------------------------------------------------*/
-const StyledInput = styled(DEFAULT_TAG, {
+const StyledInput = styled(DEFAULT_TAG_INPUT, {
   // reset
   appearance: 'none',
+  backgroundColor: '$transparent',
   borderWidth: '0',
+  bottom: '$3',
   boxSizing: 'border-box',
   fontFamily: 'inherit',
   margin: '0',
   outline: 'none',
   padding: '0',
-  width: '100%',
+  position: 'absolute',
+  width: 'calc(100% - $6)',
   WebkitTapHighlightColor: 'rgba(0,0,0,0)',
+  transition: `color 150ms linear`,
   '&::before': {
     boxSizing: 'border-box',
   },
@@ -149,37 +216,61 @@ const StyledInput = styled(DEFAULT_TAG, {
     boxSizing: 'border-box',
   },
   ...body_1,
-  color: '$text-input-value-normal',
+  '&::placeholder': {
+    color: '$text-input-filled-primary-placeholder-normal',
+  },
+  '&:disabled': {
+    color: '$$textColorInputDisabled !important',
+    pointerEvents: 'none',
+  },
+  '&:focus': {
+    color: '$$textColorInputFocused'
+  },
+  color: '$$textColorInputNormal',
   fontVariantNumeric: 'tabular-nums',
 
-  '&::placeholder': {
-    color: '$text-input-placeholder',
-  },
-
   variants: {
+    variant: {
+      filled: {
+        $$textColorInputNormal: '$colors-text-input-filled-primary-input-value-normal',
+        $$textColorInputFocused: '$colors-text-input-filled-primary-input-value-focused',
+        $$textColorInputDisabled: '$colors-text-input-filled-primary-input-value-disabled',
+        $$textColorInputInvalid: '$colors-text-input-filled-primary-input-value-invalid',
+        $$textColorInputInvalidFocused: '$colors-text-input-filled-primary-input-value-invalid-focused'
+      },
+      outlined: {
+        $$textColorInputNormal: '$colors-text-input-outlined-primary-input-value-normal',
+        $$textColorInputFocused: '$colors-text-input-outlined-primary-input-value-focused',
+        $$textColorInputDisabled: '$colors-text-input-outlined-primary-input-value-disabled',
+        $$textColorInputInvalid: '$colors-text-input-outlined-primary-input-value-invalid',
+        $$textColorInputInvalidFocused: '$colors-text-input-outlined-primary-input-value-invalid-focused'
+      },
+    },
+
     invalid: {
       true: {
-        color: '$text-input-value-error'
+        color: '$$textColorInputInvalid',
+
+        '&:focus': {
+          color: '$$textColorInputInvalidFocused'
+        },
       }
-    },
+    }
   },
 
-  '&:disabled': {
-    color: '$text-input-value-disabled',
-    pointerEvents: 'none',
-    background: '$transparent'
-  },
-
+  defaultVariants: {
+    variant: 'filled'
+  }
 });
 
 type InputCSSProp = { css?: CSS };
 type InputVariants = VariantProps<typeof StyledInput>;
 type InputOwnProps = InputCSSProp & InputVariants & { 
-  label: string 
-  invalid?: boolean, 
+  label: string
+  variant?: 'filled' | 'outlined'
 };
 
-type InputComponent = Polymorphic.ForwardRefComponent<typeof DEFAULT_TAG, InputOwnProps>;
+type InputComponent = Polymorphic.ForwardRefComponent<typeof DEFAULT_TAG_INPUT, InputOwnProps>;
 
 const Input = React.forwardRef((
   {
@@ -194,6 +285,7 @@ const Input = React.forwardRef((
     required,
     invalid,
     label,
+    variant,
     ...props
   }, forwardedRef) => {
 
@@ -226,13 +318,18 @@ const Input = React.forwardRef((
   };
 
   return  (
-    <Container focused={isFocused} disabled={disabled} invalid={invalid}>
+    <Container 
+      focused={isFocused}
+      disabled={disabled}
+      invalid={invalid}
+      variant={variant}>
       <Label 
         htmlFor={newId}
-        toTop={isFocused || hasValue} 
+        filled={hasValue}
         focused={isFocused}
         disabled={disabled}
         invalid={invalid}
+        variant={variant}
       >
         {ownLabel}
       </Label>
@@ -247,6 +344,7 @@ const Input = React.forwardRef((
         disabled={disabled}
         invalid={invalid}
         id={newId}
+        variant={variant}
       />
     </Container>
   );

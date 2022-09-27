@@ -3,12 +3,12 @@ import type * as Polymorphic from '@radix-ui/react-polymorphic';
 import { body_1 } from '@tokens';
 import React from 'react';
 
-const DEFAULT_TAG = 'button';
+const DEFAULT_TAG_BUTTON = 'button';
 
 /* -------------------------------------------------------------------------------------------------
  * Button
  * -----------------------------------------------------------------------------------------------*/
-const StyledButton = styled(DEFAULT_TAG, {
+const StyledButton = styled(DEFAULT_TAG_BUTTON, {
     alignItems: 'center',
     appearance: 'none',
     boxSizing: 'border-box',
@@ -134,7 +134,7 @@ const StyledButton = styled(DEFAULT_TAG, {
 type ButtonCSSProp = { css?: CSS };
 type ButtonVariants = Omit<VariantProps<typeof StyledButton>, 'size'>;
 type ButtonOwnProps = ButtonCSSProp & ButtonVariants & { size?: any };
-type ButtonComponent = Polymorphic.ForwardRefComponent<typeof DEFAULT_TAG, ButtonOwnProps>;
+type ButtonComponent = Polymorphic.ForwardRefComponent<typeof DEFAULT_TAG_BUTTON, ButtonOwnProps>;
 
 const Button = React.forwardRef((props, forwardedRef) => {
   return <StyledButton {...props} ref={forwardedRef} />;

@@ -77,6 +77,6 @@ describe('Given a default Input', () => {
     });
 
     it('should return a text when call toString of component', () => {
-        expect(Input.toString()).toBe('.c-gAwlVy')
+        expect(Input.toString()).toBe('.c-DHeqy')
     });
 });

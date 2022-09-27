@@ -115,6 +115,66 @@
                     }
                 }
             }
+        },
+        "input": {
+            "filled": {
+                "primary": {
+                    "normal": {
+                        "value": "{palette.light.primary.20}",
+                        "type": "color",
+                        "name": "background.input.filled.primary.normal"
+                    },
+                    "focused": {
+                        "value": "{palette.light.primary.30}",
+                        "type": "color",
+                        "name": "background.input.filled.primary.focused"
+                    },
+                    "disabled": {
+                        "value": "{palette.light.gray.20}",
+                        "type": "color",
+                        "name": "background.input.filled.primary.disabled"
+                    },
+                    "invalid": {
+                        "value": "{palette.light.danger.20}",
+                        "type": "color",
+                        "name": "background.input.filled.primary.invalid"
+                    },
+                    "invalid-focused": {
+                        "value": "{palette.light.danger.30}",
+                        "type": "color",
+                        "name": "background.input.filled.primary.invalid-focused"
+                    }
+                }
+            },
+            "outlined": {
+                "primary": {
+                    "normal": {
+                        "value": "{palette.light.primary.20}",
+                        "type": "color",
+                        "name": "background.input.outlined.primary.normal"
+                    },
+                    "focused": {
+                        "value": "{palette.light.primary.30}",
+                        "type": "color",
+                        "name": "background.input.outlined.primary.focused"
+                    },
+                    "disabled": {
+                        "value": "{palette.light.gray.20}",
+                        "type": "color",
+                        "name": "background.input.outlined.primary.disabled"
+                    },
+                    "invalid": {
+                        "value": "{palette.light.danger.20}",
+                        "type": "color",
+                        "name": "background.input.outlined.primary.invalid"
+                    },
+                    "invalid-focused": {
+                        "value": "{palette.light.danger.30}",
+                        "type": "color",
+                        "name": "background.input.outlined.primary.invalid-focused"
+                    }
+                }
+            }
         }
     },
     "border": {
@@ -130,27 +190,27 @@
             },
             "outlined": {
                 "primary": {
-                    "normal":{
+                    "normal": {
                         "value": "{palette.light.gray.200}",
                         "type": "color",
                         "name": "border.button.primary.outlined.primary.normal"
                     },
-                    "hover":{
+                    "hover": {
                         "value": "{palette.light.gray.200}",
                         "type": "color",
                         "name": "border.button.primary.outlined.primary.hover"
                     },
-                    "pressed":{
+                    "pressed": {
                         "value": "{palette.light.gray.300}",
                         "type": "color",
                         "name": "border.button.primary.outlined.primary.pressed"
                     },
-                    "focused":{
+                    "focused": {
                         "value": "{palette.light.primary.90}",
                         "type": "color",
                         "name": "border.button.primary.outlined.primary.focused"
                     },
-                    "disabled":{
+                    "disabled": {
                         "value": "{palette.light.gray.80}",
                         "type": "color",
                         "name": "border.button.primary.outlined.primary.disabled"
@@ -159,25 +219,63 @@
             }
         },
         "input": {
-            "normal": {
-                "value": "{palette.light.gray.100}",
-                "type": "color",
-                "name": "border.input.normal"
+            "filled": {
+                "primary": {
+                    "normal": {
+                        "value": "{palette.light.gray.100}",
+                        "type": "color",
+                        "name": "border.input.filled.primary.normal"
+                    },
+                    "focused": {
+                        "value": "{palette.light.primary.90}",
+                        "type": "color",
+                        "name": "border.input.filled.primary.focused"
+                    },
+                    "disabled": {
+                        "value": "{palette.light.gray.80}",
+                        "type": "color",
+                        "name": "border.input.filled.primary.disabled"
+                    },
+                    "invalid": {
+                        "value": "{palette.light.danger.100}",
+                        "type": "color",
+                        "name": "border.input.filled.primary.invalid"
+                    },
+                    "invalid-focused": {
+                        "value": "{palette.light.danger.200}",
+                        "type": "color",
+                        "name": "border.input.filled.primary.invalid-focused"
+                    }
+                }
             },
-            "focused": {
-                "value": "{palette.light.primary.90}",
-                "type": "color",
-                "name": "border.input.focused"
-            },
-            "disabled": {
-                "value": "{palette.light.gray.80}",
-                "type": "color",
-                "name": "border.input.disabled"
-            },
-            "error": {
-                "value": "{palette.light.danger.200}",
-                "type": "color",
-                "name": "border.input.error"
+            "outlined": {
+                "primary": {
+                    "normal": {
+                        "value": "{palette.light.gray.100}",
+                        "type": "color",
+                        "name": "border.input.outlined.primary.normal"
+                    },
+                    "focused": {
+                        "value": "{palette.light.primary.90}",
+                        "type": "color",
+                        "name": "border.input.outlined.primary.focused"
+                    },
+                    "disabled": {
+                        "value": "{palette.light.gray.80}",
+                        "type": "color",
+                        "name": "border.input.outlined.primary.disabled"
+                    },
+                    "invalid": {
+                        "value": "{palette.light.danger.100}",
+                        "type": "color",
+                        "name": "border.input.outlined.primary.invalid"
+                    },
+                    "invalid-focused": {
+                        "value": "{palette.light.danger.200}",
+                        "type": "color",
+                        "name": "border.input.outlined.primary.invalid-focused"
+                    }
+                }
             }
         }
     },
@@ -277,49 +375,70 @@
             }
         },
         "input": {
-            "label": {
-                "normal": {
-                    "value": "{palette.light.gray.200}",
-                    "type": "color",
-                    "name": "text.input.label.normal"
-                },
-                "focused": {
-                    "value": "{palette.light.primary.100}",
-                    "type": "color",
-                    "name": "text.input.label.focused"
-                },
-                "disabled": {
-                    "value": "{palette.light.gray.80}",
-                    "type": "color",
-                    "name": "text.input.label.disabled"
-                },
-                "error": {
-                    "value": "{palette.light.danger.200}",
-                    "type": "color",
-                    "name": "text.input.label.error"
+            "filled": {
+                "primary": {
+                    "label": {
+                        "normal": {
+                            "value": "{palette.light.gray.100}",
+                            "type": "color",
+                            "name": "border.input.filled.primary.label.normal"
+                        },
+                        "focused": {
+                            "value": "{palette.light.primary.90}",
+                            "type": "color",
+                            "name": "border.input.filled.primary.label.focused"
+                        },
+                        "disabled": {
+                            "value": "{palette.light.gray.80}",
+                            "type": "color",
+                            "name": "border.input.filled.primary.label.disabled"
+                        },
+                        "invalid": {
+                            "value": "{palette.light.danger.100}",
+                            "type": "color",
+                            "name": "border.input.filled.primary.label.invalid"
+                        },
+                        "invalid-focused": {
+                            "value": "{palette.light.danger.200}",
+                            "type": "color",
+                            "name": "border.input.filled.primary.label.invalid-focused"
+                        }
+                    },
+                    "placeholder": {
+                        "normal": {
+                            "value": "{palette.light.gray.70}",
+                            "type": "color",
+                            "name": "border.input.filled.primary.placeholder.normal"
+                        }
+                    },
+                    "input-value": {
+                        "normal": {
+                            "value": "{palette.light.gray.200}",
+                            "type": "color",
+                            "name": "border.input.filled.primary.input-value.normal"
+                        },
+                        "focused": {
+                            "value": "{palette.light.gray.300}",
+                            "type": "color",
+                            "name": "border.input.filled.primary.input-value.focused"
+                        },
+                        "disabled": {
+                            "value": "{palette.light.gray.80}",
+                            "type": "color",
+                            "name": "border.input.filled.primary.input-value.disabled"
+                        },
+                        "invalid": {
+                            "value": "{palette.light.danger.100}",
+                            "type": "color",
+                            "name": "border.input.filled.primary.input-value.invalid"
+                        },
+                        "invalid-focused": {
+                            "value": "{palette.light.danger.200}",
+                            "type": "color",
+                            "name": "border.input.filled.primary.input-value.invalid-focused"
+                        }
+                    }
                 }
-            },
-            "value": {
-                "normal": {
-                    "value": "{palette.light.gray.300}",
-                    "type": "color",
-                    "name": "text.input.value.normal"
-                },
-                "disabled": {
-                    "value": "{palette.light.gray.80}",
-                    "type": "color",
-                    "name": "text.input.value.disabled"
-                },
-                "error": {
-                    "value": "{palette.light.danger.200}",
-                    "type": "color",
-                    "name": "text.input.value.error"
-                }
-            },
-            "placeholder": {
-                "value": "{palette.light.gray.70}",
-                "type": "color",
-                "name": "text.input.placeholder"
             }
         }
     },
