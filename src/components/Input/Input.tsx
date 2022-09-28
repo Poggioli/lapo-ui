@@ -1,15 +1,16 @@
 import { CSS, styled, VariantProps } from '@lapoConfig';
 import type * as Polymorphic from '@radix-ui/react-polymorphic';
 import { body_1 } from '@tokens';
+import useId from '@utils/hooks/use-id';
 import React, { useState } from 'react';
 import Container from './Container';
 import Label from './Label';
 
-const DEFAULT_TAG_INPUT = 'input';
 
 /* -------------------------------------------------------------------------------------------------
- * Input
- * -----------------------------------------------------------------------------------------------*/
+* Input
+* -----------------------------------------------------------------------------------------------*/
+const DEFAULT_TAG_INPUT = 'input';
 const StyledInput = styled(DEFAULT_TAG_INPUT, {
   // reset
   appearance: 'none',
@@ -116,7 +117,7 @@ const Input = React.forwardRef((
   const [hasValue, setHasValue] = useState(!!value);
   //ToDo create a hook to generate Id's
   // const newId = id || useId();
-  const newId = id || 'any-id';
+  const newId = id || useId('input');
   const ownLabel = required ? '*'.concat(label) : label;
 
   const handleOnFocus = (event: React.FocusEvent<HTMLInputElement, Element>) => {
