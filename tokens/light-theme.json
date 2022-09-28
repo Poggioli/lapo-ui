@@ -175,6 +175,30 @@
                     }
                 }
             }
+        },
+        "checkbox": {
+            "primary": {
+                "normal": {
+                    "value": "{palette.generics.transparent}",
+                    "type": "color",
+                    "name": "background.checkbox.primary.normal"
+                },
+                "selected": {
+                    "value": "{palette.light.primary.200}",
+                    "type": "color",
+                    "name": "background.checkbox.primary.selected"
+                },
+                "disabled": {
+                    "value": "{palette.light.gray.80}",
+                    "type": "color",
+                    "name": "background.checkbox.primary.disabled"
+                },
+                "invalid": {
+                    "value": "{palette.light.danger.100}",
+                    "type": "color",
+                    "name": "background.checkbox.primary.invalid"
+                }
+            }
         }
     },
     "border": {
@@ -275,6 +299,30 @@
                         "type": "color",
                         "name": "border.input.outlined.primary.invalid-focused"
                     }
+                }
+            }
+        },
+        "checkbox": {
+            "primary": {
+                "normal": {
+                    "value": "{palette.light.gray.100}",
+                    "type": "color",
+                    "name": "border.checkbox.primary.normal"
+                },
+                "selected": {
+                    "value": "{palette.light.primary.200}",
+                    "type": "color",
+                    "name": "border.checkbox.primary.selected"
+                },
+                "disabled": {
+                    "value": "{palette.light.gray.80}",
+                    "type": "color",
+                    "name": "border.checkbox.primary.disabled"
+                },
+                "invalid": {
+                    "value": "{palette.light.danger.100}",
+                    "type": "color",
+                    "name": "border.checkbox.primary.invalid"
                 }
             }
         }
@@ -379,7 +427,7 @@
                 "primary": {
                     "label": {
                         "normal": {
-                            "value": "{palette.light.gray.100}",
+                            "value": "{palette.light.gray.300}",
                             "type": "color",
                             "name": "border.input.filled.primary.label.normal"
                         },
@@ -413,7 +461,7 @@
                     },
                     "input-value": {
                         "normal": {
-                            "value": "{palette.light.gray.200}",
+                            "value": "{palette.light.gray.300}",
                             "type": "color",
                             "name": "border.input.filled.primary.input-value.normal"
                         },
@@ -438,6 +486,30 @@
                             "name": "border.input.filled.primary.input-value.invalid-focused"
                         }
                     }
+                }
+            }
+        },
+        "checkbox": {
+            "primary": {
+                "normal": {
+                    "value": "{palette.light.gray.300}",
+                    "type": "color",
+                    "name": "text.checkbox.primary.normal"
+                },
+                "selected": {
+                    "value": "{palette.light.gray.300}",
+                    "type": "color",
+                    "name": "text.checkbox.primary.selected"
+                },
+                "disabled": {
+                    "value": "{palette.light.gray.80}",
+                    "type": "color",
+                    "name": "text.checkbox.primary.disabled"
+                },
+                "invalid": {
+                    "value": "{palette.light.danger.200}",
+                    "type": "color",
+                    "name": "text.checkbox.primary.invalid"
                 }
             }
         }
