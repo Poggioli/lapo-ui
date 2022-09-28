@@ -7,7 +7,7 @@ const generateBackgroundColorTokens = (scale: any, grayScale: any, errorScale: a
 
     const backgroundColors: any = {
         'background-checkbox-primary-normal': '$transparent',
-        'background-checkbox-primary-selected': genericScale[200],
+        'background-checkbox-primary-checked': genericScale[200],
         'background-checkbox-primary-disabled': genericGrayScale[80],
         'background-checkbox-primary-invalid': genericErrorScale[100],
     };
@@ -25,7 +25,7 @@ const generateBorderColorTokens = (scale: any, grayScale: any, errorScale: any):
 
     const borderColors: any = {
         'border-checkbox-primary-normal': genericGrayScale[100],
-        'border-checkbox-primary-selected': genericScale[200],
+        'border-checkbox-primary-checked': genericScale[200],
         'border-checkbox-primary-disabled': genericGrayScale[80],
         'border-checkbox-primary-invalid': genericErrorScale[100],
     };
@@ -41,7 +41,7 @@ const generateTextColorTokens = (grayScale: any, errorScale: any): any => {
 
     const textColors: any = {
         'text-checkbox-primary-normal': genericGrayScale[300],
-        'text-checkbox-primary-selected': genericGrayScale[300],
+        'text-checkbox-primary-checked': genericGrayScale[300],
         'text-checkbox-primary-disabled': genericGrayScale[80],
         'text-checkbox-primary-invalid': genericErrorScale[200],
     };
