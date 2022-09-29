@@ -134,7 +134,7 @@ const Checkbox = React.forwardRef((
         }
 
         return (
-            <Container>
+            <Container alignItems='center'>
                 <StyledCheckbox
                     {...props}
                     invalid={invalid}

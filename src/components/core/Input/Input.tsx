@@ -146,7 +146,9 @@ const Input = React.forwardRef((
       focused={isFocused}
       disabled={disabled}
       invalid={invalid}
-      variant={variant}>
+      variant={variant}
+      flexDirection='column'
+    >
       <Label 
         htmlFor={newId}
         filled={hasValue}

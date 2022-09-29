@@ -29,7 +29,7 @@ const Flex = React.forwardRef((
 
         const variants: FlexVariants = {
             flexDirection: flexDirection || 'row',
-            flexWrap: flexWrap || 'wrap',
+            flexWrap: flexWrap || 'nowrap',
             justifyContent: justifyContent || 'flex-start',
             alignItems: alignItems || 'flex-start',
             alignContent: alignContent || 'flex-start',

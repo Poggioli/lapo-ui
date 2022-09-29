@@ -1,21 +1,18 @@
 import { CSS, styled, VariantProps } from '@lapoConfig';
+import { Flex } from '@layout/Flex';
 import type * as Polymorphic from '@radix-ui/react-polymorphic';
 import React from 'react';
 
 /* -------------------------------------------------------------------------------------------------
  * Container
  * -----------------------------------------------------------------------------------------------*/
-const DEFAULT_CONTAINER_TAG = 'div';
-const StyledContainer = styled(DEFAULT_CONTAINER_TAG, {
+const StyledContainer = styled(Flex, {
     backgroundColor: '$$backgroundColorNormal',
     borderBottom: '$borderWidths$1 solid $$borderColorNormal',
     borderTopLeftRadius: '$1',
     borderTopRightRadius: '$1',
     boxSizing: 'border-box',
-    display: "flex",
-    flexDirection: 'column',
     height: "$9",
-    justifyContent: 'flex-start',
     padding: '$2 $4 $3 $3',
     position: 'relative',
     transition: `background-color 150ms linear,
@@ -97,7 +94,7 @@ const StyledContainer = styled(DEFAULT_CONTAINER_TAG, {
 type ContainerCSSProp = { css?: CSS };
 type ContainerVariants = VariantProps<typeof StyledContainer>;
 type ContainerOwnProps = ContainerCSSProp & ContainerVariants;
-type ContainerComponent = Polymorphic.ForwardRefComponent<typeof DEFAULT_CONTAINER_TAG, ContainerOwnProps>;
+type ContainerComponent = Polymorphic.ForwardRefComponent<typeof Flex, ContainerOwnProps>;
 
 const Container = React.forwardRef(({children, ...props}, forwardedRef) => {
   return <StyledContainer {...props} ref={forwardedRef}>{children}</StyledContainer>
