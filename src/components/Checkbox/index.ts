@@ -1,3 +1,4 @@
 import { checkboxTokens } from './tokens';
+import { Checkbox } from './Checkbox';
 
-export { checkboxTokens };
+export { Checkbox, checkboxTokens };

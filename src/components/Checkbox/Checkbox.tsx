@@ -99,7 +99,6 @@ const StyledIndicator = styled(CheckboxPrimitive.Indicator, {
 });
 
 type CheckboxCSSProp = { css?: CSS };
-// TODO: Remove omit fix when this is merged https://github.com/modulz/stitches/issues/421
 type CheckboxVariants = VariantProps<typeof StyledCheckbox>;
 type CheckboxOwnProps = Polymorphic.OwnProps<typeof CheckboxPrimitive.Root> &
   CheckboxCSSProp &
@@ -125,12 +124,12 @@ const Checkbox = React.forwardRef((
     }, forwardedRef) => {
 
         const newId = id || useId('checkbox');
-        const [checkedValue, setCheckedValue] = useState(checked)
+        const [checkedValue, setCheckedValue] = useState<CheckboxPrimitive.CheckedState>(checked)
 
-        const handleOnCheckedChange = (value: CheckboxPrimitive.CheckedState) => {
-            setCheckedValue(value)
+        const handleOnCheckedChange = (checkedState: CheckboxPrimitive.CheckedState) => {
+            setCheckedValue(checkedState)
             if(onCheckedChange) {
-                onCheckedChange(value)
+                onCheckedChange(checkedState)
             }
         }
 
@@ -144,6 +143,7 @@ const Checkbox = React.forwardRef((
                     id={newId}
                     checked={checkedValue}
                     onCheckedChange={handleOnCheckedChange}
+                    aria-label="checkbox"
                     ref={forwardedRef}
                 >
                     <StyledIndicator>

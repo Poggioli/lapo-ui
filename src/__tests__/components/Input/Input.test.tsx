@@ -2,7 +2,7 @@ import { render, RenderResult } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { axe } from 'jest-axe';
 import React, { ComponentProps } from "react";
-import { Input } from "../../../components/Input/Input";
+import { Input } from "../../../components/Input";
 
 describe('Given a default Input', () => {
     const label: string = "Test Input";

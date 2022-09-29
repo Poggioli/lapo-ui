@@ -1,12 +1,15 @@
-import { v4 as uuid } from 'uuid';
+
+const generateRandomId = () => {
+    return Math.random().toString(36).slice(2, 10);
+}
 
 const useId = (prefix: string = '') => {
     const newPrefix: string = prefix ? `${prefix}-` : '';
-    let id = `${newPrefix}${uuid().slice(0, 8)}`;
+    let id = '';
 
-    while(document.getElementById(id)) {
-        id = `${newPrefix}${uuid().slice(0, 8)}`;
-    }
+    do {
+        id = `${newPrefix}${generateRandomId()}`;
+    } while(document.getElementById(id))
 
     return id;
 };
