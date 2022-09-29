@@ -3,7 +3,8 @@ module.exports = {
         "<rootDir>/src"
     ],
     moduleNameMapper: {
-        "@components/(.*)": "<rootDir>/src/components/$1",
+        "@components/(.*)": "<rootDir>/src/components/core/$1",
+        "@layout/(.*)": "<rootDir>/src/components/layout/$1",
         "@utils/(.*)": "<rootDir>/src/utils/$1",
         "@tokens": "<rootDir>/src/tokens/index.ts",
         "@emotion/core": "<rootDir>/src/types/emotion.d.ts",
