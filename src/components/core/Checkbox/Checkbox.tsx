@@ -95,7 +95,6 @@ const StyledIndicator = styled(CheckboxPrimitive.Indicator, {
         width: '100%',
         height: '100%'
     }
-
 });
 
 type CheckboxCSSProp = { css?: CSS };
@@ -105,7 +104,7 @@ type CheckboxOwnProps = Polymorphic.OwnProps<typeof CheckboxPrimitive.Root> &
   CheckboxPrimitive.CheckboxProps &
   CheckboxVariants & { 
     label: string
-  };;
+  };
 
 type CheckboxComponent = Polymorphic.ForwardRefComponent<
     typeof DEFAULT_TAG_CHECKBOX, 

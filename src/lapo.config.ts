@@ -5,6 +5,7 @@ import { indigo, slate, tomato } from '@radix-ui/colors'
 import { buttonTokens } from '@components/Button'
 import { inputTokens } from '@components/Input';
 import { checkboxTokens } from '@components/Checkbox';
+import { radioTokens } from '@components/Radio';
 import WebFont from "webfontloader";
 
 import {
@@ -30,7 +31,8 @@ const lapo = createStitches({
             transparent: 'transparent',
             ...buttonTokens(indigo, slate),
             ...inputTokens(indigo, slate, tomato),
-            ...checkboxTokens(indigo, slate, tomato)
+            ...checkboxTokens(indigo, slate, tomato),
+            ...radioTokens(indigo, slate, tomato),
         },
         space: {
             ...spaceTokens()
