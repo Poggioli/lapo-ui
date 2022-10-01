@@ -7,6 +7,7 @@ import Container from './Container';
 import Label from './Label';
 import useId from '@utils/hooks/use-id';
 
+const DEFAULT_TAG_RADIO = 'button';
 export const RadioGroup = styled(RadioGroupPrimitive.Root, {
     display: 'block',
 });
@@ -17,7 +18,17 @@ const StyledIndicator = styled(RadioGroupPrimitive.Indicator, {
   height: '100%',
   justifyContent: 'center',
   width: '100%',
-  backgorundColor: '#000'
+  position: 'relative',
+  borderRadius: '$4',
+  backgroundColor: '$$backgroundColor',
+
+  "&[data-state='checked']": {
+    $$backgroundColor: '$colors-background-radio-indicator-primary-checked',
+
+    '&:disabled': {
+        $$backgroundColor: '$colors-background-radio-indicator-primary-disabled',
+    },
+}
 });
   
 const StyledRadio = styled(RadioGroupPrimitive.Item, {
@@ -29,7 +40,7 @@ const StyledRadio = styled(RadioGroupPrimitive.Item, {
     lineHeight: '1',
     margin: '0',
     outline: 'none',
-    padding: '0',
+    padding: '$2',
     textDecoration: 'none',
     userSelect: 'none',
     WebkitTapHighlightColor: 'rgba(0,0,0,0)',
@@ -45,6 +56,7 @@ const StyledRadio = styled(RadioGroupPrimitive.Item, {
     height: '$5',
     width: '$5',
     marginRight: '$4',
+    marginBottom: '$1',
     borderRadius: '$4',
     borderWidth: '$2',
     borderStyle: 'solid',
@@ -55,74 +67,46 @@ const StyledRadio = styled(RadioGroupPrimitive.Item, {
     $$borderColor: '$colors-border-radio-primary-normal',
     $$backgroundColor: '$colors-background-radio-primary-normal',
 
-    '&:disabled': {
-        $$borderColor: '$colors-border-radio-primary-disabled',
-        $$backgroundColor: '$colors-background-radio-primary-normal',
-    },
+    "&[data-state='checked']": {
+        $$borderColor: '$colors-border-radio-primary-checked',
+        $$backgroundColor: '$colors-background-radio-primary-checked',
 
-    variants: {
-        isChecked: {
-            true: {
-                $$borderColor: '$colors-border-radio-primary-checked',
-                $$backgroundColor: '$colors-background-radio-primary-checked',
-
-                '&:disabled': {
-                    $$backgroundColor: '$colors-background-radio-primary-disabled',
-                },
-            }
+        '&:disabled': {
+            $$backgroundColor: '$colors-background-radio-primary-disabled',
         },
-        invalid: {
-            true: {
-                $$borderColor: '$colors-border-radio-primary-invalid',
-                $$backgroundColor: '$colors-background-radio-primary-normal',
-            }
-        },
-    },
+    }
 
-    compoundVariants: [
-        {
-            isChecked: true,
-            invalid: true,
-            css: {
-                $$borderColor: '$colors-border-radio-primary-invalid',
-                $$backgroundColor: '$colors-background-radio-primary-invalid',
-            }
-        }
-    ]
 });
 
 type RadioCSSProp = { css?: CSS };
 type RadioVariants = VariantProps<typeof StyledRadio>;
 type RadioOwnProps = Polymorphic.OwnProps<typeof RadioGroupPrimitive.Item> &
   RadioCSSProp &
-  RadioVariants & { 
+  RadioGroupPrimitive.RadioGroupItemProps &
+  RadioVariants & {
     label: string
   };
 
-type RadioComponent = Polymorphic.ForwardRefComponent<
-    Polymorphic.IntrinsicElement<typeof RadioGroupPrimitive.Item>,
-    RadioOwnProps
->;
+type RadioComponent = Polymorphic.ForwardRefComponent<typeof DEFAULT_TAG_RADIO, RadioOwnProps>;
 
 export const Radio = React.forwardRef((
   {  
-    label, 
-    disabled, 
-    checked,
-    invalid,
+    label,
     id,
-    onCheckedChange,
+    checked,
+    disabled,
     ...props
   }, forwardedRef) => {
   
   const newId = id || useId('radio-item');
-  const [checkedValue, setCheckedValue] = useState<RadioGroupPrimitive.RadioGroupContextValue>(checked)
+  const [checkedValue, setCheckedValue] = useState<boolean>(checked)
 
   return (
     <Container alignItems='center'>
       <StyledRadio 
         {...props} 
         id={newId}
+        // checked={checkedValue}
         ref={forwardedRef}
       >
         <StyledIndicator />
@@ -130,8 +114,8 @@ export const Radio = React.forwardRef((
       <Label
         htmlFor={newId}
         // invalid={invalid}
-        // isChecked={!!checkedValue}
-        // disabled={disabled}
+        isChecked={checkedValue}
+        disabled={disabled}
       >
         {label}
       </Label>

@@ -7,9 +7,13 @@ const generateBackgroundColorTokens = (scale: any, grayScale: any, errorScale: a
 
     const backgroundColors: any = {
         'background-radio-primary-normal': '$transparent',
-        'background-radio-primary-checked': genericScale[200],
-        'background-radio-primary-disabled': genericGrayScale[80],
-        'background-radio-primary-invalid': genericErrorScale[100],
+        'background-radio-primary-checked': '$transparent',
+        'background-radio-primary-disabled': '$transparent',
+        'background-radio-primary-invalid': '$transparent',
+
+        'background-radio-indicator-primary-checked': genericScale[90],
+        'background-radio-indicator-primary-disabled': genericGrayScale[80],
+        'background-radio-indicator-primary-invalid': genericErrorScale[100],
     };
 
     return {
@@ -25,7 +29,7 @@ const generateBorderColorTokens = (scale: any, grayScale: any, errorScale: any):
 
     const borderColors: any = {
         'border-radio-primary-normal': genericGrayScale[100],
-        'border-radio-primary-checked': genericScale[200],
+        'border-radio-primary-checked': genericGrayScale[200],
         'border-radio-primary-disabled': genericGrayScale[80],
         'border-radio-primary-invalid': genericErrorScale[100],
     };
