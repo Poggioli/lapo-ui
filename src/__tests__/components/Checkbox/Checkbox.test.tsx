@@ -2,7 +2,7 @@ import { render, RenderResult } from "@testing-library/react";
 import userEvent from '@testing-library/user-event';
 import { axe } from "jest-axe";
 import React, { ComponentProps } from "react";
-import { Checkbox } from "../../../components/Checkbox";
+import { Checkbox } from "../../../components/core/Checkbox";
 
 describe('Given a default Checkbox', () => {
     const label: string = "Test Checkbox";

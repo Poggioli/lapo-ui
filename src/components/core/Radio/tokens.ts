@@ -29,7 +29,7 @@ const generateBorderColorTokens = (scale: any, grayScale: any, errorScale: any):
 
     const borderColors: any = {
         'border-radio-primary-normal': genericGrayScale[100],
-        'border-radio-primary-checked': genericGrayScale[200],
+        'border-radio-primary-checked': genericScale[90],
         'border-radio-primary-disabled': genericGrayScale[80],
         'border-radio-primary-invalid': genericErrorScale[100],
     };

@@ -150,6 +150,7 @@ export const Radio = React.forwardRef((
         id={newId}
         invalid={invalid}
         disabled={disabled}
+        aria-label={`Radio ${label}`}
         ref={forwardedRef}
       >
         <StyledIndicator invalid={invalid} />

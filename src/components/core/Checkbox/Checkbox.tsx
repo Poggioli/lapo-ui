@@ -142,7 +142,7 @@ const Checkbox = React.forwardRef((
                     id={newId}
                     checked={checkedValue}
                     onCheckedChange={handleOnCheckedChange}
-                    aria-label="checkbox"
+                    aria-label={`Checkbox ${label}`}
                     ref={forwardedRef}
                 >
                     <StyledIndicator>
