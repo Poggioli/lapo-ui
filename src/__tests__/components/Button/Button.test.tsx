@@ -1,7 +1,7 @@
 import { render, RenderResult } from '@testing-library/react';
 import { axe } from 'jest-axe';
 import React, { ComponentProps } from "react";
-import { Button } from "../../../components/Button";
+import { Button } from "../../../components/core/Button";
 
 describe('Given a default Button', () => {
     const label: string = 'Test Button';
