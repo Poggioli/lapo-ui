@@ -15,7 +15,7 @@ const StyledLabel = styled(DEFAULT_LABEL_TAG, {
     $$textColor: '$colors-text-radio-primary-normal',
 
     variants: {
-        isChecked: {
+        checked: {
             true: {
                 $$textColor: '$colors-text-radio-primary-checked',
 
@@ -35,7 +35,7 @@ const StyledLabel = styled(DEFAULT_LABEL_TAG, {
 
     compoundVariants: [
         {
-            isChecked: true,
+            checked: true,
             invalid: true,
             css: {
                 $$textColor: '$colors-text-radio-primary-invalid',

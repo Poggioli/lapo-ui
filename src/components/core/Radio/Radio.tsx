@@ -25,10 +25,26 @@ const StyledIndicator = styled(RadioGroupPrimitive.Indicator, {
   "&[data-state='checked']": {
     $$backgroundColor: '$colors-background-radio-indicator-primary-checked',
 
-    '&:disabled': {
+    "&[data-disabled]": {
         $$backgroundColor: '$colors-background-radio-indicator-primary-disabled',
     },
-}
+  },
+
+  variants: {
+    invalid: {
+      true: {
+        $$backgroundColor: '$colors-background-radio-indicator-primary-invalid',
+        
+        "&[data-state='checked']": {
+          $$backgroundColor: '$colors-background-radio-indicator-primary-invalid',
+  
+          "&[data-disabled]": {
+            $$backgroundColor: '$colors-background-radio-indicator-primary-disabled',
+          },
+        },
+      }
+    }
+  }
 });
   
 const StyledRadio = styled(RadioGroupPrimitive.Item, {
@@ -67,13 +83,38 @@ const StyledRadio = styled(RadioGroupPrimitive.Item, {
     $$borderColor: '$colors-border-radio-primary-normal',
     $$backgroundColor: '$colors-background-radio-primary-normal',
 
+    '&:disabled': {
+        $$backgroundColor: '$colors-background-radio-primary-disabled',
+        $$borderColor: '$colors-border-radio-primary-disabled',
+    },
+      
     "&[data-state='checked']": {
-        $$borderColor: '$colors-border-radio-primary-checked',
-        $$backgroundColor: '$colors-background-radio-primary-checked',
-
-        '&:disabled': {
-            $$backgroundColor: '$colors-background-radio-primary-disabled',
-        },
+      $$borderColor: '$colors-border-radio-primary-checked',
+      $$backgroundColor: '$colors-background-radio-primary-checked',
+        
+      '&:disabled': {
+          $$backgroundColor: '$colors-background-radio-primary-disabled',
+          $$borderColor: '$colors-border-radio-primary-disabled',
+      },
+    },
+      
+      variants: {
+        invalid: {
+          true: {
+            $$borderColor: '$colors-border-radio-primary-invalid',
+            $$backgroundColor: '$colors-background-radio-primary-invalid',
+            
+            "&[data-state='checked']": {
+              $$borderColor: '$colors-border-radio-primary-invalid',
+              $$backgroundColor: '$colors-background-radio-primary-invalid',
+              
+              '&:disabled': {
+                $$backgroundColor: '$colors-background-radio-primary-disabled',
+                $$borderColor: '$colors-border-radio-primary-disabled',
+            },
+          },
+        }
+      }
     }
 
 });
@@ -84,7 +125,8 @@ type RadioOwnProps = Polymorphic.OwnProps<typeof RadioGroupPrimitive.Item> &
   RadioCSSProp &
   RadioGroupPrimitive.RadioGroupItemProps &
   RadioVariants & {
-    label: string
+    label: string,
+    invalid?: boolean,
   };
 
 type RadioComponent = Polymorphic.ForwardRefComponent<typeof DEFAULT_TAG_RADIO, RadioOwnProps>;
@@ -95,26 +137,27 @@ export const Radio = React.forwardRef((
     id,
     checked,
     disabled,
+    invalid,
     ...props
   }, forwardedRef) => {
   
   const newId = id || useId('radio-item');
-  const [checkedValue, setCheckedValue] = useState<boolean>(checked)
 
   return (
     <Container alignItems='center'>
       <StyledRadio 
         {...props} 
         id={newId}
-        // checked={checkedValue}
+        invalid={invalid}
+        disabled={disabled}
         ref={forwardedRef}
       >
-        <StyledIndicator />
+        <StyledIndicator invalid={invalid} />
       </StyledRadio>
       <Label
         htmlFor={newId}
-        // invalid={invalid}
-        isChecked={checkedValue}
+        invalid={invalid}
+        checked={checked}
         disabled={disabled}
       >
         {label}

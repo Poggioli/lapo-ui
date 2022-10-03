@@ -2,29 +2,45 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React, { useState } from 'react';
 import { Radio, RadioGroup } from './Radio';
 
-export default {
-  title: 'Componentes/core/Radio',
-  component: Radio,
-  argTypes: {},
-} as ComponentMeta<typeof Radio>;
+interface RadioOptions {
+  label: string,
+  value: string,
+  checked?: boolean,
+  disabled?: boolean,
+  invalid?: boolean
+}
 
-const radioOptions = [
+const radioOptions: RadioOptions[] = [
   {
     label: 'Radio 1',
     value: 'radio-1',
-    checked: false
   },
   {
     label: 'Radio 2',
     value: 'radio-2',
-    checked: false
   },
   {
     label: 'Radio 3',
     value: 'radio-4',
-    checked: false
   }
-]
+];
+
+export default {
+  title: 'Componentes/core/Radio',
+  component: Radio,
+  argTypes: {
+    disabled: {
+      control: 'boolean',
+      defaultValue: false,
+      description: 'Esta variável define se o radio está habilitado ou não'
+    },
+    invalid: {
+      control: 'boolean',
+      defaultValue: false,
+      description: 'Esta variável define se o radio está inválido ou não'
+    },
+  },
+} as ComponentMeta<typeof Radio>;
 
 const Template: ComponentStory<typeof Radio> = (args) => {
 
@@ -40,7 +56,7 @@ const Template: ComponentStory<typeof Radio> = (args) => {
   return (
     <RadioGroup onValueChange={handleOnValueChange}>
         {options.map(option => (
-          <Radio key={option.value} {...option} />
+          <Radio key={option.value} {...option} {...args} />
         ))}
     </RadioGroup>
   )
