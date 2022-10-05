@@ -1,6 +1,18 @@
 {
-    "border-width-base": { "value": "4", "type": "borderWidth", "name": "border-width.base" },
-    "border-width-1": { "value": "{border-width-base} * 0.25", "type": "borderWidth", "name": "border-width.1" },
-    "border-width-2": { "value": "{border-width-base} * 0.5", "type": "borderWidth", "name": "border-width.2" },
-    "border-width-3": { "value": "{border-width-base} * 1", "type": "borderWidth", "name": "border-width.3" }
+  "border-width-base": { "value": "4", "type": "borderWidth", "name": "border-width.base" },
+  "border-width-1": {
+    "value": "{border-width-base} * 0.25",
+    "type": "borderWidth",
+    "name": "border-width.1"
+  },
+  "border-width-2": {
+    "value": "{border-width-base} * 0.5",
+    "type": "borderWidth",
+    "name": "border-width.2"
+  },
+  "border-width-3": {
+    "value": "{border-width-base} * 1",
+    "type": "borderWidth",
+    "name": "border-width.3"
+  }
 }

@@ -6,32 +6,32 @@ export default {
   title: 'Componentes/layout/Box',
   component: Box,
   argTypes: {
-    color: { 
-        control: { 
-            type: 'color', 
-            presetColors: ['red', 'green']
-        }
+    color: {
+      control: {
+        type: 'color',
+        presetColors: ['red', 'green']
+      }
     },
     ref: {
       table: {
-        disable: true,
-      },
+        disable: true
+      }
     },
     css: {
       table: {
-        disable: true,
-      },
+        disable: true
+      }
     },
     as: {
       table: {
-        disable: true,
-      },
-    },
-  },
+        disable: true
+      }
+    }
+  }
 } as ComponentMeta<typeof Box>;
 
-const Template: ComponentStory<typeof Box> = ({color, ...args}) => (
-  <Box {...args} css={{ backgroundColor: color, height: 100, width: 100 }}/>
+const Template: ComponentStory<typeof Box> = ({ color, ...args }) => (
+  <Box {...args} css={{ backgroundColor: color, height: 100, width: 100 }} />
 );
 
 export const Default = Template.bind({});

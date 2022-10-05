@@ -4,8 +4,8 @@ import { body_1 } from '@tokens';
 import React from 'react';
 
 /* -------------------------------------------------------------------------------------------------
-* Label
-* -----------------------------------------------------------------------------------------------*/
+ * Label
+ * -----------------------------------------------------------------------------------------------*/
 const DEFAULT_LABEL_TAG = 'label';
 const StyledLabel = styled(DEFAULT_LABEL_TAG, {
   ...body_1,
@@ -30,18 +30,18 @@ const StyledLabel = styled(DEFAULT_LABEL_TAG, {
         $$textColorLabelDisabled: '$colors-text-input-outlined-primary-label-disabled',
         $$textColorLabelInvalid: '$colors-text-input-outlined-primary-label-invalid',
         $$textColorLabelInvalidFocused: '$colors-text-input-outlined-primary-label-invalid-focused'
-      },
+      }
     },
 
-    focused: { 
+    focused: {
       true: {
         color: '$$textColorLabelFocused',
         fontSize: '$1',
         lineHeight: '$1',
-        marginTop: '0',
+        marginTop: '0'
       }
     },
-    invalid: { 
+    invalid: {
       true: {
         color: '$$textColorLabelInvalid'
       }
@@ -50,14 +50,14 @@ const StyledLabel = styled(DEFAULT_LABEL_TAG, {
       true: {
         fontSize: '$1',
         lineHeight: '$1',
-        marginTop: '0',
+        marginTop: '0'
       }
     },
     disabled: {
       true: {
         color: '$$textColorLabelDisabled !important'
       }
-    },
+    }
   },
 
   compoundVariants: [
@@ -65,7 +65,7 @@ const StyledLabel = styled(DEFAULT_LABEL_TAG, {
       focused: true,
       invalid: true,
       css: {
-        color: '$$textColorLabelInvalidFocused',
+        color: '$$textColorLabelInvalidFocused'
       }
     }
   ],
@@ -81,7 +81,11 @@ type LabelOwnProps = LabelCSSProp & LabelVariants;
 type LabelComponent = Polymorphic.ForwardRefComponent<typeof DEFAULT_LABEL_TAG, LabelOwnProps>;
 
 const Label = React.forwardRef(({ children, ...props }, forwardedRef) => {
-  return <StyledLabel {...props} ref={forwardedRef}>{children}</StyledLabel>;
+  return (
+    <StyledLabel {...props} ref={forwardedRef}>
+      {children}
+    </StyledLabel>
+  );
 }) as LabelComponent;
 /* -----------------------------------------------------------------------------------------------*/
 

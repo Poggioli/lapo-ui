@@ -1,59 +1,57 @@
-import { GenericScale, specificScaleToGenericScale } from "@utils/generic-scale"
+import { GenericScale, specificScaleToGenericScale } from '@utils/generic-scale';
 
 const generateBackgroundColorTokens = (scale: any, grayScale: any, errorScale: any): any => {
-    const genericScale: GenericScale = specificScaleToGenericScale(scale);
-    const genericErrorScale: GenericScale = specificScaleToGenericScale(errorScale);
-    const genericGrayScale: GenericScale = specificScaleToGenericScale(grayScale);
+  const genericScale: GenericScale = specificScaleToGenericScale(scale);
+  const genericErrorScale: GenericScale = specificScaleToGenericScale(errorScale);
+  const genericGrayScale: GenericScale = specificScaleToGenericScale(grayScale);
 
-    const backgroundColors: any = {
-        'background-checkbox-primary-normal': '$transparent',
-        'background-checkbox-primary-checked': genericScale[200],
-        'background-checkbox-primary-disabled': genericGrayScale[80],
-        'background-checkbox-primary-invalid': genericErrorScale[100],
-    };
+  const backgroundColors: any = {
+    'background-checkbox-primary-normal': '$transparent',
+    'background-checkbox-primary-checked': genericScale[200],
+    'background-checkbox-primary-disabled': genericGrayScale[80],
+    'background-checkbox-primary-invalid': genericErrorScale[100]
+  };
 
-    return {
-        ...backgroundColors
-    }
-
-}
+  return {
+    ...backgroundColors
+  };
+};
 
 const generateBorderColorTokens = (scale: any, grayScale: any, errorScale: any): any => {
-    const genericScale: GenericScale = specificScaleToGenericScale(scale);
-    const genericErrorScale: GenericScale = specificScaleToGenericScale(errorScale);
-    const genericGrayScale: GenericScale = specificScaleToGenericScale(grayScale);
+  const genericScale: GenericScale = specificScaleToGenericScale(scale);
+  const genericErrorScale: GenericScale = specificScaleToGenericScale(errorScale);
+  const genericGrayScale: GenericScale = specificScaleToGenericScale(grayScale);
 
-    const borderColors: any = {
-        'border-checkbox-primary-normal': genericGrayScale[100],
-        'border-checkbox-primary-checked': genericScale[200],
-        'border-checkbox-primary-disabled': genericGrayScale[80],
-        'border-checkbox-primary-invalid': genericErrorScale[100],
-    };
+  const borderColors: any = {
+    'border-checkbox-primary-normal': genericGrayScale[100],
+    'border-checkbox-primary-checked': genericScale[200],
+    'border-checkbox-primary-disabled': genericGrayScale[80],
+    'border-checkbox-primary-invalid': genericErrorScale[100]
+  };
 
-    return {
-        ...borderColors
-    }
+  return {
+    ...borderColors
+  };
 };
 
 const generateTextColorTokens = (grayScale: any, errorScale: any): any => {
-    const genericGrayScale: GenericScale = specificScaleToGenericScale(grayScale);
-    const genericErrorScale: GenericScale = specificScaleToGenericScale(errorScale);
+  const genericGrayScale: GenericScale = specificScaleToGenericScale(grayScale);
+  const genericErrorScale: GenericScale = specificScaleToGenericScale(errorScale);
 
-    const textColors: any = {
-        'text-checkbox-primary-normal': genericGrayScale[300],
-        'text-checkbox-primary-checked': genericGrayScale[300],
-        'text-checkbox-primary-disabled': genericGrayScale[80],
-        'text-checkbox-primary-invalid': genericErrorScale[200],
-    };
+  const textColors: any = {
+    'text-checkbox-primary-normal': genericGrayScale[300],
+    'text-checkbox-primary-checked': genericGrayScale[300],
+    'text-checkbox-primary-disabled': genericGrayScale[80],
+    'text-checkbox-primary-invalid': genericErrorScale[200]
+  };
 
-    return {
-        ...textColors
-    }
-
-}
+  return {
+    ...textColors
+  };
+};
 
 export const checkboxTokens = (scale: any, grayScale: any, errorScale: any): any => ({
-    ...generateBackgroundColorTokens(scale, grayScale, errorScale),
-    ...generateBorderColorTokens(scale, grayScale, errorScale),
-    ...generateTextColorTokens(grayScale, errorScale)
+  ...generateBackgroundColorTokens(scale, grayScale, errorScale),
+  ...generateBorderColorTokens(scale, grayScale, errorScale),
+  ...generateTextColorTokens(grayScale, errorScale)
 });

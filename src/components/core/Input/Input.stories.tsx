@@ -35,18 +35,17 @@ export default {
     placeholder: {
       control: 'text',
       defaultValue: '',
-      description: 'Esta variável define o placeholder que irá aparecer quando o campo for focado e estiver vazio'
+      description:
+        'Esta variável define o placeholder que irá aparecer quando o campo for focado e estiver vazio'
     },
     as: {
       table: {
-        disable: true,
-      },
-    },
-  },
+        disable: true
+      }
+    }
+  }
 } as ComponentMeta<typeof Input>;
 
-const Template: ComponentStory<typeof Input> = (args) => (
-  <Input {...args} />
-);
+const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
 
 export const Default = Template.bind({});
