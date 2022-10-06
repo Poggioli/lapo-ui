@@ -29,6 +29,9 @@ const StyledButton = styled(DEFAULT_TAG_BUTTON, {
     boxSizing: 'border-box'
   },
   borderRadius: '$4',
+  transition: `color 150ms linear,
+    border-color 150ms linear,
+    background-color 150ms linear`,
 
   ...body_1,
   backgroundColor: '$$backgroundColorNormal',
@@ -47,7 +50,7 @@ const StyledButton = styled(DEFAULT_TAG_BUTTON, {
     color: '$$textColorPressed'
   },
 
-  '&:focused': {
+  '&:focus': {
     backgroundColor: '$$backgroundColorFocused',
     border: '$$borderStylesFocused',
     color: '$$textColorFocused'
@@ -65,7 +68,7 @@ const StyledButton = styled(DEFAULT_TAG_BUTTON, {
       filled: {
         $$backgroundColorNormal: '$colors-background-button-filled-primary-normal',
         $$backgroundColorHover: '$colors-background-button-filled-primary-hover',
-        $$backgroundColorPressed: '$colors-background-button-filled-primary-pressed',
+        $$backgroundColorPressed: '$colors-background-button-filled-primary-active',
         $$backgroundColorFocused: '$colors-background-button-filled-primary-focused',
         $$backgroundColorDisabled: '$colors-background-button-filled-primary-disabled',
 
@@ -77,7 +80,7 @@ const StyledButton = styled(DEFAULT_TAG_BUTTON, {
 
         $$textColorNormal: '$colors-text-button-filled-primary-normal',
         $$textColorHover: '$colors-text-button-filled-primary-hover',
-        $$textColorPressed: '$colors-text-button-filled-primary-pressed',
+        $$textColorPressed: '$colors-text-button-filled-primary-active',
         $$textColorFocused: '$colors-text-button-filled-primary-focused',
         $$textColorDisabled: '$colors-text-button-filled-primary-disabled'
       },
@@ -85,14 +88,14 @@ const StyledButton = styled(DEFAULT_TAG_BUTTON, {
       outlined: {
         $$backgroundColorNormal: '$colors-background-button-outlined-primary-normal',
         $$backgroundColorHover: '$colors-background-button-outlined-primary-hover',
-        $$backgroundColorPressed: '$colors-background-button-outlined-primary-pressed',
+        $$backgroundColorPressed: '$colors-background-button-outlined-primary-active',
         $$backgroundColorFocused: '$colors-background-button-outlined-primary-focused',
         $$backgroundColorDisabled: '$colors-background-button-outlined-primary-disabled',
 
         $$borderStylesNormal: '$borderWidths-1 solid $colors-border-button-outlined-primary-normal',
         $$borderStylesHover: '$borderWidths-1 solid $colors-border-button-outlined-primary-hover',
         $$borderStylesPressed:
-          '$borderWidths-1 solid $colors-border-button-outlined-primary-pressed',
+          '$borderWidths-1 solid $colors-border-button-outlined-primary-active',
         $$borderStylesFocused:
           '$borderWidths-1 solid $colors-border-button-outlined-primary-focused',
         $$borderStylesDisabled:
@@ -100,7 +103,7 @@ const StyledButton = styled(DEFAULT_TAG_BUTTON, {
 
         $$textColorNormal: '$colors-text-button-outlined-primary-normal',
         $$textColorHover: '$colors-text-button-outlined-primary-hover',
-        $$textColorPressed: '$colors-text-button-outlined-primary-pressed',
+        $$textColorPressed: '$colors-text-button-outlined-primary-active',
         $$textColorFocused: '$colors-text-button-outlined-primary-focused',
         $$textColorDisabled: '$colors-text-button-outlined-primary-disabled',
 
@@ -110,7 +113,7 @@ const StyledButton = styled(DEFAULT_TAG_BUTTON, {
       text: {
         $$backgroundColorNormal: '$colors-background-button-text-primary-normal',
         $$backgroundColorHover: '$colors-background-button-text-primary-hover',
-        $$backgroundColorPressed: '$colors-background-button-text-primary-pressed',
+        $$backgroundColorPressed: '$colors-background-button-text-primary-active',
         $$backgroundColorFocused: '$colors-background-button-text-primary-focused',
         $$backgroundColorDisabled: '$colors-background-button-text-primary-disabled',
 
@@ -122,7 +125,7 @@ const StyledButton = styled(DEFAULT_TAG_BUTTON, {
 
         $$textColorNormal: '$colors-text-button-text-primary-normal',
         $$textColorHover: '$colors-text-button-text-primary-hover',
-        $$textColorPressed: '$colors-text-button-text-primary-pressed',
+        $$textColorPressed: '$colors-text-button-text-primary-active',
         $$textColorFocused: '$colors-text-button-text-primary-focused',
         $$textColorDisabled: '$colors-text-button-text-primary-disabled'
       }
