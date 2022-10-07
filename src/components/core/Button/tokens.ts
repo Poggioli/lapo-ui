@@ -40,7 +40,11 @@ const generateBorderColorTokens = (scale: any, grayScale: any): any => {
   const genericGrayScale: GenericScale = specificScaleToGenericScale(grayScale);
 
   const filledButtonBorderColor: any = {
-    'border-button-filled-primary-focused': genericScale[90]
+    'border-button-filled-primary-normal': genericScale[90],
+    'border-button-filled-primary-hover': genericScale[100],
+    'border-button-filled-primary-active': genericScale[200],
+    'border-button-filled-primary-focused': genericScale[200],
+    'border-button-filled-primary-disabled': genericGrayScale[60]
   };
 
   const outlinedButtonBorderColor: any = {

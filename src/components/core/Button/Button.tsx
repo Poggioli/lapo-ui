@@ -72,17 +72,20 @@ const StyledButton = styled(DEFAULT_TAG_BUTTON, {
         $$backgroundColorFocused: '$colors-background-button-filled-primary-focused',
         $$backgroundColorDisabled: '$colors-background-button-filled-primary-disabled',
 
-        $$borderStylesNormal: 'none',
-        $$borderStylesHover: 'none',
-        $$borderStylesPressed: 'none',
+        $$borderStylesNormal: '$borderWidths-1 solid $colors-border-button-filled-primary-normal',
+        $$borderStylesHover: '$borderWidths-1 solid $colors-border-button-filled-primary-hover',
+        $$borderStylesPressed: '$borderWidths-1 solid $colors-border-button-filled-primary-active',
         $$borderStylesFocused: '$borderWidths-1 solid $colors-border-button-filled-primary-focused',
-        $$borderStylesDisabled: 'none',
+        $$borderStylesDisabled:
+          '$borderWidths-1 solid $colors-border-button-filled-primary-disabled',
 
         $$textColorNormal: '$colors-text-button-filled-primary-normal',
         $$textColorHover: '$colors-text-button-filled-primary-hover',
         $$textColorPressed: '$colors-text-button-filled-primary-active',
         $$textColorFocused: '$colors-text-button-filled-primary-focused',
-        $$textColorDisabled: '$colors-text-button-filled-primary-disabled'
+        $$textColorDisabled: '$colors-text-button-filled-primary-disabled',
+
+        padding: 'calc($3 - 1px) calc($8 - 1px)'
       },
 
       outlined: {
