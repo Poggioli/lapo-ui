@@ -19,7 +19,7 @@ describe('Given a document', () => {
 
     Object.defineProperty(global.document, 'getElementById', { value: getElementByIdFn });
 
-    const id: string = useId('prefix');
+    useId('prefix');
 
     expect(getElementByIdFn).toHaveBeenCalledTimes(2);
   });
