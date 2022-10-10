@@ -1,3 +1,4 @@
+import { Text } from '@components/Text';
 import { CSS, styled, VariantProps } from '@lapoConfig';
 import type * as Polymorphic from '@radix-ui/react-polymorphic';
 import { body_1 } from '@tokens';
@@ -6,9 +7,7 @@ import React from 'react';
 /* -------------------------------------------------------------------------------------------------
  * Label
  * -----------------------------------------------------------------------------------------------*/
-const DEFAULT_LABEL_TAG = 'label';
-const StyledLabel = styled(DEFAULT_LABEL_TAG, {
-  ...body_1,
+const StyledLabel = styled(Text, {
   color: '$$textColor',
   transition: 'color 150ms linear',
 
@@ -46,7 +45,7 @@ const StyledLabel = styled(DEFAULT_LABEL_TAG, {
 type LabelCSSProp = { css?: CSS };
 type LabelVariants = VariantProps<typeof StyledLabel>;
 type LabelOwnProps = LabelCSSProp & LabelVariants;
-type LabelComponent = Polymorphic.ForwardRefComponent<typeof DEFAULT_LABEL_TAG, LabelOwnProps>;
+type LabelComponent = Polymorphic.ForwardRefComponent<typeof Text, LabelOwnProps>;
 
 const Label = React.forwardRef(({ children, ...props }, forwardedRef) => {
   return (

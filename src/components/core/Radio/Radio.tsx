@@ -146,7 +146,7 @@ export const Radio = React.forwardRef(
         >
           <StyledIndicator invalid={invalid} />
         </StyledRadio>
-        <Label htmlFor={newId} invalid={invalid} checked={checked} disabled={disabled}>
+        <Label htmlFor={newId} as="label" invalid={invalid} checked={checked} disabled={disabled}>
           {label}
         </Label>
       </Container>
