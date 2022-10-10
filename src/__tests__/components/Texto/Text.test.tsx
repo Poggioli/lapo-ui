@@ -13,7 +13,7 @@ describe('Given a default Text', () => {
 
   afterEach(async () => {
     expect(await axe(rendered.container)).toHaveNoViolations();
-  })
+  });
 
   it('should have no a11y violations for heading 1', async () => {
     renderComponent({ variant: 'heading1' });

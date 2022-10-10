@@ -19,7 +19,7 @@ export default {
         'body1',
         'body2',
         'auxiliary',
-        'caption',
+        'caption'
       ],
       control: { type: 'select' },
       defaultValue: 'heading1',

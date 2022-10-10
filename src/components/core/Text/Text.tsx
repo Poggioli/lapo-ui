@@ -13,7 +13,7 @@ import {
   body_2,
   auxiliary,
   caption
- } from '@tokens';
+} from '@tokens';
 import React from 'react';
 
 /* -------------------------------------------------------------------------------------------------
@@ -21,7 +21,6 @@ import React from 'react';
  * -----------------------------------------------------------------------------------------------*/
 const DEFAULT_SPAN_TAG = 'span';
 const StyledText = styled(DEFAULT_SPAN_TAG, {
-
   fontVariantNumeric: 'tabular-nums',
   display: 'block',
 
@@ -62,7 +61,7 @@ const StyledText = styled(DEFAULT_SPAN_TAG, {
       },
       caption: {
         ...caption
-      },
+      }
     }
   },
 
