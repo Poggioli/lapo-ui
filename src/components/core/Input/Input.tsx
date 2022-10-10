@@ -119,8 +119,6 @@ const Input = React.forwardRef(
   ) => {
     const [isFocused, setIsFocused] = useState(false);
     const [hasValue, setHasValue] = useState(!!value);
-    //ToDo create a hook to generate Id's
-    // const newId = id || useId();
     const newId = id || useId('input');
     const ownLabel = required ? '*'.concat(label) : label;
 
@@ -155,6 +153,7 @@ const Input = React.forwardRef(
       >
         <Label
           htmlFor={newId}
+          as="label"
           filled={hasValue}
           focused={isFocused}
           disabled={disabled}
