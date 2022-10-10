@@ -17,14 +17,11 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["./src/components/core/*"],
-      "@layout/*": ["./src/components/layout/*"],
-      "@utils/*": ["./src/utils/*"],
+      "@lapo": ["./src/core/lapo.config.ts"],
       "@tokens": ["./src/tokens/index.ts"],
-      "@emotion/core": ["./src/types/emotion.d.ts"],
-      "@lapoConfig": ["./src/lapo.config.ts"]
+      "@emotion/core": ["./src/types/emotion.d.ts"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "src/__tests__"],
   "exclude": ["**/__tests__/**/*"]
 }

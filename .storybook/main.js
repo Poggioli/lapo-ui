@@ -13,7 +13,7 @@ module.exports = {
     config.resolve.alias['@layout'] = path.resolve(__dirname, '../src/components/layout');
     config.resolve.alias['@utils'] = path.resolve(__dirname, '../src/utils');
     config.resolve.alias['@tokens'] = path.resolve(__dirname, '../src/tokens/index.ts');
-    config.resolve.alias['@lapoConfig'] = path.resolve(__dirname, '../src/lapo.config.ts');
+    config.resolve.alias['@lapo'] = path.resolve(__dirname, '../src/core/lapo.config.ts');
     return config;
   },
   framework: '@storybook/react',
