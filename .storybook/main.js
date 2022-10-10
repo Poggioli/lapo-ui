@@ -12,6 +12,7 @@ module.exports = {
   webpackFinal: async (config) => {
     config.resolve.alias['@lapo'] = path.resolve(__dirname, '../src/core/lapo.config.ts');
     config.resolve.alias['@layout'] = path.resolve(__dirname, '../src/layout');
+    config.resolve.alias['@components'] = path.resolve(__dirname, '../src/components');
     config.resolve.alias['@tokens'] = path.resolve(__dirname, '../src/tokens/index.ts');
     config.resolve.alias['@utils'] = path.resolve(__dirname, '../src/utils');
     return config;

@@ -19,6 +19,7 @@
     "paths": {
       "@lapo": ["./src/core/lapo.config.ts"],
       "@layout/*": ["./src/layout/*"],
+      "@components/*": ["./src/components/*"],
       "@tokens": ["./src/tokens/index.ts"],
       "@utils/*": ["./src/utils/*"],
       "@emotion/core": ["./src/types/emotion.d.ts"]
