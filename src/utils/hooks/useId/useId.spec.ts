@@ -1,7 +1,6 @@
 import useId from './useId';
 
 describe('Given a document', () => {
-
   it('should return a id without prefix', () => {
     const id: string = useId();
     expect(id).not.toContain('-');
@@ -13,7 +12,8 @@ describe('Given a document', () => {
   });
 
   it('should generate new id when id already exists in document', () => {
-    const getElementByIdFn = jest.fn()
+    const getElementByIdFn = jest
+      .fn()
       .mockImplementationOnce(() => true)
       .mockImplementationOnce(() => false);
 
@@ -23,5 +23,4 @@ describe('Given a document', () => {
 
     expect(getElementByIdFn).toHaveBeenCalledTimes(2);
   });
-
 });
