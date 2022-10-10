@@ -12,6 +12,11 @@ export default {
       defaultValue: 'filled',
       description: 'Esta variável define qual será o tipo do botão'
     },
+    ripple: {
+      control: 'boolean',
+      defaultValue: false,
+      description: 'Esta variável define se o botão terá o efeito ripple ou não'
+    },
     disabled: {
       control: 'boolean',
       defaultValue: false,

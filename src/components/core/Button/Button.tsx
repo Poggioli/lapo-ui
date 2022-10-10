@@ -1,4 +1,5 @@
 import { CSS, styled, VariantProps } from '@lapoConfig';
+import { Ripple } from '@layout/Ripple';
 import type * as Polymorphic from '@radix-ui/react-polymorphic';
 import { body_1 } from '@tokens';
 import useId from '@utils/hooks/use-id';
@@ -148,7 +149,11 @@ type ButtonComponent = Polymorphic.ForwardRefComponent<typeof DEFAULT_TAG_BUTTON
 const Button = React.forwardRef(({ id, ...props }, forwardedRef) => {
   const newId = id || useId('button');
 
-  return <StyledButton {...props} id={newId} ref={forwardedRef} />;
+  return (
+    <Ripple>
+      <StyledButton {...props} id={newId} ref={forwardedRef} />
+    </Ripple>
+  );
 }) as ButtonComponent;
 
 Button.toString = () => `.${StyledButton.className}`;
