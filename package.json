@@ -11,7 +11,8 @@
     "build-storybook": "build-storybook",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}'"
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}'",
+    "generate": "plop && yarn format"
   },
   "dependencies": {
     "@radix-ui/colors": "^0.1.8",
@@ -53,6 +54,7 @@
     "jest": "^29.0.3",
     "jest-axe": "^6.0.0",
     "jest-environment-jsdom": "^29.0.3",
+    "plop": "^3.1.1",
     "prettier": "^2.7.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

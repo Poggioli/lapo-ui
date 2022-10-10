@@ -1,0 +1,27 @@
+import { ComponentCSSProp, LapoVariants, styled } from '@lapo';
+import type * as Polymorphic from '@radix-ui/react-polymorphic';
+import useId from '@utils/hooks/useId';
+import React from 'react';
+
+/* -------------------------------------------------------------------------------------------------
+* {{pascalCase name}}
+* -----------------------------------------------------------------------------------------------*/
+const DEFAULT_TAG = 'span';
+export const Styled{{pascalCase name}} = styled(DEFAULT_TAG, {});
+
+type {{pascalCase name}}CSSProp = ComponentCSSProp;
+type {{pascalCase name}}Variants = LapoVariants<typeof Styled{{pascalCase name}}>;
+  type {{pascalCase name}}Props = {{pascalCase name}}CSSProp & {{pascalCase name}}Variants;
+
+  type {{pascalCase name}}Component = Polymorphic.ForwardRefComponent<typeof DEFAULT_TAG, {{pascalCase name}}Props>;
+
+    const {{pascalCase name}} = React.forwardRef(({ id, ...props }, forwardedRef) => {
+    const customId: string = id || useId('{{pascalCase name}}');
+
+    return (
+    <Styled{{pascalCase name}} {...props} id={customId} ref={forwardedRef} />);
+    }) as {{pascalCase name}}Component;
+
+    export { {{pascalCase name}} };
+
+    /* -----------------------------------------------------------------------------------------------*/
