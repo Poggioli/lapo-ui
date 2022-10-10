@@ -1,4 +1,4 @@
-import { GenericScale, specificScaleToGenericScale } from '@utils/generic-scale';
+import { GenericScale, specificScaleToGenericScale } from './genericScale';
 
 describe('Generic scale', () => {
   it("should throw an error when scale don't have 12 items", () => {
