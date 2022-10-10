@@ -9,7 +9,8 @@ export default {
     color: {
       control: {
         type: 'color',
-        presetColors: ['red', 'green']
+        presetColors: ['red', 'green'],
+        defaultValue: 'red'
       }
     },
     ref: {

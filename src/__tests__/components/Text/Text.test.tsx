@@ -62,4 +62,8 @@ describe('Given a default Text', () => {
   it('should have no a11y violations for caption', async () => {
     renderComponent({ variant: 'caption' });
   });
+
+  it('should return a text when call toString of component', () => {
+    expect(Text.toString()).toBe('.c-jNLug');
+  });
 });

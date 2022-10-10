@@ -17,6 +17,6 @@ describe('Given a default Button', () => {
   });
 
   it('should return a text when call toString of component', () => {
-    expect(Button.toString()).toBe('.c-gibZfL');
+    expect(Button.toString()).toBe('.c-kfWHpn');
   });
 });

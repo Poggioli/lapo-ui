@@ -1,7 +1,8 @@
-import { createStitches, styled } from '@stitches/react';
+import { createStitches, styled, keyframes } from '@stitches/react';
 import type * as Stitches from '@stitches/react';
 export { VariantProps } from '@stitches/react';
-import { indigo, slate, tomato } from '@radix-ui/colors';
+import { indigo, slate, tomato, whiteA } from '@radix-ui/colors';
+import { rippleTokens } from '@layout/Ripple';
 import { buttonTokens } from '@components/Button';
 import { inputTokens } from '@components/Input';
 import { checkboxTokens } from '@components/Checkbox';
@@ -34,7 +35,8 @@ const lapo = createStitches({
       ...buttonTokens(indigo, slate),
       ...inputTokens(indigo, slate, tomato),
       ...checkboxTokens(indigo, slate, tomato),
-      ...radioTokens(indigo, slate, tomato)
+      ...radioTokens(indigo, slate, tomato),
+      ...rippleTokens(whiteA)
     },
     space: {
       ...spaceTokens()
@@ -69,7 +71,7 @@ const lapo = createStitches({
   }
 });
 
-const { css, globalCss, keyframes, createTheme, getCssText, theme, config } = lapo;
+const { css, globalCss, createTheme, getCssText, theme, config } = lapo;
 
 export { styled, css, globalCss, keyframes, createTheme, getCssText, theme, config };
 
