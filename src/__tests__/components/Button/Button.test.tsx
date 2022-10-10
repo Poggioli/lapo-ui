@@ -21,11 +21,11 @@ describe('Given a default Button', () => {
     expect(Button.toString()).toBe('.c-kfWHpn');
   });
 
-    it('should render span ripple where user click', async () => {
-      renderComponent({});
-      const button = rendered.getByText(label);
-      userEvent.click(button);
-      const spanRipple = rendered.container.querySelector('span');
-      expect(spanRipple).toBeVisible();
-    });
+  it('should render span ripple where user click', async () => {
+    renderComponent({});
+    const button = rendered.getByText(label);
+    userEvent.click(button);
+    const spanRipple = rendered.container.querySelector('span');
+    expect(spanRipple).toBeVisible();
+  });
 });

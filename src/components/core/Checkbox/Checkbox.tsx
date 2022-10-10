@@ -139,7 +139,13 @@ const Checkbox = React.forwardRef(
             {checkedValue && checkedValue === 'indeterminate' && <DividerHorizontalIcon />}
           </StyledIndicator>
         </StyledCheckbox>
-        <Label htmlFor={newId} invalid={invalid} isChecked={!!checkedValue} disabled={disabled}>
+        <Label
+          htmlFor={newId}
+          as="label"
+          invalid={invalid}
+          isChecked={!!checkedValue}
+          disabled={disabled}
+        >
           {label}
         </Label>
       </Container>
