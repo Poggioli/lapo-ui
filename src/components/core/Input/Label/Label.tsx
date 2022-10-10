@@ -8,7 +8,6 @@ import React from 'react';
  * Label
  * -----------------------------------------------------------------------------------------------*/
 const StyledLabel = styled(Text, {
-  ...body_1,
   color: '$$textColorLabelNormal',
   marginTop: '$3',
   transition: `color 150ms linear,
