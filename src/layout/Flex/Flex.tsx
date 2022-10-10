@@ -53,4 +53,4 @@ const Flex = React.forwardRef(
 ) as FlexComponent;
 /* -----------------------------------------------------------------------------------------------*/
 
-export { Flex, FlexOwnProps as FlexProps };
+export { Flex };

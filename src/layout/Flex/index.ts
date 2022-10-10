@@ -1,3 +1,3 @@
-import { Flex, FlexProps } from './Flex';
+import { Flex } from './Flex';
 
-export { Flex, FlexProps };
+export { Flex };

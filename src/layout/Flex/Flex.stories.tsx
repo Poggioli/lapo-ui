@@ -1,7 +1,7 @@
-import { Box } from 'src/layout/Box';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
 import { Flex } from './Flex';
+import { Box } from '@layout/Box';
 
 export default {
   title: 'Componentes/layout/Flex',

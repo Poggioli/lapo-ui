@@ -32,7 +32,7 @@ export default {
 } as ComponentMeta<typeof Box>;
 
 const Template: ComponentStory<typeof Box> = ({ color, ...args }) => (
-  <Box {...args} css={{ backgroundColor: color, height: 100, width: 100 }} />
+  <Box {...args} css={{ backgroundColor: color || 'red', height: 100, width: 100 }} />
 );
 
 export const Default = Template.bind({});

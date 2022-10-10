@@ -7,5 +7,5 @@ describe('Given a box', () => {
     const rendered: RenderResult = render(<Box />);
     expect(rendered.container).toBeTruthy();
     expect(rendered.container.querySelector('div')).toBeVisible();
-  })
-})
+  });
+});

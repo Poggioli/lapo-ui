@@ -8,9 +8,9 @@ describe('Given a flex', () => {
   let flexComponent: HTMLElement;
 
   const mount = ({ ...props }: LapoVariants<typeof Flex>) => {
-    rendered = render(<Flex { ...props } />);
+    rendered = render(<Flex {...props} />);
     flexComponent = rendered.container;
-  }
+  };
 
   it('should render a div', () => {
     mount({});
@@ -23,7 +23,7 @@ describe('Given a flex', () => {
       flexWrap: 'wrap',
       justifyContent: 'center',
       alignItems: 'center',
-      alignContent: 'flex-end',
+      alignContent: 'flex-end'
     });
     expect(flexComponent).toBeTruthy();
   });
