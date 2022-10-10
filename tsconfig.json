@@ -18,6 +18,7 @@
     "baseUrl": ".",
     "paths": {
       "@lapo": ["./src/core/lapo.config.ts"],
+      "@layout/*": ["./src/layout/*"],
       "@tokens": ["./src/tokens/index.ts"],
       "@emotion/core": ["./src/types/emotion.d.ts"]
     }
