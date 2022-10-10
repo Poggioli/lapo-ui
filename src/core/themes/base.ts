@@ -1,12 +1,26 @@
-import { borderRadiusTokens, borderWidthTokens, fontFamilyTokens, fontSizeTokens, fontWeightTokens, letterSpaceTokens, lineHeightTokens, sizeTokens, spaceTokens, zIndexTokens } from "@tokens";
+import { blue } from '@radix-ui/colors';
+import {
+  borderRadiusTokens,
+  borderWidthTokens,
+  fontFamilyTokens,
+  fontSizeTokens,
+  fontWeightTokens,
+  letterSpaceTokens,
+  lineHeightTokens,
+  sizeTokens,
+  spaceTokens,
+  zIndexTokens
+} from '@tokens';
 
 export const base = {
-  colors: {},
+  colors: {
+    'background-ripple': blue.blue9
+  },
   media: {
     small: '(min-width: 576px)',
     medium: '(min-width: 768px)',
     large: '(min-width: 992px)',
-    extraLarge: '(min-width: 1200px)',
+    extraLarge: '(min-width: 1200px)'
   },
   borderWidths: {
     ...borderWidthTokens()

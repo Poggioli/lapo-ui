@@ -20,6 +20,7 @@
       "@lapo": ["./src/core/lapo.config.ts"],
       "@layout/*": ["./src/layout/*"],
       "@tokens": ["./src/tokens/index.ts"],
+      "@utils/*": ["./src/utils/*"],
       "@emotion/core": ["./src/types/emotion.d.ts"]
     }
   },

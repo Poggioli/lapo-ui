@@ -1,8 +1,7 @@
 import { createStitches } from '@stitches/react';
 import type * as Stitches from '@stitches/react';
 import WebFont from 'webfontloader';
-
-import { blueDark, blueLight } from './themes';
+import * as themes from './themes';
 
 WebFont.load({
   google: {
@@ -19,6 +18,7 @@ type PropertyValue<T extends keyof Stitches.CSSProperties> =
 
 const lapo = createStitches({
   prefix: 'lapo-',
+  theme: themes.base,
   utils: {
     p: (value: PropertyValue<'padding'>) => ({ padding: value }),
     pt: (value: PropertyValue<'paddingTop'>) => ({ paddingTop: value }),
@@ -59,8 +59,8 @@ const createTheme = lapo.createTheme;
 type CSS = Stitches.CSS<typeof config>;
 type ComponentCSSProp = { css?: CSS; as?: React.ElementType };
 type Theme = ReturnType<typeof createTheme>;
-const blueLightTheme = createTheme('blue-light-theme', blueLight);
-const blueDarkTheme = createTheme('blue-dark-theme', blueDark);
+const blueLightTheme = createTheme('blue-light-theme', themes.blueLight);
+const blueDarkTheme = createTheme('blue-dark-theme', themes.blueDark);
 
 export {
   CSS,
