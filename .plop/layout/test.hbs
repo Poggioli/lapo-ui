@@ -4,7 +4,8 @@ import { axe } from 'jest-axe';
 import React from 'react';
 import { {{pascalCase name}} } from './{{pascalCase name}}';
 
-describe('Given a {{pascalCase name}} component', () => {
+describe('Given a
+<{{pascalCase name}} /> component', () => {
 const labelValue = 'any {{pascalCase name}} value';
 let element: HTMLElement;
 let rendered: RenderResult;
@@ -22,12 +23,12 @@ const mount = ({ ...props }: VariantProps<typeof {{pascalCase name}}>) => {
   describe('Should have id', () => {
   it('With prefix when no Id is provided', () => {
   mount({});
-  expect(element.id).toContain('{{pascalCase name}}-');
+  expect(element.id).toContain('{{camelCase name}}-');
   });
 
   it('With Id passed by props', () => {
-  mount({ id: '{{pascalCase name}}tId123' });
-  expect(element.id).toBe('{{pascalCase name}}Id123');
+  mount({ id: '{{camelCase name}}Id123' });
+  expect(element.id).toBe('{{camelCase name}}Id123');
   });
   });
 
