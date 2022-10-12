@@ -15,7 +15,7 @@ const mount = ({ ...props }: VariantProps<typeof {{pascalCase name}}>) => {
   };
 
   it('should have no a11y violations', async () => {
-  renderComponent({});
+  mount({});
   expect(await axe(rendered.container)).toHaveNoViolations();
   });
 
