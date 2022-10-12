@@ -18,6 +18,7 @@ module.exports = {
     '!./src/**/*.config.ts',
     '!./src/tokens/**/*.ts',
     '!./src/types/**/*.ts',
+    '!./src/**/styles.ts',
     '!./src/**/index.ts',
     '!./src/**/tokens.ts'
   ],
