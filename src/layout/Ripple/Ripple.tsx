@@ -10,7 +10,25 @@ import React, { MouseEvent, useState } from 'react';
 const StyledRippleContainer = styled(Box, {
   position: 'relative',
   overflow: 'hidden',
-  display: 'inline-block'
+  display: 'inline-block',
+
+  variants: {
+    shape: {
+      flat: {
+        borderRadius: 0
+      },
+      rounded: {
+        borderRadius: '$2'
+      },
+      soft: {
+        borderRadius: '$4'
+      }
+    }
+  },
+
+  defaultVariants: {
+    shape: 'rounded'
+  }
 });
 
 const RippleAnimation = keyframes({
