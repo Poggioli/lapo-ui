@@ -39,7 +39,7 @@ export default {
 } as ComponentMeta<typeof Checkbox>;
 
 const Template: ComponentStory<typeof Checkbox> = ({ ...args }) => (
-  <Checkbox {...args}> Checkbox value </Checkbox>
+  <Checkbox {...args}>Checkbox value</Checkbox>
 );
 
 export const Default = Template.bind({});
