@@ -1,13 +1,12 @@
 import { Text } from '@components/Text';
-import { ComponentCSSProp, LapoVariants, styled } from '@lapo';
+import { ComponentCSSProp, LapoVariants } from '@lapo';
 import { Ripple } from '@layout/Ripple';
+import { CheckedState } from '@radix-ui/react-checkbox';
 import { CheckIcon, DividerHorizontalIcon } from '@radix-ui/react-icons';
 import type * as Polymorphic from '@radix-ui/react-polymorphic';
 import useId from '@utils/hooks/useId';
-import React, { useMemo, useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import { CheckboxContainer, RippleStyle, StyledCheckbox, StyledIndicator } from './styles';
-import { CheckedState } from '@radix-ui/react-checkbox';
-import { useCallback } from 'react';
 
 /* -------------------------------------------------------------------------------------------------
  * Checkbox

@@ -166,10 +166,6 @@ const StyledCheckbox = styled(CheckboxPrimitive.Root, {
   defaultVariants: {
     variant: 'primary'
   }
-
-  //border-color-empty border-color-checked border-color-hover border-color-focus border-color-active border-color-disabled
-  //background-color-normal background-color-checked background-color-hover background-color-focus background-color-active background-color-disabled
-  //color-empty color-checked color-hover color-focus color-active color-disabled
 });
 
 const StyledIndicator = styled(CheckboxPrimitive.Indicator, {
