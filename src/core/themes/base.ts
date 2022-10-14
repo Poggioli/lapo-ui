@@ -18,7 +18,7 @@ const secondary: GenericScale = specificScaleToGenericScale(brown);
 const grayScale: GenericScale = specificScaleToGenericScale(gray);
 const grayColoredColor: GenericScale = specificScaleToGenericScale(slate);
 const white = grayColoredColor[10];
-const black = grayColoredColor[110];
+const black = grayColoredColor[200];
 const danger: GenericScale = specificScaleToGenericScale(tomato);
 const success: GenericScale = specificScaleToGenericScale(grass);
 
@@ -29,18 +29,18 @@ export const base = {
     'background-ripple': primary[90],
 
     // Text component
-    'text-primary-color-low-contrast': primary[110],
-    'text-primary-color-high-contrast': primary[120],
-    'text-gray-color-low-contrast': grayScale[110],
-    'text-gray-color-high-contrast': grayScale[120],
-    'text-gray-colored-color-low-contrast': grayColoredColor[110],
-    'text-gray-colored-color-high-contrast': grayColoredColor[120],
+    'text-primary-color-low-contrast': primary[200],
+    'text-primary-color-high-contrast': primary[300],
+    'text-gray-color-low-contrast': grayScale[200],
+    'text-gray-color-high-contrast': grayScale[300],
+    'text-gray-colored-color-low-contrast': grayColoredColor[200],
+    'text-gray-colored-color-high-contrast': grayColoredColor[300],
 
     // Button Primary
     'button-primary-solid-background-color-normal': primary[90],
     'button-primary-solid-background-color-hover': primary[100],
     'button-primary-solid-background-color-focus': primary[100],
-    'button-primary-solid-background-color-active': primary[110],
+    'button-primary-solid-background-color-active': primary[200],
     'button-primary-solid-background-color-disabled': grayScale[20],
     'button-primary-solid-color-normal': white,
     'button-primary-solid-color-disabled': grayScale[80],
@@ -54,7 +54,7 @@ export const base = {
     'button-primary-ghost-color-normal': primary[90],
     'button-primary-ghost-color-hover': primary[100],
     'button-primary-ghost-color-focus': primary[100],
-    'button-primary-ghost-color-active': primary[110],
+    'button-primary-ghost-color-active': primary[200],
     'button-primary-ghost-color-disabled': grayScale[80],
     'button-primary-ghost-border-color-normal': primary[70],
     'button-primary-ghost-border-color-hover': primary[80],
@@ -70,7 +70,7 @@ export const base = {
     'button-primary-text-color-normal': primary[90],
     'button-primary-text-color-hover': primary[100],
     'button-primary-text-color-focus': primary[100],
-    'button-primary-text-color-active': primary[110],
+    'button-primary-text-color-active': primary[200],
     'button-primary-text-color-disabled': grayScale[80],
     'button-primary-text-border-color': 'none',
 
@@ -80,7 +80,7 @@ export const base = {
     'button-secondary-solid-background-color-normal': secondary[90],
     'button-secondary-solid-background-color-hover': secondary[100],
     'button-secondary-solid-background-color-focus': secondary[100],
-    'button-secondary-solid-background-color-active': secondary[110],
+    'button-secondary-solid-background-color-active': secondary[200],
     'button-secondary-solid-background-color-disabled': grayScale[20],
     'button-secondary-solid-color-normal': white,
     'button-secondary-solid-color-disabled': grayScale[80],
@@ -94,7 +94,7 @@ export const base = {
     'button-secondary-ghost-color-normal': secondary[90],
     'button-secondary-ghost-color-hover': secondary[100],
     'button-secondary-ghost-color-focus': secondary[100],
-    'button-secondary-ghost-color-active': secondary[110],
+    'button-secondary-ghost-color-active': secondary[200],
     'button-secondary-ghost-color-disabled': grayScale[80],
     'button-secondary-ghost-border-color-normal': secondary[70],
     'button-secondary-ghost-border-color-hover': secondary[80],
@@ -110,7 +110,7 @@ export const base = {
     'button-secondary-text-color-normal': secondary[90],
     'button-secondary-text-color-hover': secondary[100],
     'button-secondary-text-color-focus': secondary[100],
-    'button-secondary-text-color-active': secondary[110],
+    'button-secondary-text-color-active': secondary[200],
     'button-secondary-text-color-disabled': grayScale[80],
     'button-secondary-text-border-color': 'none',
 
@@ -120,7 +120,7 @@ export const base = {
     'button-danger-solid-background-color-normal': danger[90],
     'button-danger-solid-background-color-hover': danger[100],
     'button-danger-solid-background-color-focus': danger[100],
-    'button-danger-solid-background-color-active': danger[110],
+    'button-danger-solid-background-color-active': danger[200],
     'button-danger-solid-background-color-disabled': grayScale[20],
     'button-danger-solid-color-normal': white,
     'button-danger-solid-color-disabled': grayScale[80],
@@ -134,7 +134,7 @@ export const base = {
     'button-danger-ghost-color-normal': danger[90],
     'button-danger-ghost-color-hover': danger[100],
     'button-danger-ghost-color-focus': danger[100],
-    'button-danger-ghost-color-active': danger[110],
+    'button-danger-ghost-color-active': danger[200],
     'button-danger-ghost-color-disabled': grayScale[80],
     'button-danger-ghost-border-color-normal': danger[70],
     'button-danger-ghost-border-color-hover': danger[80],
@@ -150,7 +150,7 @@ export const base = {
     'button-danger-text-color-normal': danger[90],
     'button-danger-text-color-hover': danger[100],
     'button-danger-text-color-focus': danger[100],
-    'button-danger-text-color-active': danger[110],
+    'button-danger-text-color-active': danger[200],
     'button-danger-text-color-disabled': grayScale[80],
     'button-danger-text-border-color': 'none',
 
@@ -160,7 +160,7 @@ export const base = {
     'button-success-solid-background-color-normal': success[90],
     'button-success-solid-background-color-hover': success[100],
     'button-success-solid-background-color-focus': success[100],
-    'button-success-solid-background-color-active': success[110],
+    'button-success-solid-background-color-active': success[200],
     'button-success-solid-background-color-disabled': grayScale[20],
     'button-success-solid-color-normal': white,
     'button-success-solid-color-disabled': grayScale[80],
@@ -174,7 +174,7 @@ export const base = {
     'button-success-ghost-color-normal': success[90],
     'button-success-ghost-color-hover': success[100],
     'button-success-ghost-color-focus': success[100],
-    'button-success-ghost-color-active': success[110],
+    'button-success-ghost-color-active': success[200],
     'button-success-ghost-color-disabled': grayScale[80],
     'button-success-ghost-border-color-normal': success[70],
     'button-success-ghost-border-color-hover': success[80],
@@ -190,11 +190,65 @@ export const base = {
     'button-success-text-color-normal': success[90],
     'button-success-text-color-hover': success[100],
     'button-success-text-color-focus': success[100],
-    'button-success-text-color-active': success[110],
+    'button-success-text-color-active': success[200],
     'button-success-text-color-disabled': grayScale[80],
     'button-success-text-border-color': 'none',
 
-    'button-success-ripple-background-color': success[60]
+    'button-success-ripple-background-color': success[60],
+
+    // Checkbox Primary
+    'checkbox-primary-background-color-unchecked': 'transparent',
+    'checkbox-primary-background-color-checked': primary[90],
+    'checkbox-primary-background-color-unchecked-disabled': 'transparent',
+    'checkbox-primary-background-color-checked-disabled': grayScale[80],
+
+    'checkbox-primary-border-color-unchecked': grayScale[200],
+    'checkbox-primary-border-color-checked': primary[90],
+    'checkbox-primary-border-color-unchecked-disabled': grayScale[80],
+    'checkbox-primary-border-color-checked-disabled': grayScale[80],
+
+    'checkbox-primary-color-unchecked': grayScale[300],
+    'checkbox-primary-color-checked': grayScale[300],
+    'checkbox-primary-color-unchecked-disabled': grayScale[80],
+    'checkbox-primary-color-checked-disabled': grayScale[80],
+
+    'checkbox-primary-ripple-background-color': primary[60],
+
+    // Checkbox Secondary
+    'checkbox-secondary-background-color-unchecked': 'transparent',
+    'checkbox-secondary-background-color-checked': secondary[90],
+    'checkbox-secondary-background-color-unchecked-disabled': 'transparent',
+    'checkbox-secondary-background-color-checked-disabled': grayScale[80],
+
+    'checkbox-secondary-border-color-unchecked': grayScale[200],
+    'checkbox-secondary-border-color-checked': secondary[90],
+    'checkbox-secondary-border-color-unchecked-disabled': grayScale[80],
+    'checkbox-secondary-border-color-checked-disabled': grayScale[80],
+
+    'checkbox-secondary-color-unchecked': grayScale[300],
+    'checkbox-secondary-color-checked': grayScale[300],
+    'checkbox-secondary-color-unchecked-disabled': grayScale[80],
+    'checkbox-secondary-color-checked-disabled': grayScale[80],
+
+    'checkbox-secondary-ripple-background-color': secondary[60],
+
+    // Checkbox Danger
+    'checkbox-danger-background-color-unchecked': 'transparent',
+    'checkbox-danger-background-color-checked': danger[90],
+    'checkbox-danger-background-color-unchecked-disabled': 'transparent',
+    'checkbox-danger-background-color-checked-disabled': grayScale[80],
+
+    'checkbox-danger-border-color-unchecked': grayScale[200],
+    'checkbox-danger-border-color-checked': danger[90],
+    'checkbox-danger-border-color-unchecked-disabled': grayScale[80],
+    'checkbox-danger-border-color-checked-disabled': grayScale[80],
+
+    'checkbox-danger-color-unchecked': grayScale[300],
+    'checkbox-danger-color-checked': grayScale[300],
+    'checkbox-danger-color-unchecked-disabled': grayScale[80],
+    'checkbox-danger-color-checked-disabled': grayScale[80],
+
+    'checkbox-danger-ripple-background-color': danger[60]
   },
   media: {
     small: '(min-width: 576px)',
@@ -211,7 +265,7 @@ export const base = {
   fonts: {
     ...fontFamilyTokens()
   },
-  size: {
+  sizes: {
     ...sizeTokens()
   },
   space: {
