@@ -71,7 +71,7 @@ describe('Given a Text component', () => {
   describe('Should have id', () => {
     it('With prefix when no Id is provided', () => {
       mount({});
-      expect(textElement.id).toContain('Text-');
+      expect(textElement.id).toContain('text-');
     });
 
     it('With Id passed by props', () => {

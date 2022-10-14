@@ -15,7 +15,7 @@ import {
   lead_2
 } from '@tokens';
 import useId from '@utils/hooks/useId';
-import React from 'react';
+import React, { useMemo } from 'react';
 
 /* -------------------------------------------------------------------------------------------------
  * Text
@@ -100,7 +100,7 @@ type TextProps = TextCSSProp & TextVariants;
 type TextComponent = Polymorphic.ForwardRefComponent<typeof DEFAULT_TAG, TextProps>;
 
 const Text = React.forwardRef(({ id, ...props }, forwardedRef) => {
-  const customId: string = id || useId('Text');
+  const customId: string = useMemo(() => id || useId('text'), [id]);
 
   return <StyledText {...props} id={customId} ref={forwardedRef} />;
 }) as TextComponent;
