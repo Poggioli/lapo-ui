@@ -26,6 +26,7 @@ export const base = {
   colors: {
     white: white,
     black: black,
+    transparent: 'transparent',
     'background-ripple': primary[90],
 
     // Text component
@@ -248,7 +249,61 @@ export const base = {
     'checkbox-danger-color-unchecked-disabled': grayScale[80],
     'checkbox-danger-color-checked-disabled': grayScale[80],
 
-    'checkbox-danger-ripple-background-color': danger[60]
+    'checkbox-danger-ripple-background-color': danger[60],
+
+    // Radiobutton Primary
+    'radiobutton-primary-background-color-unchecked': 'transparent',
+    'radiobutton-primary-background-color-checked': primary[90],
+    'radiobutton-primary-background-color-unchecked-disabled': 'transparent',
+    'radiobutton-primary-background-color-checked-disabled': grayScale[80],
+
+    'radiobutton-primary-border-color-unchecked': grayScale[200],
+    'radiobutton-primary-border-color-checked': primary[90],
+    'radiobutton-primary-border-color-unchecked-disabled': grayScale[80],
+    'radiobutton-primary-border-color-checked-disabled': grayScale[80],
+
+    'radiobutton-primary-color-unchecked': grayScale[300],
+    'radiobutton-primary-color-checked': grayScale[300],
+    'radiobutton-primary-color-unchecked-disabled': grayScale[80],
+    'radiobutton-primary-color-checked-disabled': grayScale[80],
+
+    'radiobutton-primary-ripple-background-color': primary[60],
+
+    // Radiobutton Secondary
+    'radiobutton-secondary-background-color-unchecked': 'transparent',
+    'radiobutton-secondary-background-color-checked': secondary[90],
+    'radiobutton-secondary-background-color-unchecked-disabled': 'transparent',
+    'radiobutton-secondary-background-color-checked-disabled': grayScale[80],
+
+    'radiobutton-secondary-border-color-unchecked': grayScale[200],
+    'radiobutton-secondary-border-color-checked': secondary[90],
+    'radiobutton-secondary-border-color-unchecked-disabled': grayScale[80],
+    'radiobutton-secondary-border-color-checked-disabled': grayScale[80],
+
+    'radiobutton-secondary-color-unchecked': grayScale[300],
+    'radiobutton-secondary-color-checked': grayScale[300],
+    'radiobutton-secondary-color-unchecked-disabled': grayScale[80],
+    'radiobutton-secondary-color-checked-disabled': grayScale[80],
+
+    'radiobutton-secondary-ripple-background-color': secondary[60],
+
+    // Radiobutton Danger
+    'radiobutton-danger-background-color-unchecked': 'transparent',
+    'radiobutton-danger-background-color-checked': danger[90],
+    'radiobutton-danger-background-color-unchecked-disabled': 'transparent',
+    'radiobutton-danger-background-color-checked-disabled': grayScale[80],
+
+    'radiobutton-danger-border-color-unchecked': grayScale[200],
+    'radiobutton-danger-border-color-checked': danger[90],
+    'radiobutton-danger-border-color-unchecked-disabled': grayScale[80],
+    'radiobutton-danger-border-color-checked-disabled': grayScale[80],
+
+    'radiobutton-danger-color-unchecked': grayScale[300],
+    'radiobutton-danger-color-checked': grayScale[300],
+    'radiobutton-danger-color-unchecked-disabled': grayScale[80],
+    'radiobutton-danger-color-checked-disabled': grayScale[80],
+
+    'radiobutton-danger-ripple-background-color': danger[60]
   },
   media: {
     small: '(min-width: 576px)',
