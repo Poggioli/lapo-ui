@@ -2,7 +2,7 @@ import { keyframes, styled, LapoVariants } from '@lapo';
 import { Box } from '@layout/Box';
 import type * as Polymorphic from '@radix-ui/react-polymorphic';
 import useId from '@utils/hooks/useId';
-import React, { MouseEvent, useState } from 'react';
+import React, { MouseEvent, useMemo, useState } from 'react';
 
 /* -------------------------------------------------------------------------------------------------
  * Ripple
@@ -43,7 +43,8 @@ const StyledRippleEffect = styled('span', {
   borderRadius: '$4',
   position: 'absolute',
   opacity: '0.75',
-  animation: `${RippleAnimation} 1000ms`
+  animation: `${RippleAnimation} 1000ms`,
+  pointerEvents: 'none'
 });
 
 type RippleVariants = LapoVariants<typeof StyledRippleContainer>;
@@ -54,7 +55,7 @@ const Ripple = React.forwardRef(({ children, center, backgroundColor, ...props }
   const [spanStyles, setSpanStyles] = useState({});
   const [count, setCount] = useState(0);
   const [bounce, setBounce] = useState<any>();
-  const id = useId('ripple');
+  const id = useMemo(() => useId('ripple'), []);
 
   const cleanUp = () => {
     setSpanStyles({});
