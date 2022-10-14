@@ -4,7 +4,7 @@ import { Ripple } from '@layout/Ripple';
 import type * as Polymorphic from '@radix-ui/react-polymorphic';
 import { body_1 } from '@tokens';
 import useId from '@utils/hooks/useId';
-import React from 'react';
+import React, { useMemo } from 'react';
 
 /* -------------------------------------------------------------------------------------------------
  * Button
@@ -318,7 +318,7 @@ type ButtonProps = ButtonCSSProp & ButtonVariants;
 type ButtonComponent = Polymorphic.ForwardRefComponent<typeof DEFAULT_TAG, ButtonProps>;
 
 const Button = React.forwardRef(({ id, children, variant, shape, ...props }, forwardedRef) => {
-  const customId: string = id || useId('button');
+  const customId: string = useMemo(() => id || useId('button'), [id]);
 
   const rippleBackgroundColor: string = `$button-${variant}-ripple-background-color`;
 
