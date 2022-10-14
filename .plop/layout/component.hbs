@@ -16,7 +16,7 @@ type {{pascalCase name}}Variants = LapoVariants<typeof Styled{{pascalCase name}}
   type {{pascalCase name}}Component = Polymorphic.ForwardRefComponent<typeof DEFAULT_TAG, {{pascalCase name}}Props>;
 
     const {{pascalCase name}} = React.forwardRef(({ id, ...props }, forwardedRef) => {
-    const customId: string = id || useId('{{camelCase name}}');
+    const customId: string = useMemo(() => id || useId('{{camelCase name}}'), [id]);
 
     return (
     <Styled{{pascalCase name}} {...props} id={customId} ref={forwardedRef} />);
