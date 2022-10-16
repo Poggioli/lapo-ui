@@ -7,7 +7,6 @@ import { Radiobutton } from './Radiobutton';
 import { RadioGroup } from './styles';
 
 const RadioButtonGroup: FC = ({ ...props }) => {
-
   const [radioSelected, setRadioSelected] = useState('');
 
   const radioOptions = [
@@ -32,13 +31,18 @@ const RadioButtonGroup: FC = ({ ...props }) => {
   return (
     <RadioGroup onValueChange={handleOnValueChange}>
       {radioOptions.map((option) => (
-        <Radiobutton { ...props } key={option.value} value={option.value} checked={option.value === radioSelected}>
+        <Radiobutton
+          {...props}
+          key={option.value}
+          value={option.value}
+          checked={option.value === radioSelected}
+        >
           {option.label}
         </Radiobutton>
       ))}
     </RadioGroup>
   );
-}
+};
 
 describe('Given a <Radiobutton /> component', () => {
   const labelValue1 = 'Banana';

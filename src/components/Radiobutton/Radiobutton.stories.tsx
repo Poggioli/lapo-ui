@@ -59,7 +59,12 @@ const Template: ComponentStory<typeof Radiobutton> = ({ ...args }) => {
   return (
     <RadioGroup onValueChange={handleOnValueChange}>
       {radioOptions.map((option) => (
-        <Radiobutton {...args} key={option.value} value={option.value} checked={option.value === radioSelected}>
+        <Radiobutton
+          {...args}
+          key={option.value}
+          value={option.value}
+          checked={option.value === radioSelected}
+        >
           {option.label}
         </Radiobutton>
       ))}
