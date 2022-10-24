@@ -7,7 +7,8 @@ module.exports = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
-    '@storybook/addon-a11y'
+    '@storybook/addon-a11y',
+    'multiple-themes-stitches'
   ],
   webpackFinal: async (config) => {
     config.resolve.alias['@lapo'] = path.resolve(__dirname, '../src/core/lapo.config.ts');
