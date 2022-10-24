@@ -174,7 +174,7 @@ const StyledIndicator = styled(CheckboxPrimitive.Indicator, {
   height: '100%',
   justifyContent: 'center',
   width: '100%',
-  color: '$white',
+  color: '$background-app',
 
   '>svg': {
     width: '100%',
