@@ -20,6 +20,7 @@ module.exports = {
     '!./src/types/**/*.ts',
     '!./src/**/styles.ts',
     '!./src/**/index.ts',
+    '!./src/**/generateColors.ts',
     '!./src/**/tokens.ts'
   ],
   coverageThreshold: {
