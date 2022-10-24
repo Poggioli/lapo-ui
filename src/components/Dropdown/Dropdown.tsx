@@ -91,8 +91,7 @@ const DropdownTrigger = React.forwardRef(({ id, children, type, ...props }, forw
  * -----------------------------------------------------------------------------------------------*/
 type DropdownScrollUpButtonCSSProp = ComponentCSSProp;
 type DropdownScrollUpButtonVariants = LapoVariants<typeof StyledScrollUpButton>;
-type DropdownScrollUpButtonProps = DropdownScrollUpButtonCSSProp &
-  DropdownScrollUpButtonVariants;
+type DropdownScrollUpButtonProps = DropdownScrollUpButtonCSSProp & DropdownScrollUpButtonVariants;
 
 type DropdownScrollUpButtonComponent = Polymorphic.ForwardRefComponent<
   typeof StyledScrollUpButton,
