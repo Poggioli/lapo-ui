@@ -1,4 +1,4 @@
-import { blueDark } from './blueDark';
-import { blueLight } from './blueLight';
+import { blueDarkTheme } from './blueDark';
+import { blueLightTheme } from './blueLight';
 
-export { blueDark, blueLight };
+export { blueDarkTheme, blueLightTheme };
