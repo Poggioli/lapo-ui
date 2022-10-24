@@ -105,6 +105,8 @@ const Text = React.forwardRef(({ id, ...props }, forwardedRef) => {
   return <StyledText {...props} id={customId} ref={forwardedRef} />;
 }) as TextComponent;
 
+Text.toString = () => `.${StyledText.className}`;
+
 export { Text };
 
 /* -----------------------------------------------------------------------------------------------*/
