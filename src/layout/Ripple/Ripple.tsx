@@ -11,6 +11,11 @@ const StyledRippleContainer = styled(Box, {
   position: 'relative',
   overflow: 'hidden',
   display: 'inline-block',
+  pointerEvents: 'none',
+
+  '*': {
+    pointerEvents: 'auto',
+  },
 
   variants: {
     shape: {
