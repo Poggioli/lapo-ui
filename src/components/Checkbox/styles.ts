@@ -5,7 +5,7 @@ import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
 const CheckboxContainer = styled(Flex, {
   '& label': {
     color: '$$colorText',
-    transition: 'color 200ms linear',
+    transition: 'color 200ms linear'
   },
 
   variants: {
@@ -54,8 +54,8 @@ const CheckboxContainer = styled(Flex, {
       css: {
         $$colorText: '$$colorUnchecked',
         '&:hover': {
-          $$colorText: '$$colorHover',
-        },
+          $$colorText: '$$colorHover'
+        }
       }
     },
     {
@@ -64,8 +64,8 @@ const CheckboxContainer = styled(Flex, {
       css: {
         $$colorText: '$$colorChecked',
         '&:hover': {
-          $$colorText: '$$colorHover',
-        },
+          $$colorText: '$$colorHover'
+        }
       }
     },
     {
@@ -115,7 +115,7 @@ const StyledCheckbox = styled(CheckboxPrimitive.Root, {
     $$borderColor: '$$borderColorUnchecked',
 
     '&:hover': {
-      $$borderColor: '$$borderColorHover',
+      $$borderColor: '$$borderColorHover'
     },
 
     '&:disabled, &[disabled], &[aria-disabled=true]': {

@@ -63,8 +63,8 @@ const RadiobuttonContainer = styled(Flex, {
       css: {
         $$colorText: '$$colorUnchecked',
         '&:hover': {
-          $$colorText: '$$colorHover',
-        },
+          $$colorText: '$$colorHover'
+        }
       }
     },
     {
@@ -73,8 +73,8 @@ const RadiobuttonContainer = styled(Flex, {
       css: {
         $$colorText: '$$colorChecked',
         '&:hover': {
-          $$colorText: '$$colorHover',
-        },
+          $$colorText: '$$colorHover'
+        }
       }
     },
     {
@@ -130,7 +130,7 @@ const StyledRadiobutton = styled(RadioGroupPrimitive.Item, {
     },
 
     '&:hover': {
-      $$borderColor: '$$borderColorHover',
+      $$borderColor: '$$borderColorHover'
     },
 
     '&:disabled, &[disabled], &[aria-disabled=true]': {

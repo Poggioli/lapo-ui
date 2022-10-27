@@ -14,7 +14,7 @@ const StyledRippleContainer = styled(Box, {
   pointerEvents: 'none',
 
   '*': {
-    pointerEvents: 'auto',
+    pointerEvents: 'auto'
   },
 
   variants: {
