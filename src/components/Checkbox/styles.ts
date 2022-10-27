@@ -5,7 +5,7 @@ import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
 const CheckboxContainer = styled(Flex, {
   '& label': {
     color: '$$colorText',
-    transition: 'color 200ms linear'
+    transition: 'color 200ms linear',
   },
 
   variants: {
@@ -14,19 +14,22 @@ const CheckboxContainer = styled(Flex, {
         $$colorUnchecked: '$colors-checkbox-primary-color-unchecked',
         $$colorChecked: '$colors-checkbox-primary-color-checked',
         $$colorUncheckedDisabled: '$colors-checkbox-primary-color-unchecked-disabled',
-        $$colorCheckedDisabled: '$colors-checkbox-primary-color-checked-disabled'
+        $$colorCheckedDisabled: '$colors-checkbox-primary-color-checked-disabled',
+        $$colorHover: '$colors-checkbox-primary-color-hover'
       },
       secondary: {
         $$colorUnchecked: '$colors-checkbox-secondary-color-unchecked',
         $$colorChecked: '$colors-checkbox-secondary-color-checked',
         $$colorUncheckedDisabled: '$colors-checkbox-secondary-color-unchecked-disabled',
-        $$colorCheckedDisabled: '$colors-checkbox-secondary-color-checked-disabled'
+        $$colorCheckedDisabled: '$colors-checkbox-secondary-color-checked-disabled',
+        $$colorHover: '$colors-checkbox-secondary-color-hover'
       },
       danger: {
         $$colorUnchecked: '$colors-checkbox-danger-color-unchecked',
         $$colorChecked: '$colors-checkbox-danger-color-checked',
         $$colorUncheckedDisabled: '$colors-checkbox-danger-color-unchecked-disabled',
-        $$colorCheckedDisabled: '$colors-checkbox-danger-color-checked-disabled'
+        $$colorCheckedDisabled: '$colors-checkbox-danger-color-checked-disabled',
+        $$colorHover: '$colors-checkbox-danger-color-hover'
       }
     },
     checked: {
@@ -49,14 +52,20 @@ const CheckboxContainer = styled(Flex, {
       disabled: false,
       checked: false,
       css: {
-        $$colorText: '$$colorUnchecked'
+        $$colorText: '$$colorUnchecked',
+        '&:hover': {
+          $$colorText: '$$colorHover',
+        },
       }
     },
     {
       disabled: false,
       checked: true,
       css: {
-        $$colorText: '$$colorChecked'
+        $$colorText: '$$colorChecked',
+        '&:hover': {
+          $$colorText: '$$colorHover',
+        },
       }
     },
     {
@@ -105,6 +114,10 @@ const StyledCheckbox = styled(CheckboxPrimitive.Root, {
     $$backgroundColor: '$$backgroundColorUnchecked',
     $$borderColor: '$$borderColorUnchecked',
 
+    '&:hover': {
+      $$borderColor: '$$borderColorHover',
+    },
+
     '&:disabled, &[disabled], &[aria-disabled=true]': {
       $$backgroundColor: '$$backgroundColorUncheckedDisabled',
       $$borderColor: '$$borderColorUncheckedDisabled'
@@ -131,6 +144,7 @@ const StyledCheckbox = styled(CheckboxPrimitive.Root, {
         $$borderColorUncheckedDisabled: '$colors-checkbox-primary-border-color-unchecked-disabled',
         $$backgroundColorChecked: '$colors-checkbox-primary-background-color-checked',
         $$borderColorChecked: '$colors-checkbox-primary-border-color-checked',
+        $$borderColorHover: '$colors-checkbox-primary-border-color-hover',
         $$backgroundColorCheckedDisabled:
           '$colors-checkbox-primary-background-color-checked-disabled',
         $$borderColorCheckedDisabled: '$colors-checkbox-primary-border-color-checked-disabled'
@@ -144,6 +158,7 @@ const StyledCheckbox = styled(CheckboxPrimitive.Root, {
           '$colors-checkbox-secondary-border-color-unchecked-disabled',
         $$backgroundColorChecked: '$colors-checkbox-secondary-background-color-checked',
         $$borderColorChecked: '$colors-checkbox-secondary-border-color-checked',
+        $$borderColorHover: '$colors-checkbox-secondary-border-color-hover',
         $$backgroundColorCheckedDisabled:
           '$colors-checkbox-secondary-background-color-checked-disabled',
         $$borderColorCheckedDisabled: '$colors-checkbox-secondary-border-color-checked-disabled'
@@ -156,6 +171,7 @@ const StyledCheckbox = styled(CheckboxPrimitive.Root, {
         $$borderColorUncheckedDisabled: '$colors-checkbox-danger-border-color-unchecked-disabled',
         $$backgroundColorChecked: '$colors-checkbox-danger-background-color-checked',
         $$borderColorChecked: '$colors-checkbox-danger-border-color-checked',
+        $$borderColorHover: '$colors-checkbox-danger-border-color-hover',
         $$backgroundColorCheckedDisabled:
           '$colors-checkbox-danger-background-color-checked-disabled',
         $$borderColorCheckedDisabled: '$colors-checkbox-danger-border-color-checked-disabled'

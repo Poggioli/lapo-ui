@@ -23,19 +23,22 @@ const RadiobuttonContainer = styled(Flex, {
         $$colorUnchecked: '$colors-radiobutton-primary-color-unchecked',
         $$colorChecked: '$colors-radiobutton-primary-color-checked',
         $$colorUncheckedDisabled: '$colors-radiobutton-primary-color-unchecked-disabled',
-        $$colorCheckedDisabled: '$colors-radiobutton-primary-color-checked-disabled'
+        $$colorCheckedDisabled: '$colors-radiobutton-primary-color-checked-disabled',
+        $$colorHover: '$colors-radiobutton-primary-color-hover'
       },
       secondary: {
         $$colorUnchecked: '$colors-radiobutton-secondary-color-unchecked',
         $$colorChecked: '$colors-radiobutton-secondary-color-checked',
         $$colorUncheckedDisabled: '$colors-radiobutton-secondary-color-unchecked-disabled',
-        $$colorCheckedDisabled: '$colors-radiobutton-secondary-color-checked-disabled'
+        $$colorCheckedDisabled: '$colors-radiobutton-secondary-color-checked-disabled',
+        $$colorHover: '$colors-radiobutton-secondary-color-hover'
       },
       danger: {
         $$colorUnchecked: '$colors-radiobutton-danger-color-unchecked',
         $$colorChecked: '$colors-radiobutton-danger-color-checked',
         $$colorUncheckedDisabled: '$colors-radiobutton-danger-color-unchecked-disabled',
-        $$colorCheckedDisabled: '$colors-radiobutton-danger-color-checked-disabled'
+        $$colorCheckedDisabled: '$colors-radiobutton-danger-color-checked-disabled',
+        $$colorHover: '$colors-radiobutton-danger-color-hover'
       }
     },
     checked: {
@@ -58,14 +61,20 @@ const RadiobuttonContainer = styled(Flex, {
       disabled: false,
       checked: false,
       css: {
-        $$colorText: '$$colorUnchecked'
+        $$colorText: '$$colorUnchecked',
+        '&:hover': {
+          $$colorText: '$$colorHover',
+        },
       }
     },
     {
       disabled: false,
       checked: true,
       css: {
-        $$colorText: '$$colorChecked'
+        $$colorText: '$$colorChecked',
+        '&:hover': {
+          $$colorText: '$$colorHover',
+        },
       }
     },
     {
@@ -120,6 +129,10 @@ const StyledRadiobutton = styled(RadioGroupPrimitive.Item, {
       backgroundColor: '$$backgroundColorUnchecked'
     },
 
+    '&:hover': {
+      $$borderColor: '$$borderColorHover',
+    },
+
     '&:disabled, &[disabled], &[aria-disabled=true]': {
       $$borderColor: '$$borderColorUncheckedDisabled',
 
@@ -153,6 +166,7 @@ const StyledRadiobutton = styled(RadioGroupPrimitive.Item, {
           '$colors-radiobutton-primary-border-color-unchecked-disabled',
         $$borderColorChecked: '$colors-radiobutton-primary-border-color-checked',
         $$borderColorCheckedDisabled: '$colors-radiobutton-primary-border-color-checked-disabled',
+        $$borderColorHover: '$colors-radiobutton-primary-border-color-hover',
 
         $$backgroundColorUnchecked: '$colors-radiobutton-primary-background-color-unchecked',
         $$backgroundColorUncheckedDisabled:
@@ -167,6 +181,7 @@ const StyledRadiobutton = styled(RadioGroupPrimitive.Item, {
           '$colors-radiobutton-secondary-border-color-unchecked-disabled',
         $$borderColorChecked: '$colors-radiobutton-secondary-border-color-checked',
         $$borderColorCheckedDisabled: '$colors-radiobutton-secondary-border-color-checked-disabled',
+        $$borderColorHover: '$colors-radiobutton-secondary-border-color-hover',
 
         $$backgroundColorUnchecked: '$colors-radiobutton-secondary-background-color-unchecked',
         $$backgroundColorUncheckedDisabled:
@@ -181,6 +196,7 @@ const StyledRadiobutton = styled(RadioGroupPrimitive.Item, {
           '$colors-radiobutton-danger-border-color-unchecked-disabled',
         $$borderColorChecked: '$colors-radiobutton-danger-border-color-checked',
         $$borderColorCheckedDisabled: '$colors-radiobutton-danger-border-color-checked-disabled',
+        $$borderColorHover: '$colors-radiobutton-danger-border-color-hover',
 
         $$backgroundColorUnchecked: '$colors-radiobutton-danger-background-color-unchecked',
         $$backgroundColorUncheckedDisabled:
