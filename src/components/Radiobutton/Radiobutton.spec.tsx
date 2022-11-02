@@ -1,4 +1,4 @@
-import { VariantProps } from '@stitches/react';
+import { LapoVariants } from '@lapo';
 import { render, RenderResult } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { axe } from 'jest-axe';
@@ -51,7 +51,7 @@ describe('Given a <Radiobutton /> component', () => {
   let element2: HTMLElement;
   let rendered: RenderResult;
 
-  const mount = ({ ...props }: VariantProps<typeof Radiobutton>) => {
+  const mount = ({ ...props }: LapoVariants<typeof Radiobutton>) => {
     rendered = render(<RadioButtonGroup {...props} />);
     element1 = rendered.getByLabelText(`Radiobutton ${labelValue1}`);
     element2 = rendered.getByLabelText(`Radiobutton ${labelValue2}`);

@@ -4,7 +4,7 @@ import { Flex } from './Flex';
 import { Box } from '@layout/Box';
 
 export default {
-  title: 'Componentes/layout/Flex',
+  title: 'Layout/Flex',
   component: Flex,
   argTypes: {
     flexDirection: {

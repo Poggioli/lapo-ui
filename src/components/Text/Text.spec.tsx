@@ -1,4 +1,4 @@
-import { VariantProps } from '@stitches/react';
+import { LapoVariants } from '@lapo';
 import { render, RenderResult } from '@testing-library/react';
 import { axe } from 'jest-axe';
 import React from 'react';
@@ -9,7 +9,7 @@ describe('Given a Text component', () => {
   let textElement: HTMLElement;
   let rendered: RenderResult;
 
-  const mount = ({ ...props }: VariantProps<typeof Text>) => {
+  const mount = ({ ...props }: LapoVariants<typeof Text>) => {
     rendered = render(<Text {...props}>{labelValue}</Text>);
     textElement = rendered.getByText(labelValue);
   };

@@ -4,7 +4,7 @@ import { Radiobutton } from './Radiobutton';
 import { RadioGroup } from './styles';
 
 export default {
-  title: 'Componentes/components/Radiobutton',
+  title: 'Componentes/Radiobutton',
   component: Radiobutton,
   argTypes: {
     variant: {

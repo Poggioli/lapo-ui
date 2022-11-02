@@ -3,7 +3,7 @@ import React from 'react';
 import { Button } from './Button';
 
 export default {
-  title: 'Componentes/components/Button',
+  title: 'Componentes/Button',
   component: Button,
   argTypes: {
     type: {

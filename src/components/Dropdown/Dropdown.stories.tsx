@@ -14,7 +14,7 @@ import {
 } from './Dropdown';
 
 export default {
-  title: 'Componentes/components/Dropdown',
+  title: 'Componentes/Dropdown',
   component: Dropdown,
   argTypes: {
     shape: {

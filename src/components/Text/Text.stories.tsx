@@ -3,7 +3,7 @@ import React from 'react';
 import { Text } from './Text';
 
 export default {
-  title: 'Componentes/components/Text',
+  title: 'Componentes/Text',
   component: Text,
   argTypes: {
     variant: {

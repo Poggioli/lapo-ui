@@ -4,7 +4,7 @@ import React from 'react';
 import { Ripple } from './Ripple';
 
 export default {
-  title: 'Componentes/layout/Ripple',
+  title: 'Layout/Ripple',
   component: Ripple,
   argTypes: {
     center: {

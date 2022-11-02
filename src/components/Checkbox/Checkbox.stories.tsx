@@ -3,7 +3,7 @@ import React from 'react';
 import { Checkbox } from './Checkbox';
 
 export default {
-  title: 'Componentes/components/Checkbox',
+  title: 'Componentes/Checkbox',
   component: Checkbox,
   argTypes: {
     variant: {
