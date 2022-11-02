@@ -88,7 +88,6 @@ const StyledTrigger = styled(Select.Trigger, {
         borderStyle: 'solid',
         borderWidth: '$1',
         padding: 'calc($3 - 1px) calc($4 - 1px)',
-        backgroundColor: 'red important',
         transition:
           'background-color 200ms linear, border-width 0ms linear, padding-bottom 0ms linear, border-color 200ms linear',
 
@@ -139,9 +138,6 @@ const StyledTrigger = styled(Select.Trigger, {
       },
       standard: {
         borderRadius: '0',
-        backgroundColor: 'red important',
-        transition:
-          'background-color 200ms linear, border-width 0ms linear, padding-bottom 0ms linear, border-color 200ms linear',
 
         '&:hover, &:focus': {
           borderWidth: '$2',
