@@ -106,10 +106,10 @@ describe('Given a <Slider /> component', () => {
     mount({
       onValueChange: onValueChangeMock,
       id: 'sliderId123'
-    })
+    });
 
     const slider = rendered.container.querySelector('#sliderId123');
-    userEvent.click(slider)
+    userEvent.click(slider);
 
     expect(onValueChangeMock).toHaveBeenCalled();
   });
