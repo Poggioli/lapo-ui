@@ -21,7 +21,8 @@ module.exports = {
     '!./src/**/styles.ts',
     '!./src/**/index.ts',
     '!./src/**/generateColors.ts',
-    '!./src/**/tokens.ts'
+    '!./src/**/tokens.ts',
+    '!./src/**/*.spec.tsx.snap'
   ],
   coverageThreshold: {
     global: {
