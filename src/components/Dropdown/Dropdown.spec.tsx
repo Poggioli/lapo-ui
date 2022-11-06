@@ -1,4 +1,5 @@
-import { render, RenderResult } from '@testing-library/react';
+import { fireEvent, render, RenderResult } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { axe } from 'jest-axe';
 import React from 'react';
 import {
@@ -44,9 +45,9 @@ describe('Given a <Dropdown /> component', () => {
         <DropdownContent id={content}>
           <DropdownGroup>
             <DropdownGroupLabel id={groupLabel}>Birds</DropdownGroupLabel>
-            <DropdownItem id={`${selectItem}-1`} value="cockatiel" disabled={true}>
-              <DropdownSelectedIndicator id={`${selectIndicator}-1`} />
-              <DropdownText id={`${selectItemText}-1`}>Cockatiel</DropdownText>
+            <DropdownItem value="cockatiel" disabled={true}>
+              <DropdownSelectedIndicator />
+              <DropdownText>Cockatiel</DropdownText>
             </DropdownItem>
             <DropdownItem id={`${selectItem}-2`} value="budgerigar">
               <DropdownSelectedIndicator id={`${selectIndicator}-2`} />
@@ -71,7 +72,7 @@ describe('Given a <Dropdown /> component', () => {
     );
   };
 
-  it('should render', async () => {
+  it('should render', () => {
     mount({});
     expect(rendered).toBeTruthy();
   });
