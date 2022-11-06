@@ -530,5 +530,23 @@ export const generateColors = ({
   'input-danger-ghost-border-color-hover': danger[200],
   'input-danger-ghost-border-color-focus': danger[200],
   'input-danger-ghost-border-color-active': danger[200],
-  'input-danger-ghost-border-color-disabled': grayColoredColor[80]
+  'input-danger-ghost-border-color-disabled': grayColoredColor[80],
+
+  // Slider
+  'slider-background-color-track-normal': primary[60],
+  'slider-background-color-track-disabled': grayColoredColor[50],
+  'slider-background-color-range-normal': primary[90],
+  'slider-background-color-range-disabled': grayColoredColor[80],
+  'slider-background-color-thumb-normal': primary[100],
+  'slider-background-color-thumb-hover': primary[200],
+  'slider-background-color-thumb-focus': primary[200],
+  'slider-background-color-thumb-active': primary[200],
+  'slider-background-color-thumb-disabled': grayColoredColor[90],
+  'slider-box-shadow-thumb-normal': grayColoredColor[90],
+  'slider-box-shadow-thumb-hover': grayColoredColor[100],
+  'slider-box-shadow-thumb-focus': grayColoredColor[200],
+  'slider-box-shadow-thumb-active': grayColoredColor[200],
+  'slider-color-max-and-min-value-normal': grayColoredColor[200],
+  'slider-color-max-and-min-value-disabled': grayColoredColor[80],
+  'slider-color-indicator-value-normal': grayColoredColor[200]
 });
