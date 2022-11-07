@@ -3,7 +3,7 @@ import React from 'react';
 import { Slider } from './Slider';
 
 export default {
-  title: 'Componentes/Slider',
+  title: 'Form/Slider',
   component: Slider,
   argTypes: {
     min: {

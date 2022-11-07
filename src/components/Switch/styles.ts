@@ -70,8 +70,7 @@ const StyledSwitch = styled(SwitchPrimitive.Thumb, {
         $$backgroundHover: '$colors-switch-danger-background-color-thumb-hover',
         $$backgroundChecked: '$colors-switch-danger-background-color-thumb-checked',
         $$backgroundDisabled: '$colors-switch-danger-background-color-thumb-disabled-normal',
-        $$backgroundDisabledChecked:
-          '$colors-switch-danger-background-color-thumb-disabled-checked'
+        $$backgroundDisabledChecked: '$colors-switch-danger-background-color-thumb-disabled-checked'
       }
     }
   },

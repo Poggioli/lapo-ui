@@ -22,7 +22,13 @@ const Switch = React.forwardRef(({ id, children, inverted, variant, ...props }, 
 
   return (
     <Container inverted={!!inverted} variant={variant} alignItems="center">
-      <StyledRoot {...props} id={customId} variant={variant} aria-label="Switch" ref={assignRefs(forwardedRef)}>
+      <StyledRoot
+        {...props}
+        id={customId}
+        variant={variant}
+        aria-label="Switch"
+        ref={assignRefs(forwardedRef)}
+      >
         <StyledSwitch variant={variant} />
       </StyledRoot>
       <Label as="label" htmlFor={customId}>

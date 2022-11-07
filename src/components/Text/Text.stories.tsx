@@ -3,7 +3,7 @@ import React from 'react';
 import { Text } from './Text';
 
 export default {
-  title: 'Componentes/Text',
+  title: 'Typograph/Text',
   component: Text,
   argTypes: {
     variant: {
