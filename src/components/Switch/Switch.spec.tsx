@@ -22,12 +22,14 @@ describe('Given a <Switch /> component', () => {
   describe('Should have id', () => {
     it('With prefix when no Id is provided', () => {
       mount({});
-      expect(element.id).toContain('switch-');
+      const switcher = rendered.container.querySelector('[id^="switch-"]');
+      expect(switcher).toBeTruthy();
     });
 
     it('With Id passed by props', () => {
       mount({ id: 'switchId123' });
-      expect(element.id).toBe('switchId123');
+      const switcher = rendered.container.querySelector('#switchId123');
+      expect(switcher).toBeTruthy();
     });
   });
 });

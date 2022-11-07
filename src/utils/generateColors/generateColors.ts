@@ -548,5 +548,62 @@ export const generateColors = ({
   'slider-box-shadow-thumb-active': grayColoredColor[200],
   'slider-color-max-and-min-value-normal': grayColoredColor[200],
   'slider-color-max-and-min-value-disabled': grayColoredColor[80],
-  'slider-color-indicator-value-normal': grayColoredColor[200]
+  'slider-color-indicator-value-normal': grayColoredColor[200],
+
+  // Switch
+  'switch-primary-background-color-normal': grayColoredColor[70],
+  'switch-primary-background-color-checked': primary[70],
+  'switch-primary-background-color-disabled-normal': grayColoredColor[50],
+  'switch-primary-background-color-disabled-checked': primary[30],
+
+  'switch-primary-background-color-thumb-normal': grayColoredColor[20],
+  'switch-primary-background-color-thumb-hover': grayColoredColor[30],
+  'switch-primary-background-color-thumb-checked': primary[90],
+  'switch-primary-background-color-thumb-disabled-normal': grayColoredColor[20],
+  'switch-primary-background-color-thumb-disabled-checked': primary[50],
+
+  'switch-primary-color-unchecked': grayColoredColor[200],
+  'switch-primary-color-hover': grayColoredColor[300],
+  'switch-primary-color-checked': grayColoredColor[300],
+  'switch-primary-color-unchecked-disabled': grayColoredColor[80],
+  'switch-primary-color-checked-disabled': grayColoredColor[80],
+
+  'switch-secondary-background-color-normal': grayColoredColor[70],
+  'switch-secondary-background-color-checked': secondary[70],
+  'switch-secondary-background-color-disabled-normal': grayColoredColor[50],
+  'switch-secondary-background-color-disabled-checked': secondary[30],
+
+  'switch-secondary-background-color-thumb-normal': grayColoredColor[20],
+  'switch-secondary-background-color-thumb-hover': grayColoredColor[30],
+  'switch-secondary-background-color-thumb-checked': secondary[90],
+  'switch-secondary-background-color-thumb-disabled-normal': grayColoredColor[20],
+  'switch-secondary-background-color-thumb-disabled-checked': secondary[50],
+
+  'switch-secondary-color-unchecked': grayColoredColor[200],
+  'switch-secondary-color-hover': grayColoredColor[300],
+  'switch-secondary-color-checked': grayColoredColor[300],
+  'switch-secondary-color-unchecked-disabled': grayColoredColor[80],
+  'switch-secondary-color-checked-disabled': grayColoredColor[80],
+
+  'switch-danger-background-color-normal': grayColoredColor[70],
+  'switch-danger-background-color-checked': danger[70],
+  'switch-danger-background-color-disabled-normal': grayColoredColor[50],
+  'switch-danger-background-color-disabled-checked': danger[30],
+
+  'switch-danger-background-color-thumb-normal': grayColoredColor[20],
+  'switch-danger-background-color-thumb-hover': grayColoredColor[30],
+  'switch-danger-background-color-thumb-checked': danger[90],
+  'switch-danger-background-color-thumb-disabled-normal': grayColoredColor[20],
+  'switch-danger-background-color-thumb-disabled-checked': danger[50],
+
+  'switch-danger-color-unchecked': danger[200],
+  'switch-danger-color-hover': danger[200],
+  'switch-danger-color-checked': danger[300],
+  'switch-danger-color-unchecked-disabled': grayColoredColor[80],
+  'switch-danger-color-checked-disabled': grayColoredColor[80],
+
+  'switch-box-shadow-color-thumb-normal':
+    '0 2px 1px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f',
+  'switch-box-shadow-color-thumb-hover':
+    '0 2px 12px 2px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f'
 });
