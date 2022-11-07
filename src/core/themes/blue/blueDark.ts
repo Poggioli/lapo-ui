@@ -24,6 +24,20 @@ export const blueDarkTheme = {
       secondary,
       danger,
       success
-    })
+    }),
+    'switch-primary-background-color-thumb-normal': grayColoredColor[200],
+    'switch-primary-background-color-thumb-hover': grayColoredColor[300],
+    'switch-primary-background-color-thumb-disabled-normal': grayColoredColor[70],
+    'switch-secondary-background-color-thumb-normal': grayColoredColor[200],
+    'switch-secondary-background-color-thumb-hover': grayColoredColor[300],
+    'switch-secondary-background-color-thumb-disabled-normal': grayColoredColor[70],
+    'switch-danger-background-color-thumb-normal': grayColoredColor[200],
+    'switch-danger-background-color-thumb-hover': grayColoredColor[300],
+    'switch-danger-background-color-thumb-disabled-normal': grayColoredColor[70],
+    'switch-box-shadow-color-thumb-normal':
+      '0 2px 1px -1px #FFF3, 0 1px 1px #FFFFFF24, 0 1px 3px #FFFFFF1f',
+
+    'switch-box-shadow-color-thumb-hover':
+      '0 2px 12px 2px #FFF3, 0 1px 1px #FFFFFF24, 0 1px 3px #FFFFFF1f'
   }
 };
