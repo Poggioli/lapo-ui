@@ -10,7 +10,7 @@ exports[`Given a <Slider /> component should invert range label if inverted valu
       >
         <span
           aria-disabled="false"
-          class="lapo--c-gVJsmb"
+          class="lapo--c-jwvbwP"
           data-orientation="horizontal"
           dir="ltr"
           id="sliderId123"
@@ -43,7 +43,7 @@ exports[`Given a <Slider /> component should invert range label if inverted valu
               tabindex="0"
             >
               <span
-                class="lapo--c-jNLug lapo--c-cLMHMJ lapo--c-jNLug-bkzKcy-variant-body2 lapo--c-jNLug-ewLzLC-color-grayColoredHighContrast"
+                class="lapo--c-gwBMnL lapo--c-cLMHMJ lapo--c-gwBMnL-bkzKcy-variant-body2 lapo--c-gwBMnL-ewLzLC-color-grayColoredHighContrast"
               >
                 0
               </span>
@@ -59,7 +59,7 @@ exports[`Given a <Slider /> component should invert range label if inverted valu
     >
       <span
         aria-disabled="false"
-        class="lapo--c-gVJsmb"
+        class="lapo--c-jwvbwP"
         data-orientation="horizontal"
         dir="ltr"
         id="sliderId123"
@@ -92,7 +92,7 @@ exports[`Given a <Slider /> component should invert range label if inverted valu
             tabindex="0"
           >
             <span
-              class="lapo--c-jNLug lapo--c-cLMHMJ lapo--c-jNLug-bkzKcy-variant-body2 lapo--c-jNLug-ewLzLC-color-grayColoredHighContrast"
+              class="lapo--c-gwBMnL lapo--c-cLMHMJ lapo--c-gwBMnL-bkzKcy-variant-body2 lapo--c-gwBMnL-ewLzLC-color-grayColoredHighContrast"
             >
               0
             </span>

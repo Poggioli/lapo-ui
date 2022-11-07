@@ -605,5 +605,11 @@ export const generateColors = ({
   'switch-box-shadow-color-thumb-normal':
     '0 2px 1px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f',
   'switch-box-shadow-color-thumb-hover':
-    '0 2px 12px 2px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f'
+    '0 2px 12px 2px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f',
+
+  // Card
+  'card-border-color-normal': grayColoredColor[70],
+  'card-border-color-hover': grayColoredColor[80],
+  'card-background-color-normal': primary[20],
+  'card-background-color-hover': primary[30]
 });

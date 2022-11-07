@@ -23,6 +23,8 @@ import React, { useMemo } from 'react';
 const DEFAULT_TAG = 'span';
 export const StyledText = styled(DEFAULT_TAG, {
   fontVariantNumeric: 'tabular-nums',
+  margin: 0,
+  padding: 0,
   display: 'block',
 
   variants: {

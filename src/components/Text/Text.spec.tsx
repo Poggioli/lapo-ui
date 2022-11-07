@@ -81,6 +81,6 @@ describe('Given a Text component', () => {
   });
 
   it('Should return the class name', () => {
-    expect(Text.toString()).toBe('.lapo--c-jNLug');
+    expect(Text.toString()).toBe('.lapo--c-gwBMnL');
   });
 });
