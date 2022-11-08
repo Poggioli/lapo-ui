@@ -611,5 +611,8 @@ export const generateColors = ({
   'card-border-color-normal': grayColoredColor[70],
   'card-border-color-hover': grayColoredColor[80],
   'card-background-color-normal': primary[20],
-  'card-background-color-hover': primary[30]
+  'card-background-color-hover': primary[30],
+
+  // Separator
+  'separator-background-color': grayColoredColor[70],
 });

@@ -50,27 +50,27 @@ module.exports = function (plop) {
     actions: [
       {
         type: 'add',
-        path: 'src/layout/{{pascalCase name}}/{{pascalCase name}}.tsx',
+        path: 'src/components/layout/{{pascalCase name}}/{{pascalCase name}}.tsx',
         templateFile: '.plop/component/component.hbs'
       },
       {
         type: 'add',
-        path: 'src/layout/{{pascalCase name}}/styles.ts',
+        path: 'src/components/layout/{{pascalCase name}}/styles.ts',
         templateFile: '.plop/component/styles.hbs'
       },
       {
         type: 'add',
-        path: 'src/layout/{{pascalCase name}}/index.ts',
+        path: 'src/components/layout/{{pascalCase name}}/index.ts',
         templateFile: '.plop/component/index.hbs'
       },
       {
         type: 'add',
-        path: 'src/layout/{{pascalCase name}}/{{pascalCase name}}.stories.tsx',
+        path: 'src/components/layout/{{pascalCase name}}/{{pascalCase name}}.stories.tsx',
         templateFile: '.plop/component/stories.hbs'
       },
       {
         type: 'add',
-        path: 'src/layout/{{pascalCase name}}/{{pascalCase name}}.spec.tsx',
+        path: 'src/components/layout/{{pascalCase name}}/{{pascalCase name}}.spec.tsx',
         templateFile: '.plop/component/test.hbs'
       }
     ]
