@@ -2,8 +2,8 @@
 module.exports = {
   roots: ['<rootDir>/src'],
   moduleNameMapper: {
-    '@lapo': '<rootDir>/src/core/lapo.config.ts',
-    '@layout/(.*)': '<rootDir>/src/layout/$1',
+    '@lapo': '<rootDir>/src/config/lapo.config.ts',
+    '@layout/(.*)': '<rootDir>/src/components/layout/$1',
     '@components/(.*)': '<rootDir>/src/components/$1',
     '@tokens': '<rootDir>/src/tokens/index.ts',
     '@utils/(.*)': '<rootDir>/src/utils/$1',

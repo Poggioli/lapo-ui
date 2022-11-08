@@ -17,8 +17,8 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "@lapo": ["./src/core/lapo.config.ts"],
-      "@layout/*": ["./src/layout/*"],
+      "@lapo": ["./src/config/lapo.config.ts"],
+      "@layout/*": ["src/components/layout/*"],
       "@components/*": ["./src/components/*"],
       "@tokens": ["./src/tokens/index.ts"],
       "@utils/*": ["./src/utils/*"],

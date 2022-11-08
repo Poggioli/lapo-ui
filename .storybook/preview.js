@@ -1,4 +1,4 @@
-import { blueDarkTheme, blueLightTheme } from '../src/core/lapo.config';
+import { blueDarkTheme, blueLightTheme } from '../src/config/lapo.config';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
