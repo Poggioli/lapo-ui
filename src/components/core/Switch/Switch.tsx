@@ -38,6 +38,11 @@ const Switch = React.forwardRef(({ id, children, inverted, variant, ...props }, 
   );
 }) as SwitchComponent;
 
+Switch.defaultProps = {
+  inverted: false,
+  orientation: 'primary'
+};
+
 export { Switch };
 
 /* -----------------------------------------------------------------------------------------------*/

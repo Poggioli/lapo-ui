@@ -1,4 +1,12 @@
-import { blueDark, brownDark, grassDark, grayDark, slateDark, tomatoDark } from '@radix-ui/colors';
+import {
+  blueDark,
+  brownDark,
+  grassDark,
+  grayDark,
+  slateDark,
+  tomatoDark,
+  whiteA
+} from '@radix-ui/colors';
 import { generateColors } from '@utils/generateColors';
 import { GenericScale, specificScaleToGenericScale } from '@utils/genericScale';
 import { base } from '../base';
@@ -9,6 +17,7 @@ const grayScale: GenericScale = specificScaleToGenericScale(grayDark);
 const grayColoredColor: GenericScale = specificScaleToGenericScale(slateDark);
 const white = grayScale[300];
 const black = grayColoredColor[10];
+const overlay: GenericScale = specificScaleToGenericScale(whiteA, 'overlay');
 const danger: GenericScale = specificScaleToGenericScale(tomatoDark);
 const success: GenericScale = specificScaleToGenericScale(grassDark);
 
@@ -23,7 +32,8 @@ export const blueDarkTheme = {
       grayScale,
       secondary,
       danger,
-      success
+      success,
+      overlay
     }),
     'switch-primary-background-color-thumb-normal': grayColoredColor[200],
     'switch-primary-background-color-thumb-hover': grayColoredColor[300],

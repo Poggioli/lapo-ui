@@ -201,7 +201,8 @@ const Container = styled(Flex, {
   },
 
   defaultVariants: {
-    variant: 'primary'
+    variant: 'primary',
+    inverted: false
   }
 });
 

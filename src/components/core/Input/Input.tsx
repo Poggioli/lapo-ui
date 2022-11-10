@@ -16,7 +16,10 @@ export type InputProps = InputCSSProp & InputVariants & { label: string };
 type InputComponent = Polymorphic.ForwardRefComponent<typeof StyledInput, InputProps>;
 
 const Input = React.forwardRef(
-  ({ id, placeholder, label, value, shape, variant, onFocus, onBlur, ...props }, forwardedRef) => {
+  (
+    { id, placeholder, label, value, shape, variant, onFocus, onBlur, css, ...props },
+    forwardedRef
+  ) => {
     const customId: string = useMemo(() => id || useId('input'), [id]);
     const [ownPlaceholder, setOwnPlaceholder] = useState<string>('');
     const inputRef = useRef<HTMLInputElement | null>(null);
@@ -35,7 +38,13 @@ const Input = React.forwardRef(
     }, []);
 
     return (
-      <Container shape={shape} variant={variant}>
+      <Container
+        css={{
+          ...css
+        }}
+        shape={shape}
+        variant={variant}
+      >
         <StyledInput
           {...props}
           shape={shape}
@@ -67,6 +76,11 @@ const Input = React.forwardRef(
     );
   }
 ) as InputComponent;
+
+Input.defaultProps = {
+  shape: 'standard',
+  variant: 'primary'
+};
 
 export { Input };
 

@@ -19,6 +19,12 @@ type PropertyValue<T extends keyof Stitches.CSSProperties> =
 const lapo = createStitches({
   prefix: 'lapo-',
   theme: themes.blueLightTheme,
+  media: {
+    small: '(min-width: 576px)',
+    medium: '(min-width: 768px)',
+    large: '(min-width: 992px)',
+    extraLarge: '(min-width: 1200px)'
+  },
   utils: {
     p: (value: PropertyValue<'padding'>) => ({ padding: value }),
     pt: (value: PropertyValue<'paddingTop'>) => ({ paddingTop: value }),

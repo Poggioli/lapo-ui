@@ -75,7 +75,13 @@ const CheckboxContainer = styled(Flex, {
         $$colorText: '$$colorUncheckedDisabled'
       }
     }
-  ]
+  ],
+
+  defaultVariants: {
+    variant: 'primary',
+    checked: false,
+    disabled: false
+  }
 });
 
 const StyledCheckbox = styled(CheckboxPrimitive.Root, {

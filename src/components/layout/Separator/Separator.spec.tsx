@@ -20,13 +20,13 @@ describe('Given a <Separator /> component', () => {
     it('With prefix when no Id is provided', () => {
       mount({});
       const separator = rendered.container.querySelector('[id^="separator-"]');
-      expect(separator).toBeTruthy()
+      expect(separator).toBeTruthy();
     });
 
     it('With Id passed by props', () => {
       mount({ id: 'separatorId123' });
       const separator = rendered.container.querySelector('#separatorId123');
-      expect(separator).toBeTruthy()
+      expect(separator).toBeTruthy();
     });
   });
 });

@@ -1,4 +1,4 @@
-import { blue, brown, grass, gray, slate, tomato } from '@radix-ui/colors';
+import { blackA, blue, brown, grass, gray, slate, tomato } from '@radix-ui/colors';
 import { generateColors } from '@utils/generateColors';
 import { GenericScale, specificScaleToGenericScale } from '@utils/genericScale';
 import { base } from '../base';
@@ -9,6 +9,7 @@ const grayScale: GenericScale = specificScaleToGenericScale(gray);
 const grayColoredColor: GenericScale = specificScaleToGenericScale(slate);
 const white = grayScale[10];
 const black = grayColoredColor[300];
+const overlay: GenericScale = specificScaleToGenericScale(blackA, 'overlay');
 const danger: GenericScale = specificScaleToGenericScale(tomato);
 const success: GenericScale = specificScaleToGenericScale(grass);
 
@@ -23,7 +24,8 @@ export const blueLightTheme = {
       grayScale,
       secondary,
       danger,
-      success
+      success,
+      overlay
     })
   }
 };

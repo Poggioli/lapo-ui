@@ -84,7 +84,13 @@ const RadiobuttonContainer = styled(Flex, {
         $$colorText: '$$colorUncheckedDisabled'
       }
     }
-  ]
+  ],
+
+  defaultVariants: {
+    variant: 'primary',
+    checked: false,
+    disabled: false
+  }
 });
 
 const RadioGroup = styled(RadioGroupPrimitive.Root, {

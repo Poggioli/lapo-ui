@@ -9,6 +9,7 @@ type GenerateColors = {
   secondary: GenericScale;
   danger: GenericScale;
   success: GenericScale;
+  overlay: GenericScale;
 };
 
 export const generateColors = ({
@@ -19,8 +20,10 @@ export const generateColors = ({
   grayScale,
   secondary,
   danger,
-  success
+  success,
+  overlay
 }: GenerateColors): any => ({
+  ...overlay,
   white: white,
   black: black,
   transparent: 'transparent',
@@ -433,6 +436,7 @@ export const generateColors = ({
   'input-primary-standard-label-normal': grayColoredColor[200],
   'input-primary-standard-label-hover': grayColoredColor[300],
   'input-primary-standard-label-focus': primary[200],
+  'input-primary-standard-label-active': primary[200],
   'input-primary-standard-label-disabled': grayColoredColor[80],
   'input-primary-standard-value-disabled': grayColoredColor[80],
   'input-primary-standard-value-normal': grayColoredColor[300],
@@ -450,6 +454,7 @@ export const generateColors = ({
   'input-primary-solid-label-normal': grayColoredColor[200],
   'input-primary-solid-label-hover': grayColoredColor[300],
   'input-primary-solid-label-focus': primary[200],
+  'input-primary-solid-label-active': primary[200],
   'input-primary-solid-label-disabled': grayColoredColor[80],
   'input-primary-solid-value-disabled': grayColoredColor[80],
   'input-primary-solid-value-normal': grayColoredColor[300],
@@ -467,6 +472,7 @@ export const generateColors = ({
   'input-primary-ghost-label-normal': grayColoredColor[200],
   'input-primary-ghost-label-hover': grayColoredColor[300],
   'input-primary-ghost-label-focus': primary[200],
+  'input-primary-ghost-label-active': primary[200],
   'input-primary-ghost-label-disabled': grayColoredColor[80],
   'input-primary-ghost-value-disabled': grayColoredColor[80],
   'input-primary-ghost-value-normal': grayColoredColor[300],
@@ -484,6 +490,7 @@ export const generateColors = ({
   'input-danger-standard-label-normal': grayColoredColor[200],
   'input-danger-standard-label-hover': grayColoredColor[300],
   'input-danger-standard-label-focus': danger[200],
+  'input-danger-standard-label-active': danger[200],
   'input-danger-standard-label-disabled': grayColoredColor[80],
   'input-danger-standard-value-disabled': grayColoredColor[80],
   'input-danger-standard-value-normal': grayColoredColor[300],
@@ -501,6 +508,7 @@ export const generateColors = ({
   'input-danger-solid-label-normal': grayColoredColor[200],
   'input-danger-solid-label-hover': grayColoredColor[300],
   'input-danger-solid-label-focus': danger[200],
+  'input-danger-solid-label-active': danger[200],
   'input-danger-solid-label-disabled': grayColoredColor[80],
   'input-danger-solid-value-disabled': grayColoredColor[80],
   'input-danger-solid-value-normal': grayColoredColor[300],
@@ -518,6 +526,7 @@ export const generateColors = ({
   'input-danger-ghost-label-normal': grayColoredColor[200],
   'input-danger-ghost-label-hover': grayColoredColor[300],
   'input-danger-ghost-label-focus': danger[200],
+  'input-danger-ghost-label-active': danger[200],
   'input-danger-ghost-label-disabled': grayColoredColor[80],
   'input-danger-ghost-value-disabled': grayColoredColor[80],
   'input-danger-ghost-value-normal': grayColoredColor[300],
@@ -615,4 +624,11 @@ export const generateColors = ({
 
   // Separator
   'separator-background-color': grayColoredColor[70],
+
+  // Modal
+  'modal-background-color-content': primary[20],
+  'modal-background-color-overlay': '$overlay-200',
+  'modal-color-close-icon-normal': grayColoredColor[100],
+  'modal-color-close-icon-hover': grayColoredColor[300],
+  'modal-color-close-icon-focus': grayColoredColor[300]
 });

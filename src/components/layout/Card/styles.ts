@@ -51,7 +51,7 @@ const StyledCard = styled(Box, {
   defaultVariants: {
     variant: 'standard',
     borderFormat: 'soft',
-    isPadded: 'true'
+    isPadded: true
   }
 });
 

@@ -5,13 +5,13 @@ import { body_1 } from '@tokens';
 
 const isFilledOrFocused: CSS = {
   transform:
-    'translateY(-$space-5) scale(.65) perspective(100px) translateZ(.001px) translateX(calc(-$space-3 - $space-2))'
+    'translateY(-$space-5) scale(.65) perspective(100px) translateZ(.001px) translateX(-27%)'
 };
 
 const isFilledOrFocusedGhostLine: CSS = {
   display: 'block',
   bottom: '$8',
-  transform: 'scaleX(.65) translateX(calc(-$space-3 - $space-2))'
+  transform: 'scaleX(.65) translateX(-24%)'
 };
 
 const Label = styled(StyledText, {
@@ -33,6 +33,11 @@ const Label = styled(StyledText, {
         ...isFilledOrFocused
       }
     }
+  },
+
+  defaultVariants: {
+    isFocused: false,
+    isFilled: false
   }
 });
 
@@ -69,6 +74,11 @@ const GhostLine = styled(Box, {
         ...isFilledOrFocusedGhostLine
       }
     }
+  },
+
+  defaultVariants: {
+    shape: 'standard',
+    isFilled: false
   }
 });
 
@@ -197,7 +207,6 @@ const StyledInput = styled(DEFAULT_TAG, {
   borderColor: '$$borderColor',
   color: '$$color',
   display: 'inline-flex',
-  maxWidth: 'calc($13 * 2.5)',
   padding: '$4 $4 calc($3 - 1px) $3',
   transition: `background-color 200ms linear,
     border-width 200ms linear,
@@ -397,7 +406,8 @@ const StyledInput = styled(DEFAULT_TAG, {
 
   defaultVariants: {
     shape: 'standard',
-    variant: 'primary'
+    variant: 'primary',
+    filled: false
   }
 });
 

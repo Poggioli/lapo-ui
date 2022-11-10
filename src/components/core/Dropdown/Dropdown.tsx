@@ -69,7 +69,7 @@ type DropdownTriggerComponent = Polymorphic.ForwardRefComponent<
   DropdownTriggerProps
 >;
 
-const DropdownTrigger = React.forwardRef(({ id, children, type, ...props }, forwardedRef) => {
+const DropdownTrigger = React.forwardRef(({ id, children, ...props }, forwardedRef) => {
   const customId: string = useMemo(() => id || useId('dropdown-trigger'), [id]);
   return (
     <StyledTrigger
@@ -84,6 +84,11 @@ const DropdownTrigger = React.forwardRef(({ id, children, type, ...props }, forw
     </StyledTrigger>
   );
 }) as DropdownTriggerComponent;
+
+DropdownTrigger.defaultProps = {
+  shape: 'standard',
+  variant: 'primary'
+};
 /* -----------------------------------------------------------------------------------------------*/
 
 /* -------------------------------------------------------------------------------------------------

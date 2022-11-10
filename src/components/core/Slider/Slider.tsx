@@ -44,13 +44,11 @@ const Slider = React.forwardRef(
   ) => {
     const ownId: string = useMemo(() => id || useId('slider'), [id]);
     const ownDefaultValue: number[] = defaultValue || value || [0];
-    const ownMin: number = min || 0;
-    const ownMax: number = max || 100;
-    const [ownValue, setownValue] = useState<number[]>(value || ownDefaultValue);
+    const [ownValue, setOwnValue] = useState<number[]>(value || ownDefaultValue);
 
     const ownOnValueChange = useCallback((value: number[]) => {
       onValueChange && onValueChange(value);
-      setownValue(value);
+      setOwnValue(value);
     }, []);
 
     return (
@@ -58,11 +56,11 @@ const Slider = React.forwardRef(
         {showRange ? (
           <RangeValue
             role="range"
-            aria-label={`${inverted ? ownMax : ownMin}`}
+            aria-label={`${inverted ? max : min}`}
             variant="body1"
             disabled={disabled}
           >
-            {inverted ? ownMax : ownMin}
+            {inverted ? max : min}
           </RangeValue>
         ) : null}
         <StyledRoot
@@ -71,8 +69,8 @@ const Slider = React.forwardRef(
           ref={forwardedRef}
           disabled={disabled}
           inverted={inverted}
-          min={ownMin}
-          max={ownMax}
+          min={min}
+          max={max}
           orientation={orientation}
           defaultValue={ownDefaultValue}
           onValueChange={ownOnValueChange}
@@ -89,17 +87,26 @@ const Slider = React.forwardRef(
         {showRange ? (
           <RangeValue
             role="range"
-            aria-label={`${inverted ? ownMin : ownMax}`}
+            aria-label={`${inverted ? min : max}`}
             variant="body1"
             disabled={disabled}
           >
-            {inverted ? ownMin : ownMax}
+            {inverted ? min : max}
           </RangeValue>
         ) : null}
       </Container>
     );
   }
 ) as SliderComponent;
+
+Slider.defaultProps = {
+  showRange: false,
+  disabled: false,
+  inverted: false,
+  min: 0,
+  max: 100,
+  orientation: 'horizontal'
+};
 
 export { Slider };
 

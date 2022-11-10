@@ -65,4 +65,10 @@ const Checkbox = React.forwardRef(
 
 export { Checkbox };
 
+Checkbox.defaultProps = {
+  variant: 'primary',
+  checked: false,
+  disabled: false
+};
+
 /* -----------------------------------------------------------------------------------------------*/

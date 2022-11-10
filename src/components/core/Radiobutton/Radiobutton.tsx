@@ -53,6 +53,12 @@ const Radiobutton = React.forwardRef(
   }
 ) as RadiobuttonComponent;
 
+Radiobutton.defaultProps = {
+  variant: 'primary',
+  disabled: false,
+  checked: false
+};
+
 export { Radiobutton };
 
 /* -----------------------------------------------------------------------------------------------*/

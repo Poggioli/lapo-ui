@@ -36,6 +36,10 @@ const RangeValue = styled(StyledText, {
         color: '$slider-color-max-and-min-value-disabled !important'
       }
     }
+  },
+
+  defaultVariants: {
+    disabled: false
   }
 });
 

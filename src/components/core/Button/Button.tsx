@@ -1,6 +1,5 @@
-import { Text } from '@components/typograph/Text';
-import { ComponentCSSProp, LapoVariants, styled } from '@lapo';
 import { Ripple } from '@components/layout/Ripple';
+import { ComponentCSSProp, LapoVariants, styled } from '@lapo';
 import type * as Polymorphic from '@radix-ui/react-polymorphic';
 import { body_1 } from '@tokens';
 import useId from '@utils/hooks/useId';
@@ -330,6 +329,12 @@ const Button = React.forwardRef(({ id, children, variant, shape, ...props }, for
     </Ripple>
   );
 }) as ButtonComponent;
+
+Button.defaultProps = {
+  variant: 'primary',
+  shape: 'rounded',
+  type: 'solid'
+};
 
 export { Button };
 

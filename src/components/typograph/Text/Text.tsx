@@ -99,7 +99,7 @@ type TextCSSProp = ComponentCSSProp;
 type TextVariants = LapoVariants<typeof StyledText>;
 type TextProps = TextCSSProp & TextVariants;
 
-type TextComponent = Polymorphic.ForwardRefComponent<typeof DEFAULT_TAG, TextProps>;
+type TextComponent = Polymorphic.ForwardRefComponent<typeof StyledText, TextProps>;
 
 const Text = React.forwardRef(({ id, ...props }, forwardedRef) => {
   const customId: string = useMemo(() => id || useId('text'), [id]);
