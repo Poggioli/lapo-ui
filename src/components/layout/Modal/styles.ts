@@ -49,7 +49,7 @@ const StyledOverlay = styled(Dialog.Overlay, {
   display: 'flex',
   overflowY: 'auto',
   padding: '$12 0',
-  position: 'fixed',
+  position: 'fixed'
 });
 /* ----------------------------------------------------------------------------------------------*/
 
