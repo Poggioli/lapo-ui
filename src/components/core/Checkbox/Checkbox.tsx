@@ -33,7 +33,7 @@ const Checkbox = React.forwardRef(
 
     return (
       <CheckboxContainer
-        alignItems="center"
+        align="center"
         disabled={disabled}
         checked={!!checkedState}
         variant={variant}

@@ -21,7 +21,7 @@ const Switch = React.forwardRef(({ id, children, inverted, variant, ...props }, 
   const customId: string = useMemo(() => id || useId('switch'), [id]);
 
   return (
-    <Container inverted={!!inverted} variant={variant} alignItems="center">
+    <Container inverted={!!inverted} variant={variant} align="center">
       <StyledRoot
         {...props}
         id={customId}
@@ -31,16 +31,18 @@ const Switch = React.forwardRef(({ id, children, inverted, variant, ...props }, 
       >
         <StyledSwitch variant={variant} />
       </StyledRoot>
-      <Label as="label" htmlFor={customId}>
-        {children}
-      </Label>
+      {children ? (
+        <Label as="label" htmlFor={customId}>
+          {children}
+        </Label>
+      ) : null}
     </Container>
   );
 }) as SwitchComponent;
 
 Switch.defaultProps = {
   inverted: false,
-  orientation: 'primary'
+  variant: 'primary'
 };
 
 export { Switch };

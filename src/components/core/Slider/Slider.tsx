@@ -43,7 +43,7 @@ const Slider = React.forwardRef(
     forwardedRef
   ) => {
     const ownId: string = useMemo(() => id || useId('slider'), [id]);
-    const ownDefaultValue: number[] = defaultValue || value || [0];
+    const ownDefaultValue: number[] = defaultValue || value || [Math.max(min, 0)];
     const [ownValue, setOwnValue] = useState<number[]>(value || ownDefaultValue);
 
     const ownOnValueChange = useCallback((value: number[]) => {

@@ -6,11 +6,11 @@ exports[`Given a <Slider /> component should invert range label if inverted valu
   "baseElement": <body>
     <div>
       <div
-        class="lapo--c-lesPJm lapo--c-dhzjXW lapo--c-lesPJm-igAUidj-css lapo--c-jJvGnk lapo--c-jJvGnk-dJfSKz-orientation-horizontal"
+        class="lapo--c-gqwkJN lapo--c-gqwkJN-iPJLV-css lapo--c-Zfryv lapo--c-Zfryv-dJfSKz-orientation-horizontal"
       >
         <span
           aria-disabled="false"
-          class="lapo--c-jwvbwP"
+          class="lapo--c-cKVYKj"
           data-orientation="horizontal"
           dir="ltr"
           id="sliderId123"
@@ -55,11 +55,11 @@ exports[`Given a <Slider /> component should invert range label if inverted valu
   </body>,
   "container": <div>
     <div
-      class="lapo--c-lesPJm lapo--c-dhzjXW lapo--c-lesPJm-igAUidj-css lapo--c-jJvGnk lapo--c-jJvGnk-dJfSKz-orientation-horizontal"
+      class="lapo--c-gqwkJN lapo--c-gqwkJN-iPJLV-css lapo--c-Zfryv lapo--c-Zfryv-dJfSKz-orientation-horizontal"
     >
       <span
         aria-disabled="false"
-        class="lapo--c-jwvbwP"
+        class="lapo--c-cKVYKj"
         data-orientation="horizontal"
         dir="ltr"
         id="sliderId123"

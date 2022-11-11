@@ -20,6 +20,7 @@ const lapo = createStitches({
   prefix: 'lapo-',
   theme: themes.blueLightTheme,
   media: {
+    initial: '(min-width: 0px)',
     small: '(min-width: 576px)',
     medium: '(min-width: 768px)',
     large: '(min-width: 992px)',

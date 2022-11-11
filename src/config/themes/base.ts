@@ -39,9 +39,6 @@ export const base = {
   fontWeights: {
     ...fontWeightTokens()
   },
-  shadows: {
-    1: '0 10px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2)'
-  },
   zIndices: {
     ...zIndexTokens()
   }

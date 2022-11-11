@@ -1,54 +1,67 @@
 import { CSS, styled } from '@lapo';
-import { Box } from '@components/layout/Box';
 import type * as Polymorphic from '@radix-ui/react-polymorphic';
 import React from 'react';
 
 /* -------------------------------------------------------------------------------------------------
  * Flex
  * -----------------------------------------------------------------------------------------------*/
-const StyledFlex = styled(Box, {
+const StyledFlex = styled('div', {
+  boxSizing: 'border-box',
   display: 'flex'
 });
 
-type FlexCSSProp = {
-  css?: Omit<CSS, 'flexDirection' | 'flexWrap' | 'justifyContent' | 'alignItems' | 'alignContent'>;
+type FlexVariants = {
+  direction?: CSS['flexDirection'];
+  align?: CSS['alignItems'];
+  justify?: CSS['justifyContent'];
+  wrap?: CSS['flexWrap'];
+  templateColumns?: CSS['gridTemplateColumns'];
+  templateRows?: CSS['gridTemplateRows'];
+  gap?: CSS['gap'];
+  gapX?: CSS['columnGap'];
+  gapY?: CSS['rowGap'];
 };
-type FlexVariants = Pick<
-  CSS,
-  'flexDirection' | 'flexWrap' | 'justifyContent' | 'alignItems' | 'alignContent'
->;
-type FlexOwnProps = FlexCSSProp & FlexVariants;
-type FlexComponent = Polymorphic.ForwardRefComponent<typeof Box, FlexOwnProps>;
+
+type FlexOwnProps = FlexVariants;
+type FlexComponent = Polymorphic.ForwardRefComponent<typeof StyledFlex, FlexOwnProps>;
 
 const Flex = React.forwardRef(
   (
-    { children, flexDirection, flexWrap, justifyContent, alignItems, alignContent, css, ...props },
+    {
+      direction,
+      align,
+      justify,
+      wrap,
+      templateColumns,
+      templateRows,
+      gap,
+      gapX,
+      gapY,
+      css,
+      ...props
+    },
     forwardedRef
   ) => {
-    const variants: FlexVariants = {
-      flexDirection: flexDirection || 'row',
-      flexWrap: flexWrap || 'nowrap',
-      justifyContent: justifyContent || 'flex-start',
-      alignItems: alignItems || 'flex-start',
-      alignContent: alignContent || 'flex-start'
-    };
+    const flexStyles = {
+      flexDirection: direction,
+      alignItems: align,
+      justifyContent: justify,
+      flexWrap: wrap,
+      gridTemplateColumns: templateColumns,
+      gridTemplateRows: templateRows,
+      gap,
+      columnGap: gapX,
+      rowGap: gapY,
+      css
+    } as CSS;
 
-    const customCss: CSS = {
-      ...css,
-      ...variants
-    };
+    for (const key in flexStyles) {
+      if (flexStyles[key] === null || flexStyles[key] === undefined) {
+        delete flexStyles[key];
+      }
+    }
 
-    return (
-      <StyledFlex
-        {...props}
-        css={{
-          ...customCss
-        }}
-        ref={forwardedRef}
-      >
-        {children}
-      </StyledFlex>
-    );
+    return <StyledFlex ref={forwardedRef} css={{ ...flexStyles, ...(css as any) }} {...props} />;
   }
 ) as FlexComponent;
 /* -----------------------------------------------------------------------------------------------*/

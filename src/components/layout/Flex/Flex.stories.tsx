@@ -7,15 +7,15 @@ export default {
   title: 'Layout/Flex',
   component: Flex,
   argTypes: {
-    flexDirection: {
+    direction: {
       options: ['row', 'row-reverse', 'column', 'column-reverse'],
       control: { type: 'select' }
     },
-    flexWrap: {
+    wrap: {
       options: ['nowrap', 'wrap', 'wrap-reverse'],
       control: { type: 'select' }
     },
-    justifyContent: {
+    justify: {
       options: [
         'flex-start',
         'flex-end',
@@ -26,12 +26,8 @@ export default {
       ],
       control: { type: 'select' }
     },
-    alignItems: {
+    align: {
       options: ['flex-start', 'flex-end', 'center', 'baseline', 'stretch'],
-      control: { type: 'select' }
-    },
-    alignContent: {
-      options: ['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch'],
       control: { type: 'select' }
     },
     ref: {

@@ -28,8 +28,7 @@ const StyledTrigger = styled(Select.Trigger, {
   borderBottomWidth: '$1',
   display: 'inline-flex',
   justifyContent: 'space-between',
-  maxWidth: 'calc($13 * 2.5)',
-  padding: '$3 $4 calc($3 - 1px) $4',
+  padding: '$3 $4 calc($3 - 1px) $3',
   transition:
     'background-color 200ms linear, border-width 200ms linear, padding-bottom 200ms linear, border-color 200ms linear',
   width: '100%',
@@ -286,9 +285,11 @@ const StyledTrigger = styled(Select.Trigger, {
 const StyledPortal = styled(Select.Portal, {});
 
 const StyledContent = styled(Select.Content, {
+  $$boxShadow:
+    '0 10px 38px -10px $colors-dropdown-box-shadow-color-content, 0px 10px 20px -15px $colors-dropdown-box-shadow-color-content',
   backgroundColor: '$dropdown-background-color-content',
   borderRadius: '$2',
-  boxShadow: '$1',
+  boxShadow: '$$boxShadow',
   minWidth: 'calc($13 + $13)',
   overflow: 'hidden',
   padding: '$3',

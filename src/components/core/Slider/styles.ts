@@ -6,7 +6,7 @@ import * as SliderPrimitive from '@radix-ui/react-slider';
 const Container = styled(Flex, {
   minHeight: '$9',
   gap: '$4',
-  width: 'fit-content',
+  width: '100%',
 
   variants: {
     orientation: {
@@ -153,7 +153,6 @@ const StyledRoot = styled(SliderPrimitive.Root, {
 
   '&[data-orientation="horizontal"]': {
     height: '$5',
-    minWidth: 'calc($13 * 2)',
     width: '100%',
 
     '&:not([data-disabled])': {

@@ -42,7 +42,7 @@ export default {
 
 const Template: ComponentStory<typeof Card> = ({ ...args }) => (
   <Card {...args}>
-    <Flex flexDirection="column">
+    <Flex direction="column">
       <Text as="h1" variant="heading4" css={{ marginBottom: '$4' }}>
         This is a card component
       </Text>

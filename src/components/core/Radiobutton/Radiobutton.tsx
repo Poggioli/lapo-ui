@@ -26,12 +26,7 @@ const Radiobutton = React.forwardRef(
     const rippleBackgroundColor: string = `$radiobutton-${variant}-ripple-background-color`;
 
     return (
-      <RadiobuttonContainer
-        alignItems="center"
-        disabled={disabled}
-        checked={checked}
-        variant={variant}
-      >
+      <RadiobuttonContainer align="center" disabled={disabled} checked={checked} variant={variant}>
         <Ripple className={RippleStyle()} backgroundColor={rippleBackgroundColor} center>
           <StyledRadiobutton
             {...props}

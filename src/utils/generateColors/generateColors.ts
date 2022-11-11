@@ -425,6 +425,7 @@ export const generateColors = ({
   'dropdown-danger-standard-border-color-disabled': grayColoredColor[80],
 
   'dropdown-background-color-content': primary[20],
+  'dropdown-box-shadow-color-content': '$overlay-80',
   'dropdown-bordar-color-separator': grayColoredColor[50],
 
   'dropdown-item-background-hover': primary[30],

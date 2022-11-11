@@ -5,18 +5,27 @@ import React from 'react';
 import { Switch } from './Switch';
 
 describe('Given a <Switch /> component', () => {
-  const labelValue = 'any Switch value';
-  let element: HTMLElement;
   let rendered: RenderResult;
 
-  const mount = ({ ...props }: LapoVariants<typeof Switch>) => {
-    rendered = render(<Switch {...props}>{labelValue}</Switch>);
-    element = rendered.getByText(labelValue);
+  const mount = ({ ...props }: LapoVariants<typeof Switch>, label?: string) => {
+    rendered = render(<Switch {...props}>{label}</Switch>);
   };
 
   it('should have no a11y violations', async () => {
     mount({});
     expect(await axe(rendered.container)).toHaveNoViolations();
+  });
+
+  it('should render text', () => {
+    mount({}, 'swicth element');
+    const element = rendered.getByText('swicth element');
+    expect(element).toBeVisible();
+  });
+
+  it('should not render label', () => {
+    mount({});
+    const element = rendered.queryByRole('label');
+    expect(element).not.toBeInTheDocument();
   });
 
   describe('Should have id', () => {

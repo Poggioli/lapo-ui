@@ -19,11 +19,10 @@ describe('Given a flex', () => {
 
   it('should render a div with custom variants', () => {
     mount({
-      flexDirection: 'column',
-      flexWrap: 'wrap',
-      justifyContent: 'center',
-      alignItems: 'center',
-      alignContent: 'flex-end'
+      direction: 'column',
+      wrap: 'wrap',
+      justify: 'center',
+      align: 'center'
     });
     expect(flexComponent).toBeTruthy();
   });
