@@ -642,5 +642,8 @@ export const generateColors = ({
   'accordion-item-content-background-color': primary[10],
   'accordion-box-shadow-color': '$overlay-70',
   'accordion-border-color-separator': grayColoredColor[50],
-  'accordion-border-color': grayColoredColor[50]
+  'accordion-border-color': grayColoredColor[50],
+
+  // Toast
+  'toast-background-color': '$background-subtle'
 });

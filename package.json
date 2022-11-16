@@ -26,6 +26,7 @@
     "@radix-ui/react-separator": "^1.0.1",
     "@radix-ui/react-slider": "^1.1.0",
     "@radix-ui/react-switch": "^1.0.1",
+    "@radix-ui/react-toast": "^1.1.2",
     "@stitches/react": "^1.2.8",
     "webfontloader": "^1.6.28"
   },
@@ -64,6 +65,6 @@
     "prettier": "^2.7.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "typescript": "*"
+    "typescript": "^4.9.3"
   }
 }
