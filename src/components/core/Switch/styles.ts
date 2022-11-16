@@ -24,7 +24,7 @@ const StyledSwitch = styled(SwitchPrimitive.Thumb, {
   $$backgroundColor: '$$backgroundNormal',
 
   '&:not([data-disabled])': {
-    '&:hover': {
+    '&:hover, &:focus': {
       $$backgroundColor: '$$backgroundHover',
       $$boxShadow: '$colors-switch-box-shadow-color-thumb-hover'
     },
@@ -79,47 +79,67 @@ const StyledSwitch = styled(SwitchPrimitive.Thumb, {
     variant: 'primary'
   }
 });
+StyledSwitch.toString = () => `.${StyledSwitch.className}`;
 
 const StyledRoot = styled(SwitchPrimitive.Root, {
   all: 'unset',
   width: '$8',
   height: '$4',
-  backgroundColor: '$$backgroundNormal',
+  backgroundColor: '$$backgroundRootNormal',
   borderRadius: '$4',
   position: 'relative',
   transition: 'background-color 200ms linear',
 
-  '&[data-state="checked"]': {
-    backgroundColor: '$$backgroundChecked'
+  '&:not([data-disabled])': {
+    '&:hover, &:focus': {
+      [`${StyledSwitch.toString()}`]: {
+        backgroundColor: '$$backgroundThumbHover',
+        $$boxShadow: '$colors-switch-box-shadow-color-thumb-hover'
+      }
+    }
+  },
+
+  '&:not([data-disabled])[data-state="checked"]': {
+    backgroundColor: '$$backgroundRootChecked',
+    [`${StyledSwitch.toString()}`]: {
+      backgroundColor: '$$backgroundThumbChecked !important'
+    }
   },
 
   '&[data-disabled]': {
-    backgroundColor: '$$backgroundDisabledNormal',
+    backgroundColor: '$$backgroundRootDisabledNormal',
 
     '&[data-state="checked"]': {
-      backgroundColor: '$$backgroundDisabledChecked'
+      backgroundColor: '$$backgroundRootDisabledChecked'
     }
   },
 
   variants: {
     variant: {
       primary: {
-        $$backgroundNormal: '$colors-switch-primary-background-color-normal',
-        $$backgroundChecked: '$colors-switch-primary-background-color-checked',
-        $$backgroundDisabledNormal: '$colors-switch-primary-background-color-disabled-normal',
-        $$backgroundDisabledChecked: '$colors-switch-primary-background-color-disabled-checked'
+        $$backgroundRootNormal: '$colors-switch-primary-background-color-normal',
+        $$backgroundRootChecked: '$colors-switch-primary-background-color-checked',
+        $$backgroundRootDisabledNormal: '$colors-switch-primary-background-color-disabled-normal',
+        $$backgroundRootDisabledChecked: '$colors-switch-primary-background-color-disabled-checked',
+        $$backgroundThumbHover: '$colors-switch-primary-background-color-thumb-hover',
+        $$backgroundThumbChecked: '$colors-switch-primary-background-color-thumb-checked'
       },
       secondary: {
-        $$backgroundNormal: '$colors-switch-secondary-background-color-normal',
-        $$backgroundChecked: '$colors-switch-secondary-background-color-checked',
-        $$backgroundDisabledNormal: '$colors-switch-secondary-background-color-disabled-normal',
-        $$backgroundDisabledChecked: '$colors-switch-secondary-background-color-disabled-checked'
+        $$backgroundRootNormal: '$colors-switch-secondary-background-color-normal',
+        $$backgroundRootChecked: '$colors-switch-secondary-background-color-checked',
+        $$backgroundRootDisabledNormal: '$colors-switch-secondary-background-color-disabled-normal',
+        $$backgroundRootDisabledChecked:
+          '$colors-switch-secondary-background-color-disabled-checked',
+        $$backgroundThumbHover: '$colors-switch-secondary-background-color-thumb-hover',
+        $$backgroundThumbChecked: '$colors-switch-secondary-background-color-thumb-checked'
       },
       danger: {
-        $$backgroundNormal: '$colors-switch-danger-background-color-normal',
-        $$backgroundChecked: '$colors-switch-danger-background-color-checked',
-        $$backgroundDisabledNormal: '$colors-switch-danger-background-color-disabled-normal',
-        $$backgroundDisabledChecked: '$colors-switch-danger-background-color-disabled-checked'
+        $$backgroundRootNormal: '$colors-switch-danger-background-color-normal',
+        $$backgroundRootChecked: '$colors-switch-danger-background-color-checked',
+        $$backgroundRootDisabledNormal: '$colors-switch-danger-background-color-disabled-normal',
+        $$backgroundRootDisabledChecked: '$colors-switch-danger-background-color-disabled-checked',
+        $$backgroundThumbHover: '$colors-switch-danger-background-color-thumb-hover',
+        $$backgroundThumbChecked: '$colors-switch-danger-background-color-thumb-checked'
       }
     }
   },
@@ -135,7 +155,7 @@ const Container = styled(Flex, {
   width: 'fit-content',
   flexDirection: 'row-reverse !important',
 
-  '&:hover': {
+  '&:hover, &:has(*:focus)': {
     [`button:not([data-disabled])[data-state="unchecked"] +${Label.toString()}`]: {
       color: '$$colorHover'
     }

@@ -11,88 +11,6 @@ const CheckAnimation = keyframes({
   }
 });
 
-const RadiobuttonContainer = styled(Flex, {
-  '& label': {
-    color: '$$colorText',
-    transition: 'color 200ms linear'
-  },
-
-  variants: {
-    variant: {
-      primary: {
-        $$colorUnchecked: '$colors-radiobutton-primary-color-unchecked',
-        $$colorChecked: '$colors-radiobutton-primary-color-checked',
-        $$colorUncheckedDisabled: '$colors-radiobutton-primary-color-unchecked-disabled',
-        $$colorCheckedDisabled: '$colors-radiobutton-primary-color-checked-disabled',
-        $$colorHover: '$colors-radiobutton-primary-color-hover'
-      },
-      secondary: {
-        $$colorUnchecked: '$colors-radiobutton-secondary-color-unchecked',
-        $$colorChecked: '$colors-radiobutton-secondary-color-checked',
-        $$colorUncheckedDisabled: '$colors-radiobutton-secondary-color-unchecked-disabled',
-        $$colorCheckedDisabled: '$colors-radiobutton-secondary-color-checked-disabled',
-        $$colorHover: '$colors-radiobutton-secondary-color-hover'
-      },
-      danger: {
-        $$colorUnchecked: '$colors-radiobutton-danger-color-unchecked',
-        $$colorChecked: '$colors-radiobutton-danger-color-checked',
-        $$colorUncheckedDisabled: '$colors-radiobutton-danger-color-unchecked-disabled',
-        $$colorCheckedDisabled: '$colors-radiobutton-danger-color-checked-disabled',
-        $$colorHover: '$colors-radiobutton-danger-color-hover'
-      }
-    },
-    checked: {
-      true: {}
-    },
-    disabled: {
-      true: {}
-    }
-  },
-
-  compoundVariants: [
-    {
-      disabled: true,
-      checked: true,
-      css: {
-        $$colorText: '$$colorCheckedDisabled'
-      }
-    },
-    {
-      disabled: false,
-      checked: false,
-      css: {
-        $$colorText: '$$colorUnchecked',
-        '&:hover': {
-          $$colorText: '$$colorHover'
-        }
-      }
-    },
-    {
-      disabled: false,
-      checked: true,
-      css: {
-        $$colorText: '$$colorChecked',
-        '&:hover': {
-          $$colorText: '$$colorHover'
-        }
-      }
-    },
-    {
-      disabled: true,
-      checked: false,
-      css: {
-        $$colorText: '$$colorUncheckedDisabled'
-      }
-    }
-  ],
-
-  defaultVariants: {
-    variant: 'primary',
-    checked: false,
-    disabled: false
-  }
-});
-
 const RadioGroup = styled(RadioGroupPrimitive.Root, {
   display: 'block'
 });
@@ -135,7 +53,7 @@ const StyledRadiobutton = styled(RadioGroupPrimitive.Item, {
       backgroundColor: '$$backgroundColorUnchecked'
     },
 
-    '&:hover': {
+    '&:hover, &:focus': {
       $$borderColor: '$$borderColorHover'
     },
 
@@ -216,6 +134,93 @@ const StyledRadiobutton = styled(RadioGroupPrimitive.Item, {
 
   defaultVariants: {
     variant: 'primary'
+  }
+});
+StyledRadiobutton.toString = () => `.${StyledRadiobutton.className}`;
+
+const RadiobuttonContainer = styled(Flex, {
+  '& label': {
+    color: '$$colorText',
+    transition: 'color 200ms linear'
+  },
+
+  [`&:has(${StyledRadiobutton.toString()}:focus)`]: {
+    $$colorText: '$$colorHover'
+  },
+
+  variants: {
+    variant: {
+      primary: {
+        $$colorUnchecked: '$colors-radiobutton-primary-color-unchecked',
+        $$colorChecked: '$colors-radiobutton-primary-color-checked',
+        $$colorUncheckedDisabled: '$colors-radiobutton-primary-color-unchecked-disabled',
+        $$colorCheckedDisabled: '$colors-radiobutton-primary-color-checked-disabled',
+        $$colorHover: '$colors-radiobutton-primary-color-hover'
+      },
+      secondary: {
+        $$colorUnchecked: '$colors-radiobutton-secondary-color-unchecked',
+        $$colorChecked: '$colors-radiobutton-secondary-color-checked',
+        $$colorUncheckedDisabled: '$colors-radiobutton-secondary-color-unchecked-disabled',
+        $$colorCheckedDisabled: '$colors-radiobutton-secondary-color-checked-disabled',
+        $$colorHover: '$colors-radiobutton-secondary-color-hover'
+      },
+      danger: {
+        $$colorUnchecked: '$colors-radiobutton-danger-color-unchecked',
+        $$colorChecked: '$colors-radiobutton-danger-color-checked',
+        $$colorUncheckedDisabled: '$colors-radiobutton-danger-color-unchecked-disabled',
+        $$colorCheckedDisabled: '$colors-radiobutton-danger-color-checked-disabled',
+        $$colorHover: '$colors-radiobutton-danger-color-hover'
+      }
+    },
+    checked: {
+      true: {}
+    },
+    disabled: {
+      true: {}
+    }
+  },
+
+  compoundVariants: [
+    {
+      disabled: true,
+      checked: true,
+      css: {
+        $$colorText: '$$colorCheckedDisabled'
+      }
+    },
+    {
+      disabled: false,
+      checked: false,
+      css: {
+        $$colorText: '$$colorUnchecked',
+        '&:hover': {
+          $$colorText: '$$colorHover'
+        }
+      }
+    },
+    {
+      disabled: false,
+      checked: true,
+      css: {
+        $$colorText: '$$colorChecked',
+        '&:hover': {
+          $$colorText: '$$colorHover'
+        }
+      }
+    },
+    {
+      disabled: true,
+      checked: false,
+      css: {
+        $$colorText: '$$colorUncheckedDisabled'
+      }
+    }
+  ],
+
+  defaultVariants: {
+    variant: 'primary',
+    checked: false,
+    disabled: false
   }
 });
 
