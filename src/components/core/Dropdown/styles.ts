@@ -364,7 +364,7 @@ const StyledLabel = styled(Select.Label, {
 
 const StyledSeparator = styled(Select.Separator, {
   height: 1,
-  backgroundColor: '$dropdown-bordar-color-separator',
+  backgroundColor: '$dropdown-border-color-separator',
   margin: '$2'
 });
 

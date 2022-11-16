@@ -36,10 +36,13 @@ export const generateColors = ({
   // Text component
   'text-primary-color-low-contrast': primary[200],
   'text-primary-color-high-contrast': primary[300],
+  'text-primary-color-disabled': primary[80],
   'text-gray-color-low-contrast': grayScale[200],
   'text-gray-color-high-contrast': grayScale[300],
+  'text-gray-color-disabled': grayScale[80],
   'text-gray-colored-color-low-contrast': grayColoredColor[200],
   'text-gray-colored-color-high-contrast': grayColoredColor[300],
+  'text-gray-colored-disabled': grayColoredColor[80],
 
   // Button Primary
   'button-primary-solid-background-color-normal': primary[90],
@@ -426,7 +429,7 @@ export const generateColors = ({
 
   'dropdown-background-color-content': primary[20],
   'dropdown-box-shadow-color-content': '$overlay-80',
-  'dropdown-bordar-color-separator': grayColoredColor[50],
+  'dropdown-border-color-separator': grayColoredColor[50],
 
   'dropdown-item-background-hover': primary[30],
   'dropdown-item-background-checked': primary[40],
@@ -631,5 +634,13 @@ export const generateColors = ({
   'modal-background-color-overlay': '$overlay-200',
   'modal-color-close-icon-normal': grayColoredColor[100],
   'modal-color-close-icon-hover': grayColoredColor[300],
-  'modal-color-close-icon-focus': grayColoredColor[300]
+  'modal-color-close-icon-focus': grayColoredColor[300],
+
+  // Accordion
+  'accordion-item-trigger-background-color-normal': primary[10],
+  'accordion-item-trigger-background-color-hover': primary[20],
+  'accordion-item-content-background-color': primary[10],
+  'accordion-box-shadow-color': '$overlay-70',
+  'accordion-border-color-separator': grayColoredColor[50],
+  'accordion-border-color': grayColoredColor[50]
 });
