@@ -11,11 +11,6 @@ export default {
       control: { type: 'select' },
       defaultValue: 'primary'
     },
-    checked: {
-      options: [true, false, 'indeterminate'],
-      control: { type: 'select' },
-      defaultValue: false
-    },
     disabled: {
       type: 'boolean',
       defaultValue: false

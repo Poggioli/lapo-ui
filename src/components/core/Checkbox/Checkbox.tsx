@@ -2,11 +2,10 @@ import { Text } from '@components/typograph/Text';
 import { ComponentCSSProp, LapoVariants } from '@lapo';
 import { Ripple } from '@components/layout/Ripple';
 import { CheckedState } from '@radix-ui/react-checkbox';
-import { CheckIcon, DividerHorizontalIcon } from '@radix-ui/react-icons';
 import type * as Polymorphic from '@radix-ui/react-polymorphic';
 import useId from '@utils/hooks/useId';
-import React, { useCallback, useMemo, useState } from 'react';
-import { CheckboxContainer, RippleStyle, StyledCheckbox, StyledIndicator } from './styles';
+import React, { useMemo } from 'react';
+import { CheckboxContainer, RippleStyle, StyledCheckbox, StyledIndicator, IndeterminateIndicator, CheckIndicator } from './styles';
 
 /* -------------------------------------------------------------------------------------------------
  * Checkbox
@@ -18,40 +17,27 @@ type CheckboxProps = CheckboxCSSProp & CheckboxVariants;
 type CheckboxComponent = Polymorphic.ForwardRefComponent<typeof StyledCheckbox, CheckboxProps>;
 
 const Checkbox = React.forwardRef(
-  ({ id, children, checked, variant, disabled, onCheckedChange, ...props }, forwardedRef) => {
+  ({ id, children, ...props }, forwardedRef) => {
     const customId: string = useMemo(() => id || useId('checkbox'), [id]);
-    const [checkedState, setCheckedState] = useState<CheckedState>(checked);
 
-    const rippleBackgroundColor: string = `$checkbox-${variant}-ripple-background-color`;
-
-    const handleOnCheckedChange = useCallback((value: CheckedState) => {
-      setCheckedState(value);
-      if (onCheckedChange) {
-        onCheckedChange(value);
-      }
-    }, []);
+    const rippleBackgroundColor: string = `$checkbox-${props.variant}-ripple-background-color`;
 
     return (
       <CheckboxContainer
         align="center"
-        disabled={disabled}
-        checked={!!checkedState}
-        variant={variant}
+        disabled={props.disabled}
+        checked={!!props.checked}
+        variant={props.variant}
       >
         <Ripple className={RippleStyle()} backgroundColor={rippleBackgroundColor} center>
           <StyledCheckbox
             {...props}
             ref={forwardedRef}
             id={customId}
-            checked={checkedState}
-            variant={variant}
-            disabled={disabled}
-            aria-label={`Checkbox ${children}`}
-            onCheckedChange={handleOnCheckedChange}
           >
             <StyledIndicator>
-              {checkedState && checkedState !== 'indeterminate' && <CheckIcon />}
-              {checkedState && checkedState === 'indeterminate' && <DividerHorizontalIcon />}
+              <CheckIndicator />
+              <IndeterminateIndicator />
             </StyledIndicator>
           </StyledCheckbox>
         </Ripple>
@@ -66,9 +52,7 @@ const Checkbox = React.forwardRef(
 export { Checkbox };
 
 Checkbox.defaultProps = {
-  variant: 'primary',
-  checked: false,
-  disabled: false
+  variant: 'primary'
 };
 
 /* -----------------------------------------------------------------------------------------------*/

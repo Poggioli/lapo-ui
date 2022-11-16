@@ -1,6 +1,7 @@
 import { css, styled } from '@lapo';
 import { Flex } from '@components/layout/Flex';
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
+import { CheckIcon, DividerHorizontalIcon } from '@radix-ui/react-icons';
 
 const StyledCheckbox = styled(CheckboxPrimitive.Root, {
   alignItems: 'center',
@@ -195,6 +196,17 @@ const CheckboxContainer = styled(Flex, {
   }
 });
 
+const CheckIndicator = styled(CheckIcon, {
+  display: 'none',
+  unset: 'all'
+});
+CheckIndicator.toString = () => `.${CheckIndicator.className}`;
+
+const IndeterminateIndicator = styled(DividerHorizontalIcon, {
+  display: 'none'
+});
+IndeterminateIndicator.toString = () => `.${IndeterminateIndicator.className}`;
+
 const StyledIndicator = styled(CheckboxPrimitive.Indicator, {
   alignItems: 'center',
   display: 'flex',
@@ -206,7 +218,16 @@ const StyledIndicator = styled(CheckboxPrimitive.Indicator, {
   '>svg': {
     width: '100%',
     height: '100%'
-  }
+  },
+
+  [`&[data-state="checked"] ${CheckIndicator.toString()}`]: {
+    display: 'block'
+  },
+
+  [`&[data-state="indeterminate"] ${IndeterminateIndicator.toString()}`]: {
+    display: 'block'
+  },
+
 });
 
 const RippleStyle = css({
@@ -218,4 +239,4 @@ const RippleStyle = css({
   borderRadius: '$4 !important'
 });
 
-export { CheckboxContainer, StyledCheckbox, StyledIndicator, RippleStyle };
+export { CheckboxContainer, StyledCheckbox, StyledIndicator, RippleStyle, IndeterminateIndicator, CheckIndicator };

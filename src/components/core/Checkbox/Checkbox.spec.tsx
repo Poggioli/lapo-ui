@@ -11,8 +11,8 @@ describe('Given a <Checkbox /> component', () => {
   let rendered: RenderResult;
 
   const mount = ({ ...props }: VariantProps<typeof Checkbox>) => {
-    rendered = render(<Checkbox {...props}>{labelValue}</Checkbox>);
-    element = rendered.getByLabelText(`Checkbox ${labelValue}`);
+    rendered = render(<Checkbox {...props} aria-label='Checkbox'>{labelValue}</Checkbox>);
+    element = rendered.getByRole('checkbox');
   };
 
   it('should have no a11y violations', async () => {
@@ -29,49 +29,6 @@ describe('Given a <Checkbox /> component', () => {
     it('With Id passed by props', () => {
       mount({ id: 'checkboxId123' });
       expect(element.id).toBe('checkboxId123');
-    });
-  });
-
-  describe('Given a onCheckedChange function', () => {
-    describe('When user check the component', () => {
-      const onCheckedChange = jest.fn();
-
-      beforeEach(() => {
-        mount({ onCheckedChange });
-        userEvent.click(element);
-      });
-
-      it('should call "onCheckedChange" with the right value', () => {
-        expect(onCheckedChange).toHaveBeenCalledTimes(1);
-        expect(onCheckedChange).toHaveBeenCalledWith(true);
-      });
-
-      it('should set data-state to "checked"', () => {
-        expect(element).toHaveAttribute('data-state', 'checked');
-      });
-
-      it('when user uncheck, should set data-state to "unchecked"', () => {
-        userEvent.click(element);
-        expect(element).toHaveAttribute('data-state', 'unchecked');
-      });
-    });
-  });
-
-  describe('Not given a onCheckedChange function', () => {
-    describe('When user check the component', () => {
-      beforeEach(() => {
-        mount({});
-        userEvent.click(element);
-      });
-
-      it('should set data-state to "checked"', () => {
-        expect(element).toHaveAttribute('data-state', 'checked');
-      });
-
-      it('when user uncheck, should set data-state to "unchecked"', () => {
-        userEvent.click(element);
-        expect(element).toHaveAttribute('data-state', 'unchecked');
-      });
     });
   });
 
