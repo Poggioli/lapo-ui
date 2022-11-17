@@ -20,22 +20,18 @@ type RadiobuttonComponent = Polymorphic.ForwardRefComponent<
 >;
 
 const Radiobutton = React.forwardRef(
-  ({ id, children, variant, disabled, checked, ...props }, forwardedRef) => {
+  ({ id, children, ...props }, forwardedRef) => {
     const customId: string = useMemo(() => id || useId('radiobutton'), [id]);
 
-    const rippleBackgroundColor: string = `$radiobutton-${variant}-ripple-background-color`;
+    const rippleBackgroundColor: string = `$radiobutton-${props.variant}-ripple-background-color`;
 
     return (
-      <RadiobuttonContainer align="center" disabled={disabled} checked={checked} variant={variant}>
+      <RadiobuttonContainer align="center" disabled={props.disabled} checked={props.checked} variant={props.variant}>
         <Ripple className={RippleStyle()} backgroundColor={rippleBackgroundColor} center>
           <StyledRadiobutton
             {...props}
             ref={forwardedRef}
             id={customId}
-            variant={variant}
-            disabled={disabled}
-            checked={checked}
-            aria-label={`Radiobutton ${children}`}
           >
             <StyledIndicator />
           </StyledRadiobutton>
@@ -50,8 +46,6 @@ const Radiobutton = React.forwardRef(
 
 Radiobutton.defaultProps = {
   variant: 'primary',
-  disabled: false,
-  checked: false
 };
 
 export { Radiobutton };

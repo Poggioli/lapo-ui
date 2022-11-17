@@ -35,7 +35,6 @@ export default {
 } as ComponentMeta<typeof Radiobutton>;
 
 const Template: ComponentStory<typeof Radiobutton> = ({ ...args }) => {
-  const [radioSelected, setRadioSelected] = useState('');
 
   const radioOptions = [
     {
@@ -52,18 +51,14 @@ const Template: ComponentStory<typeof Radiobutton> = ({ ...args }) => {
     }
   ];
 
-  const handleOnValueChange = (value: string) => {
-    setRadioSelected(value);
-  };
-
   return (
-    <RadioGroup onValueChange={handleOnValueChange}>
+    <RadioGroup>
       {radioOptions.map((option) => (
         <Radiobutton
           {...args}
           key={option.value}
           value={option.value}
-          checked={option.value === radioSelected}
+          aria-label={option.label}
         >
           {option.label}
         </Radiobutton>

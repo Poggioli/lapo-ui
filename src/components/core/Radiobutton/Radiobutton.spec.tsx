@@ -6,36 +6,34 @@ import React, { FC, useState } from 'react';
 import { Radiobutton } from './Radiobutton';
 import { RadioGroup } from './styles';
 
-const RadioButtonGroup: FC = ({ ...props }) => {
-  const [radioSelected, setRadioSelected] = useState('');
+const RadioButtonGroup: FC<any> = ({ useCustomId, ...props }) => {
 
   const radioOptions = [
     {
       label: 'Banana',
-      value: 'banana'
+      value: 'banana',
+      id: useCustomId ? 'radio-1' : undefined
     },
     {
       value: 'apple',
-      label: 'Apple'
+      label: 'Apple',
+      id: useCustomId ? 'radio-2' : undefined
     },
     {
       value: 'tomato',
-      label: 'Tomato'
+      label: 'Tomato',
+      id: useCustomId ? 'radio-3' : undefined
     }
   ];
 
-  const handleOnValueChange = (value: string) => {
-    setRadioSelected(value);
-  };
-
   return (
-    <RadioGroup onValueChange={handleOnValueChange}>
+    <RadioGroup>
       {radioOptions.map((option) => (
         <Radiobutton
-          {...props}
           key={option.value}
           value={option.value}
-          checked={option.value === radioSelected}
+          aria-label={option.label}
+          id={option.id}
         >
           {option.label}
         </Radiobutton>
@@ -51,10 +49,10 @@ describe('Given a <Radiobutton /> component', () => {
   let element2: HTMLElement;
   let rendered: RenderResult;
 
-  const mount = ({ ...props }: LapoVariants<typeof Radiobutton>) => {
-    rendered = render(<RadioButtonGroup {...props} />);
-    element1 = rendered.getByLabelText(`Radiobutton ${labelValue1}`);
-    element2 = rendered.getByLabelText(`Radiobutton ${labelValue2}`);
+  const mount = ({ ...props }: any) => {
+    rendered = render(<RadioButtonGroup { ...props } />);
+    element1 = rendered.getByLabelText(labelValue1);
+    element2 = rendered.getByLabelText(labelValue2);
   };
 
   it('should have no a11y violations', async () => {
@@ -69,8 +67,8 @@ describe('Given a <Radiobutton /> component', () => {
     });
 
     it('With Id passed by props', () => {
-      mount({ id: 'radiobuttonId123' });
-      expect(element1.id).toBe('radiobuttonId123');
+      mount({ useCustomId: true });
+      expect(element1.id).toBe('radio-1');
     });
   });
 
