@@ -43,6 +43,7 @@ export const generateColors = ({
   'text-gray-colored-color-low-contrast': grayColoredColor[200],
   'text-gray-colored-color-high-contrast': grayColoredColor[300],
   'text-gray-colored-disabled': grayColoredColor[80],
+  'text-gray-colored-color-hight-contrast-white': grayColoredColor[10],
 
   // Button Primary
   'button-primary-solid-background-color-normal': primary[90],
@@ -645,5 +646,9 @@ export const generateColors = ({
   'accordion-border-color': grayColoredColor[50],
 
   // Toast
-  'toast-background-color': '$background-subtle'
+  'toast-background-color': '$background-subtle',
+
+  // Tooltip
+  'tooltip-arrow-background-color': grayColoredColor[300],
+  'tooltip-content-background-color': grayColoredColor[300]
 });
