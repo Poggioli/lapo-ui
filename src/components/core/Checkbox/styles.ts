@@ -226,8 +226,7 @@ const StyledIndicator = styled(CheckboxPrimitive.Indicator, {
 
   [`&[data-state="indeterminate"] ${IndeterminateIndicator.toString()}`]: {
     display: 'block'
-  },
-
+  }
 });
 
 const RippleStyle = css({
@@ -239,4 +238,11 @@ const RippleStyle = css({
   borderRadius: '$4 !important'
 });
 
-export { CheckboxContainer, StyledCheckbox, StyledIndicator, RippleStyle, IndeterminateIndicator, CheckIndicator };
+export {
+  CheckboxContainer,
+  StyledCheckbox,
+  StyledIndicator,
+  RippleStyle,
+  IndeterminateIndicator,
+  CheckIndicator
+};

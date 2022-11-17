@@ -11,7 +11,11 @@ describe('Given a <Checkbox /> component', () => {
   let rendered: RenderResult;
 
   const mount = ({ ...props }: VariantProps<typeof Checkbox>) => {
-    rendered = render(<Checkbox {...props} aria-label='Checkbox'>{labelValue}</Checkbox>);
+    rendered = render(
+      <Checkbox {...props} aria-label="Checkbox">
+        {labelValue}
+      </Checkbox>
+    );
     element = rendered.getByRole('checkbox');
   };
 

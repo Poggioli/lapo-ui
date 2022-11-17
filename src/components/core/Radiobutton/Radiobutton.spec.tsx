@@ -7,7 +7,6 @@ import { Radiobutton } from './Radiobutton';
 import { RadioGroup } from './styles';
 
 const RadioButtonGroup: FC<any> = ({ useCustomId, ...props }) => {
-
   const radioOptions = [
     {
       label: 'Banana',
@@ -50,7 +49,7 @@ describe('Given a <Radiobutton /> component', () => {
   let rendered: RenderResult;
 
   const mount = ({ ...props }: any) => {
-    rendered = render(<RadioButtonGroup { ...props } />);
+    rendered = render(<RadioButtonGroup {...props} />);
     element1 = rendered.getByLabelText(labelValue1);
     element2 = rendered.getByLabelText(labelValue2);
   };

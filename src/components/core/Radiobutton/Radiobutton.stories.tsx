@@ -35,7 +35,6 @@ export default {
 } as ComponentMeta<typeof Radiobutton>;
 
 const Template: ComponentStory<typeof Radiobutton> = ({ ...args }) => {
-
   const radioOptions = [
     {
       label: 'Banana',
@@ -54,12 +53,7 @@ const Template: ComponentStory<typeof Radiobutton> = ({ ...args }) => {
   return (
     <RadioGroup>
       {radioOptions.map((option) => (
-        <Radiobutton
-          {...args}
-          key={option.value}
-          value={option.value}
-          aria-label={option.label}
-        >
+        <Radiobutton {...args} key={option.value} value={option.value} aria-label={option.label}>
           {option.label}
         </Radiobutton>
       ))}
